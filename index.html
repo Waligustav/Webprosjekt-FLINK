@@ -5,22 +5,36 @@
     <link href = "style.css" type = "text/css" rel = "stylesheet">
 </head>
 <body>
-    <form>
-        <select name = "dropdown">
-           <option value = "subjects">Emner</option>
-           <option value = "school">Skolefag</option>
-           <option value = "sport">Sport</option>
-           <option value = "fritid">Fritid</option>
-           <option value = "various">Diverse</option>
-        </select>
-     </form>
-     <div>
-         <input name = "participant" type = "text" placeholder = "Deltaker">
-     </div>
-     <!-- Frist for oppgave -->
-     <div>
-        <textarea name = "description" placeholder = "Beskrivelse.."></textarea>
+    <div id = "participant-bar">
+        <label>
+            <input name = "image" type = "file"/>
+        </label>
+        <label>
+            Brukernavn
+        </label>
     </div>
+    <section id = "mainview">
+        <section id = "formInput">
+            <form class = "form-input">
+                <select name = "dropdown">
+                <option value = "subjects">Emner</option>
+                <option value = "school">Skolefag</option>
+                <option value = "sport">Sport</option>
+                <option value = "fritid">Fritid</option>
+                <option value = "various">Diverse</option>
+                </select>
+            </form>
+            <div>
+                <input name = "participant" type = "text" class = "form-input" placeholder = "Deltaker">
+            </div>
+            <!-- Frist for oppgave -->
+            <div>
+                <textarea name = "description" class = "form-input" placeholder = "Beskrivelse.."></textarea>
+            </div>
+        </section>
+        <div class="verticalLine"> </div>
+        <img src = "Images/pingu.png" id = "helpingCharacter" alt = "Pingu hjelpe karakter">
+    </section>
 </body>
 <script src = "member.js"></script>
 <script src = "task.js"></script>

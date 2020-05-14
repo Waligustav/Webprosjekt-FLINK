@@ -1,0 +1,50 @@
+body {
+    background-color: rgb(255, 255, 255);
+    position: relative;
+}
+
+#mainview {
+    width: 1280px;
+    height: 720px;
+    position: relative;
+    border: 1px rgb(0, 0, 0) solid;
+    background-color: rgb(217, 214, 213);
+    margin: 0 auto;
+    /*margin-top: 70px;*/
+    border-width: 1px;
+}
+
+#formInput {
+    width: 220px;
+    height: 220px;
+    position: absolute;
+    border: 1px rgb(0, 0, 0) dashed;
+    margin-top: 240px;
+    margin-left: 13px;
+}
+
+.form-input {
+    width: 200px;
+    height: 17px;
+}
+
+.verticalLine {
+    border-left: 2px solid rgb(0, 0, 0);
+    height: 690px;
+    margin-left: 250px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#participant-bar {
+    width: 1280px;
+    margin: 0 auto;
+    text-align: right;
+    margin-top: 50px;
+}
+
+#helpingCharacter {
+    position: absolute;
+    margin-right: 50px;
+    align-content: center;
+}
