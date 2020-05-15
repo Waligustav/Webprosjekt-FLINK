@@ -59,3 +59,8 @@ body {
     border: solid 1px rgb(0, 0, 0);
     border-radius: 80px;
 }
+
+#combinedOutput {
+    width: 400px;
+    margin-left: 40px;
+}
