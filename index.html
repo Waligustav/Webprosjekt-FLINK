@@ -14,31 +14,39 @@
         </label>
     </div>
     <section id = "mainview">
-        <section id = "formInput">
-            <form class = "form-input">
-                <select name = "dropdown">
-                <option value = "subjects">Emner</option>
-                <option value = "school">Skolefag</option>
-                <option value = "sport">Sport</option>
-                <option value = "leisure">Fritid</option>
-                <option value = "various">Diverse</option>
-                </select>
-            </form>
-            <div>
-                <input name = "participant" type = "text" class = "form-input" placeholder = "Deltaker">
-            </div>
-            <!-- Frist for oppgave -->
-            <div>
-                <textarea name = "description" class = "form-input" placeholder = "Beskrivelse.."></textarea>
-            </div>
-            <div>
-                <input type = "submit" id = "submitBtn" value = "+"/>
-            </div>
-        </section>
+        <form onsubmit = "addTask(event)">
+            <section id = "formInput">
+                <form class = "form-input">
+                    <select name = "dropdown">
+                    <option value = "subjects">Emner</option>
+                    <option value = "school">Skolefag</option>
+                    <option value = "sport">Sport</option>
+                    <option value = "leisure">Fritid</option>
+                    <option value = "various">Diverse</option>
+                    </select>
+                </form>
+                <div>
+                    <input name = "subject" type = "text" class = "form-input" placeholder = "Fag (valgfri)">
+                </div>
+                <div>
+                    <input name = "participant" type = "text" class = "form-input" placeholder = "Deltaker">
+                </div>
+                <div>
+                    <input name = "duetime" type = "text" class = "form-input" placeholder = "Frist: 10/06">
+                </div>
+                <div>
+                    <textarea name = "description" rows = "6" cols = "31" placeholder = "Beskrivelse.."></textarea>
+                </div>
+                <div>
+                    <input type = "submit" id = "submitBtn" value = "Legg til"/>
+                </div>
+            </section>
+        </form>
         <img src = "Images/pingu.png" id = "helpingCharacter" alt = "Pingu hjelpe karakter">
-        <div class="verticalLine"> </div>
+        <div class = "verticalLine"> 
+            <div id = "combinedOutput"> </div>
+        </div> 
     </section>
 </body>
-<script src = "member.js"></script>
-<script src = "task.js"></script>
+<script src = "addTask.js"></script>
 </html>

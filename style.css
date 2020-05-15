@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 body {
     background-color: rgb(255, 255, 255);
     position: relative;
@@ -25,7 +24,7 @@ body {
 }
 
 .form-input {
-    width: 200px;
+    width: 202px;
     height: 17px;
 }
 
@@ -54,13 +53,14 @@ body {
 }
 
 #submitBtn {
-    width: 40px;
+    width: 60px;
     height: 30px;
     background-color:rgb(255, 255, 255);
     border: solid 1px rgb(0, 0, 0);
     border-radius: 80px;
 }
-=======
 
-
->>>>>>> 207a766fecbdaa6234d273d67f26af703ecd8119
+#combinedOutput {
+    width: 400px;
+    margin-left: 40px;
+}
