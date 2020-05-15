@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+    <title>Exam group 29</title>
+    <meta charset = "utf-8">
+    <link href = "style.css" type = "text/css" rel = "stylesheet">
+</head>
+<body>
+    <div id = "participant-bar">
+        <label>
+            <input name = "image" type = "file" value = "Profilbilde"/>
+        </label>
+        <label>
+            Brukernavn
+        </label>
+    </div>
+    <section id = "mainview">
+        <section id = "formInput">
+            <form class = "form-input">
+                <select name = "dropdown">
+                <option value = "subjects">Emner</option>
+                <option value = "school">Skolefag</option>
+                <option value = "sport">Sport</option>
+                <option value = "leisure">Fritid</option>
+                <option value = "various">Diverse</option>
+                </select>
+            </form>
+            <div>
+                <input name = "participant" type = "text" class = "form-input" placeholder = "Deltaker">
+            </div>
+            <!-- Frist for oppgave -->
+            <div>
+                <textarea name = "description" class = "form-input" placeholder = "Beskrivelse.."></textarea>
+            </div>
+            <div>
+                <input type = "submit" id = "submitBtn" value = "+"/>
+            </div>
+        </section>
+        <img src = "Images/pingu.png" id = "helpingCharacter" alt = "Pingu hjelpe karakter">
+        <div class="verticalLine"> </div>
+    </section>
+</body>
+<script src = "member.js"></script>
+<script src = "task.js"></script>
+</html>
