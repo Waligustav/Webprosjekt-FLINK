@@ -8,9 +8,9 @@ function renderTask(){
         const taskEl = document.createElement("div");
         const {subject, participant, duetime, description} = task;
 
-        taskEl.innerHTML = "<div> Fag: " + subject + "<br> Deltaker(e): " + participant +
-                            "<br> Frist: " + duetime + "<br>" + 
-                            "Beskrivelse: " + description + "<div><br>";
+        taskEl.innerHTML = "<div><b> Fag: </b>" + subject + "<br><b> Deltaker(e): </b>" + participant +
+                            "<br><b> Frist: </b>" + duetime + "<br>" + 
+                            "<b>Beskrivelse: </b>" + description + "<div><br>";
     /*
         if (dropdown = "school") {
             taskEl.innerHTML = "<div> Fag: " + subject + "<br> Deltaker(e): " + participant +
