@@ -60,7 +60,27 @@ body {
     border-radius: 80px;
 }
 
+<<<<<<< HEAD
 #combinedOutput {
     width: 400px;
     margin-left: 40px;
 }
+=======
+
+
+
+/*Images*/
+#transportToArchivePic{
+    position: absolute; 
+    width: 100px;
+    top: 580px;
+    left: 1100px;
+}
+
+#pinguText{
+    position: absolute; 
+    width: 200px;
+    top: 20px;
+    left: 20px;
+}
+>>>>>>> fec94af7e53c297239fc59dcf765a1f7b958e7f7
