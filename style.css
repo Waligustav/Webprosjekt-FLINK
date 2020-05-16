@@ -60,14 +60,6 @@ body {
     border-radius: 80px;
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-#combinedOutput {
-    width: 400px;
-    margin-left: 40px;
-}
-=======
-=======
 /* settings for main page task overview */
 .taskOverview{
     position: absolute;
@@ -109,7 +101,6 @@ body {
 #overviewThree{
     background-color: rgb(184, 183, 145);
     display: none;
->>>>>>> 1a498813013550f5627248180761ddd4f2aae2ab
 
 }
 
@@ -168,4 +159,3 @@ body {
     top: 20px;
     left: 20px;
 }
->>>>>>> fec94af7e53c297239fc59dcf765a1f7b958e7f7
