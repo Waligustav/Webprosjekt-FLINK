@@ -14,39 +14,11 @@
         </label>
     </div>
     <section id = "mainview">
-<<<<<<< HEAD
+        <!-- Form start -->
         <form onsubmit = "addTask(event)">
-            <section id = "formInput">
-                <form class = "form-input">
-                    <select name = "dropdown">
-                    <option value = "subjects">Emner</option>
-                    <option value = "school">Skolefag</option>
-                    <option value = "sport">Sport</option>
-                    <option value = "leisure">Fritid</option>
-                    <option value = "various">Diverse</option>
-                    </select>
-                </form>
-                <div>
-                    <input name = "subject" type = "text" class = "form-input" placeholder = "Fag (valgfri)">
-                </div>
-                <div>
-                    <input name = "participant" type = "text" class = "form-input" placeholder = "Deltaker">
-                </div>
-                <div>
-                    <input name = "duetime" type = "text" class = "form-input" placeholder = "Frist: 10/06">
-                </div>
-                <div>
-                    <textarea name = "description" rows = "6" cols = "31" placeholder = "Beskrivelse.."></textarea>
-                </div>
-                <div>
-                    <input type = "submit" id = "submitBtn" value = "Legg til"/>
-                </div>
-            </section>
-        </form>
-=======
         <section id = "formInput">
             <form class = "form-input">
-                <select name = "dropdown">
+                <select name = "dropdown" required>
                 <option value = "subjects">Emner</option>
                 <option value = "school">Skolefag</option>
                 <option value = "sport">Sport</option>
@@ -55,35 +27,35 @@
                 </select>
             </form>
             <div>
-                <input name = "participant" type = "text" class = "form-input" placeholder = "Deltaker">
-            </div>
-            <!-- Frist for oppgave -->
-            <div>
-                <textarea name = "description" class = "form-input" placeholder = "Beskrivelse.."></textarea>
+                <input name = "subject" type = "text" class = "form-input" placeholder = "Fag (valgfri)">
             </div>
             <div>
-                <input type = "submit" id = "submitBtn" value = "+"/>
+                <input name = "participant" type = "text" class = "form-input" placeholder = "Deltaker" required>
+            </div>
+            <div>
+                <input name = "duetime" type = "text" class = "form-input" placeholder = "Frist: 10/06" required>
+            </div>
+            <div>
+                <textarea name = "description" rows = "4" cols = "31" placeholder = "Beskrivelse.." required></textarea>
+            </div>
+            <div>
+                <input type = "submit" id = "submitBtn" value = "Legg til"/>
             </div>
         </section>
+    </form>
+        <!-- Form end -->
+        <!-- Hyperlink to archive -->
         <a href="http://127.0.0.1:5500/archive.html">
             <img src="images/archive.png" id="transportToArchivePic" alt="Takes a user to thier archive">
         </a>
         <img src="images/wigflip-ds.png" id="pinguText" alt= "Pingu's speach bubble"> 
->>>>>>> fec94af7e53c297239fc59dcf765a1f7b958e7f7
         <img src = "Images/pingu.png" id = "helpingCharacter" alt = "Pingu hjelpe karakter">
-<<<<<<< HEAD
-        <div class = "verticalLine"> 
-            <div id = "combinedOutput"> </div>
-        </div> 
-    </section>
-</body>
-<script src = "addTask.js"></script>
-</html>
-
-=======
         <div class="verticalLine"> </div>
 
-        <div id="overviewOne" class="taskOverview"></div>
+        <div id="overviewOne" class="taskOverview">
+            <!-- output -->
+            <div id = "combinedOutput"></div> 
+        </div>
         <div id="overviewTwo" class="taskOverview"></div>
         <div id="overviewThree" class="taskOverview"></div>
         <div id="overviewFour" class="taskOverview"></div>
@@ -94,8 +66,6 @@
         <input id="taskBtnFour" type="button" value="Diverse" class="taskBtns">
     </section>
 </body>
-<script src = "member.js"></script>
-<script src = "task.js"></script>
+<script src = "addTask.js"></script>
 <script src = "taskOverview.js"></script>
 </html>
->>>>>>> 1a498813013550f5627248180761ddd4f2aae2ab

@@ -3,16 +3,17 @@ function renderTask(){
     const taskOutput = JSON.parse(window.localStorage.getItem("taskList")) || [];
     
     const taskOutputEl = document.getElementById("combinedOutput");
-    //taskOutputEl.innerHTML = "";
+    taskOutputEl.innerHTML = "";
     for (const task of taskOutput) {
         const taskEl = document.createElement("div");
         const {subject, participant, duetime, description} = task;
-
+        
         taskEl.innerHTML = "<div><b> Fag: </b>" + subject + "<br><b> Deltaker(e): </b>" + participant +
                             "<br><b> Frist: </b>" + duetime + "<br>" + 
                             "<b>Beskrivelse: </b>" + description + "<div><br>";
+        
     /*
-        if (dropdown = "school") {
+        if (dropdown) {
             taskEl.innerHTML = "<div> Fag: " + subject + "<br> Deltaker(e): " + participant +
                             "<br> Frist: " + duetime + "<br>" + 
                             "Beskrivelse: " + description + "<div><br>";
