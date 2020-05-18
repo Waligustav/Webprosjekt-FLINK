@@ -2,30 +2,26 @@
 function renderTask(){
     const taskOutput = JSON.parse(window.localStorage.getItem("taskList")) || [];
     
+    // with subject
     const taskOutputEl = document.getElementById("combinedOutput");
     taskOutputEl.innerHTML = "";
     for (const task of taskOutput) {
         const taskEl = document.createElement("div");
         const {subject, participant, duetime, description} = task;
         
-        taskEl.innerHTML = "<div><b> Fag: </b>" + subject + "<br><b> Deltaker(e): </b>" + participant +
-                            "<br><b> Frist: </b>" + duetime + "<br>" + 
-                            "<b>Beskrivelse: </b>" + description + "<div><br>";
-        
-    /*
-        if (dropdown) {
+        if (document.querySelector('#dropdown').value == 'school'){
             taskEl.innerHTML = "<div> Fag: " + subject + "<br> Deltaker(e): " + participant +
-                            "<br> Frist: " + duetime + "<br>" + 
-                            "Beskrivelse: " + description + "<div><br>";
+            "<br> Frist: " + duetime + "<br>" + 
+            "Beskrivelse: " + description + "<div><br>";
         } else {
             taskEl.innerHTML = "<div> Deltaker(e): " + participant +
                             "<br> Frist: " + duetime + "<br>" + 
                             "Beskrivelse: " + description + "<div><br>";
         }
-    */
 
         taskOutputEl.appendChild(taskEl);
     }
+
 }
     
 // adds data to localStorage
