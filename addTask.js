@@ -5,6 +5,7 @@ function renderTask(){
     // with subject
     const taskOutputEl = document.getElementById("combinedOutput");
     taskOutputEl.innerHTML = "";
+
     for (const task of taskOutput) {
         const taskEl = document.createElement("div");
         const {subject, participant, duetime, description} = task;
@@ -19,7 +20,10 @@ function renderTask(){
                             "Beskrivelse: " + description + "<div><br>";
         }
 
-        taskOutputEl.appendChild(taskEl);
+    
+    taskOutputEl.appendChild(taskEl);
+
+        
     }
 
 }
