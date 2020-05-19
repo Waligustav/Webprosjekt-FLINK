@@ -34,16 +34,20 @@ h1 {
     background-color: rgb(170, 170, 70);
 }
 
-/*Nudes*/
+/*Images*/
 #pingu {
     position: absolute;
     top: 370px;
     left: 1040px;
     width: 250px;
 }
-
 #pinguText2 {
     position: absolute;
     top: 300px;
     left: 870px;
 }
+
+#pingu:hover {
+    filter:drop-shadow(0px 0px 50px 
+    rgb(0, 0, 0));
+} 
