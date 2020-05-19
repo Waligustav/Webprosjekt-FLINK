@@ -28,6 +28,7 @@ body {
     height: 17px;
 }
 
+
 .verticalLine {
     border-left: 2px solid rgb(0, 0, 0);
     height: 690px;
@@ -153,9 +154,22 @@ body {
     left: 1100px;
 }
 
-#pinguText{
-    position: absolute; 
-    width: 200px;
-    top: 20px;
-    left: 20px;
+/*Speech-Bubble*/
+#speech{
+    position: absolute;
+    font-weight: bold;
+    font-size: 20px;
+    top: 25px;
+    left: 30px;
+}
+
+#speechBubble{
+    position: absolute;
+    width: 180px;
+    height: 60px;
+    top: 22px;
+    left: 15px;
+    border: 4.2px rgb(0, 0, 0) solid;
+    border-radius: 20px;
+    background-color: white;
 }
