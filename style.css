@@ -41,6 +41,11 @@ body {
     height: 17px;
 }
 
+#form-desc {
+    width: 202px;
+    height: 60px;
+}
+
 
 .verticalLine {
     border-left: 2px solid rgb(0, 0, 0);
