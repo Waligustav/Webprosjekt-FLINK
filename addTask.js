@@ -3,7 +3,13 @@ function renderTask(){
     const taskOutput = JSON.parse(window.localStorage.getItem("taskList")) || [];
     
     const taskOutputEl = document.getElementById("combinedOutput");
+    const taskOutputE2 = document.getElementById("combinedOutput2");
+    const taskOutputE3 = document.getElementById("combinedOutput3");
+    const taskOutputE4 = document.getElementById("combinedOutput4");
     taskOutputEl.innerHTML = "";
+    taskOutputE2.innerHTML = "";
+    taskOutputE3.innerHTML = "";
+    taskOutputE4.innerHTML = "";
     for (const task of taskOutput) {
         const taskEl = document.createElement("div");
         const {subject, participant, duetime, description} = task;
@@ -24,7 +30,10 @@ function renderTask(){
         }
     */
 
-        taskOutputEl.appendChild(taskEl);
+    
+    taskOutputEl.appendChild(taskEl);
+
+        
     }
 }
     

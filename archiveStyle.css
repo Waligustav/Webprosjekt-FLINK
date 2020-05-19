@@ -7,17 +7,22 @@ body {
     position: relative;
 }
 
-h1 {
-    position: relative;
-    top: 20px;
-    left: 600px;
+#archiveText{
+    position: absolute;
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+    font-style: initial;
+    margin-top: 8px;
+    margin-left: 650px;
+    color: rgb(48, 41, 41);
 }
 
 #archiveSec{
     width: 1280px;
     height: 720px;
-    left: 80px;
-    top: 36px;
+    margin-left: 319px;
+    margin-top: 71px;
     position: relative;
     border: 1px rgb(0, 0, 0) solid;
     background-color: rgb(197, 200, 190);
