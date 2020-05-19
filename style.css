@@ -23,7 +23,7 @@ body {
     margin: 0 auto;
     /*margin-top: 70px;*/
     border-width: 1px;
-    border-radius: 25px;
+    border-radius: 15px;
 }
 
 #formInput {
@@ -33,7 +33,7 @@ body {
     border: 1px rgb(0, 0, 0) dashed;
     margin-top: 360px;
     margin-left: 13px;
-    border-radius: 25px;
+    border-radius: 5px;
 }
 
 .form-input {

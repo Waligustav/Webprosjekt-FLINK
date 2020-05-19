@@ -14,7 +14,7 @@ body {
     font-size: 50px;
     font-style: initial;
     margin-top: 8px;
-    margin-left: 650px;
+    margin-left: 450px;
     color: rgb(48, 41, 41);
 }
 
@@ -27,6 +27,7 @@ body {
     border: 1px rgb(0, 0, 0) solid;
     background-color: rgb(197, 200, 190);
     border-width: 1px;
+    border-radius: 15px;
 }
 
 #output {
@@ -37,6 +38,7 @@ body {
     top: 90px;
     left: 20px;
     background-color: rgb(170, 170, 70);
+    border-radius: 10px;
 }
 
 /*Nudes*/
