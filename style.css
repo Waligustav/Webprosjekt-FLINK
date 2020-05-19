@@ -78,15 +78,15 @@ body {
 }
 
 .taskOverview::-webkit-scrollbar-track{
-    background: rgb(241, 241, 241);
+    background: rgb(109, 105, 105);
 }
 
 .taskOverview::-webkit-scrollbar-thumb{
-    background: rgb(136, 136, 136);
+    background: rgb(109, 105, 105);
 }
 
 .taskOverview::-webkit-scrollbar-thumb:hover{
-    background: rgb(85, 85, 85);
+    background: rgb(109, 105, 105);
 }
 
 #overviewOne{
