@@ -27,7 +27,7 @@ body {
     border: 1px rgb(0, 0, 0) solid;
     background-color: rgb(197, 200, 190);
     border-width: 1px;
-    border-radius: 25px;
+    border-radius: 15px;
 }
 
 #output {
