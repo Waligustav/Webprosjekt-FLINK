@@ -33,11 +33,7 @@ body {
     border: 1px rgb(0, 0, 0) dashed;
     margin-top: 360px;
     margin-left: 13px;
-<<<<<<< HEAD
-    border-radius: 6px;
-=======
     border-radius: 5px;
->>>>>>> swedishCorner
 }
 
 .form-input {
