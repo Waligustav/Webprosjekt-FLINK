@@ -78,7 +78,7 @@ body {
 }
 
 .taskOverview::-webkit-scrollbar-track{
-    background: rgb(109, 105, 105);
+    background: rgb(207, 198, 198);
 }
 
 .taskOverview::-webkit-scrollbar-thumb{
