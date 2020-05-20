@@ -2,36 +2,66 @@
 function renderTask(){
     const taskOutput = JSON.parse(window.localStorage.getItem("taskList")) || [];
     
-    // with subject
     const taskOutputEl = document.getElementById("combinedOutput");
-    const taskOutputE2 = document.getElementById("combinedOutput2");
-    const taskOutputE3 = document.getElementById("combinedOutput3");
-    const taskOutputE4 = document.getElementById("combinedOutput4");
+    const taskOutputEl2 = document.getElementById("combinedOutput2");
+    const taskOutputEl3 = document.getElementById("combinedOutput3");
+    const taskOutputEl4 = document.getElementById("combinedOutput4");
     taskOutputEl.innerHTML = "";
+    //taskOutputEl2.innerHTML = "";
+    //taskOutputEl3.innerHTML = "";
+    //taskOutputEl4.innerHTML = "";
 
     for (const task of taskOutput) {
         const taskEl = document.createElement("div");
         const {participant, duetime, description} = task;
         
         
-        taskEl.innerHTML = "<div style='border: 1px solid black'> <strong>Deltaker(e):</strong> " + participant +
-                            "<br> <strong>Frist:</strong> " + duetime + "<br>" + 
-                            "<strong>Beskrivelse:</strong " + description + "<div><br>";
+        taskEl.innerHTML = "<div style = 'border: 1px solid black'> <strong> Deltaker(e): </strong> " + participant +
+                            "<br> <strong> Frist: </strong> " + duetime + "<br>" + 
+                            "<strong> Beskrivelse: </strong> " + description + "<div><br>";
         
+        /*if (document.querySelector('#dropdown').value == 'school'){
+            taskEl.innerHTML = "<div> Fag: " + subject + "<br> Deltaker(e): " + participant +
+            "<br> Frist: " + duetime + "<br>" + 
+            "Beskrivelse: " + description + "<div><br>";
+        } else {
+            taskEl.innerHTML = "<div> Deltaker(e): " + participant +
+                            "<br> Frist: " + duetime + "<br>" + 
+                            "Beskrivelse: " + description + "<div><br>";
+        } */
 
-        taskOutputEl.appendChild(taskEl);
+        if (document.querySelector("#dropdown").value == "work"){
+            taskOutputEl.appendChild(taskEl);
+
+        } else if (document.querySelector("#dropdown").value == "subjects"){
+            taskOutputEl2.appendChild(taskEl);
+
+        } else if (document.querySelector("#dropdown").value == "various"){
+            taskOutputEl3.appendChild(taskEl);
+            
+        } else{
+            taskOutputEl4.appendChild(taskEl);
+        } 
+
+
+    taskOutputEl.appendChild(taskEl);
+    //taskOutputEl2.appendChild(taskEl);
+    //taskOutputEl3.appendChild(taskEl);
+    //taskOutputEl4.appendChild(taskEl);
+
 
     }
-
     
 
-    /* if(document.querySelector("#dropdown").value == "school"){
+    
+/*
+     if (document.querySelector("#dropdown").value == "work"){
             taskOutputEl.appendChild(taskEl);
-        }else if (document.querySelector("#dropdown").value == "sport"){
+        } else if (document.querySelector("#dropdown").value == "subjects"){
             taskOutputE2.appendChild(taskE1);
-        }else if (document.querySelector("#dropdown").value == "leisure"){
+        } else if (document.querySelector("#dropdown").value == "various"){
             taskOutputE3.appendChild(taskE1);
-        }else{
+        } else{
             taskOutputE4.appendChild(taskE1);
         } */
 
