@@ -7,16 +7,16 @@ function renderTask(){
     const taskOutputEl3 = document.getElementById("combinedOutput3");
     const taskOutputEl4 = document.getElementById("combinedOutput4");
     taskOutputEl.innerHTML = "";
-    taskOutputEl2.innerHTML = "";
-    taskOutputEl3.innerHTML = "";
-    taskOutputEl4.innerHTML = "";
+    //taskOutputEl2.innerHTML = "";
+    //taskOutputEl3.innerHTML = "";
+    //taskOutputEl4.innerHTML = "";
 
     for (const task of taskOutput) {
         const taskEl = document.createElement("div");
         const {participant, duetime, description} = task;
         
         
-        taskEl.innerHTML = "<div style = 'border: 1px solid rgb (0, 0, 0)'> <strong> Deltaker(e): </strong> " + participant +
+        taskEl.innerHTML = "<div style = 'border: 1px solid black'> <strong> Deltaker(e): </strong> " + participant +
                             "<br> <strong> Frist: </strong> " + duetime + "<br>" + 
                             "<strong> Beskrivelse: </strong> " + description + "<div><br>";
         
@@ -45,9 +45,9 @@ function renderTask(){
 
 
     taskOutputEl.appendChild(taskEl);
-    taskOutputEl2.appendChild(taskEl);
-    taskOutputEl3.appendChild(taskEl);
-    taskOutputEl4.appendChild(taskEl);
+    //taskOutputEl2.appendChild(taskEl);
+    //taskOutputEl3.appendChild(taskEl);
+    //taskOutputEl4.appendChild(taskEl);
 
 
     }
