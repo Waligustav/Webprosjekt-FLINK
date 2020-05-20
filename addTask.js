@@ -3,6 +3,9 @@ function renderTask(){
     const taskOutput = JSON.parse(window.localStorage.getItem("taskList")) || [];
     
     const taskOutputEl = document.getElementById("combinedOutput");
+    const taskOutputE2 = document.getElementById("combinedOutput2");
+    const taskOutputE3 = document.getElementById("combinedOutput3");
+    const taskOutputE4 = document.getElementById("combinedOutput4");
     taskOutputEl.innerHTML = "";
 
     for (const task of taskOutput) {
@@ -25,10 +28,17 @@ function renderTask(){
         }
     */
 
-    
-    taskOutputEl.appendChild(taskEl);
 
-        
+    }
+
+    if(document.querySelector("#dropdown").value == "school"){
+        taskOutputEl.appendChild(taskEl);
+    }else if (document.querySelector("#dropdown").value == "sport"){
+        taskOutputE2.appendChild(taskE1);
+    }else if (document.querySelector("#dropdown").value == "leisure"){
+        taskOutputE3.appendChild(taskE1);
+    }else{
+        taskOutputE4.appendChild(taskE1);
     }
 }
     
