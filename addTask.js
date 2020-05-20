@@ -4,13 +4,15 @@ function renderTask(){
     
     // with subject
     const taskOutputEl = document.getElementById("combinedOutput");
+    const taskOutputEl2 = document.getElementById("combinedOutput2");
     taskOutputEl.innerHTML = "";
+    taskOutputEl2.innerHTML = "";
 
     for (const task of taskOutput) {
         const taskEl = document.createElement("div");
         const {subject, participant, duetime, description} = task;
         
-        if (document.querySelector('#dropdown').value == 'school'){
+        /*if (document.querySelector('#dropdown').value == 'school'){
             taskEl.innerHTML = "<div> Fag: " + subject + "<br> Deltaker(e): " + participant +
             "<br> Frist: " + duetime + "<br>" + 
             "Beskrivelse: " + description + "<div><br>";
@@ -18,12 +20,40 @@ function renderTask(){
             taskEl.innerHTML = "<div> Deltaker(e): " + participant +
                             "<br> Frist: " + duetime + "<br>" + 
                             "Beskrivelse: " + description + "<div><br>";
+        } */
+
+        switch(document.querySelector('#dropdown').value) {
+            case 'school':
+                taskEl.innerHTML = "<div> Fag: " + subject + "<br> Deltaker(e): " + participant +
+                "<br> Frist: " + duetime + "<br>" + 
+                "Beskrivelse: " + description + "<div><br>";
+                break;
+
+            case 'sport':
+
+                taskEl.innerHTML = "<div> Deltaker(e): " + participant +
+                "<br> Frist: " + duetime + "<br>" + 
+                "Beskrivelse: " + description + "<div><br>";
+                break;
+
+            case 'leisure':
+                taskEl.innerHTML = "<div> Deltaker(e): " + participant +
+                "<br> Frist: " + duetime + "<br>" + 
+                "Beskrivelse: " + description + "<div><br>";
+                break;
+
+            case 'various':
+                taskEl.innerHTML = "<div> Deltaker(e): " + participant +
+                "<br> Frist: " + duetime + "<br>" + 
+                "Beskrivelse: " + description + "<div><br>";
+                break;
         }
 
-    
-    taskOutputEl.appendChild(taskEl);
 
-        
+
+    taskOutputEl.appendChild(taskEl);
+    taskOutputEl2.appendChild(taskEl);
+ 
     }
 
 }
