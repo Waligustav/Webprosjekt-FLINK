@@ -16,22 +16,19 @@
     </div>
     <section id = "mainview">
         <!-- Main page presentation text -->
-        <h1 id="logoText">Kidsbook</h1>
+        <h1 id="logoText">E-booker</h1>
         <!-- Form start -->
         <form onsubmit = "addTask(event)">
         <section id = "formInput">
             <form class = "form-input">
                 <select id = "dropdown" name = "dropdown" required>
+                <option value = "categories">Kategori</option>
+                <option value = "work">Jobb</option>
                 <option value = "subjects">Emner</option>
-                <option value = "school">Skolefag</option>
-                <option value = "sport">Sport</option>
-                <option value = "leisure">Fritid</option>
+                <option value = "hobby">Hobby</option>
                 <option value = "various">Diverse</option>
                 </select>
             </form>
-            <div>
-                <input name = "subject" type = "text" class = "form-input" placeholder = "Fag (valgfri)">
-            </div>
             <div>
                 <input name = "participant" type = "text" class = "form-input" placeholder = "Deltaker" required>
             </div>
@@ -59,15 +56,15 @@
         <div class="verticalLine"> </div>
 
         <div id="overviewOne" class="taskOverview">
-            <!-- output: school -->
+            <!-- output: work -->
             <div id = "combinedOutput"></div> 
         </div>
         <div id="overviewTwo" class="taskOverview">
-            <!-- output: sport -->
+            <!-- output: subjects -->
             <div id = "combinedOutput2"></div> 
         </div>
         <div id="overviewThree" class="taskOverview">
-            <!-- output: leisure -->
+            <!-- output: hobby -->
             <div id = "combinedOutput3"></div> 
         </div>
         <div id="overviewFour" class="taskOverview">
@@ -75,9 +72,9 @@
             <div id = "combinedOutput4"></div> 
         </div>
         
-        <input id="taskBtnOne" type="button" value="Skolefag" class="taskBtns">
-        <input id="taskBtnTwo" type="button" value="Sport" class="taskBtns">
-        <input id="taskBtnThree" type="button" value="Fritid" class="taskBtns">
+        <input id="taskBtnOne" type="button" value="Jobb" class="taskBtns">
+        <input id="taskBtnTwo" type="button" value="Emner" class="taskBtns">
+        <input id="taskBtnThree" type="button" value="Hobby" class="taskBtns">
         <input id="taskBtnFour" type="button" value="Diverse" class="taskBtns">
     </section>
 </body>

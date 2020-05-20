@@ -2,15 +2,23 @@
 function renderTask(){
     const taskOutput = JSON.parse(window.localStorage.getItem("taskList")) || [];
     
-    // with subject
     const taskOutputEl = document.getElementById("combinedOutput");
     const taskOutputEl2 = document.getElementById("combinedOutput2");
+    const taskOutputEl3 = document.getElementById("combinedOutput3");
+    const taskOutputEl4 = document.getElementById("combinedOutput4");
     taskOutputEl.innerHTML = "";
     taskOutputEl2.innerHTML = "";
+    taskOutputEl3.innerHTML = "";
+    taskOutputEl4.innerHTML = "";
 
     for (const task of taskOutput) {
         const taskEl = document.createElement("div");
-        const {subject, participant, duetime, description} = task;
+        const {participant, duetime, description} = task;
+        
+        
+        taskEl.innerHTML = "<div style = 'border: 1px solid rgb (0, 0, 0)'> <strong> Deltaker(e): </strong> " + participant +
+                            "<br> <strong> Frist: </strong> " + duetime + "<br>" + 
+                            "<strong> Beskrivelse: </strong> " + description + "<div><br>";
         
         /*if (document.querySelector('#dropdown').value == 'school'){
             taskEl.innerHTML = "<div> Fag: " + subject + "<br> Deltaker(e): " + participant +
@@ -22,53 +30,53 @@ function renderTask(){
                             "Beskrivelse: " + description + "<div><br>";
         } */
 
-        switch(document.querySelector('#dropdown').value) {
-            case 'school':
-                taskEl.innerHTML = "<div> Fag: " + subject + "<br> Deltaker(e): " + participant +
-                "<br> Frist: " + duetime + "<br>" + 
-                "Beskrivelse: " + description + "<div><br>";
-                break;
+        if (document.querySelector("#dropdown").value == "work"){
+            taskOutputEl.appendChild(taskEl);
 
-            case 'sport':
+        } else if (document.querySelector("#dropdown").value == "subjects"){
+            taskOutputEl2.appendChild(taskEl);
 
-                taskEl.innerHTML = "<div> Deltaker(e): " + participant +
-                "<br> Frist: " + duetime + "<br>" + 
-                "Beskrivelse: " + description + "<div><br>";
-                break;
-
-            case 'leisure':
-                taskEl.innerHTML = "<div> Deltaker(e): " + participant +
-                "<br> Frist: " + duetime + "<br>" + 
-                "Beskrivelse: " + description + "<div><br>";
-                break;
-
-            case 'various':
-                taskEl.innerHTML = "<div> Deltaker(e): " + participant +
-                "<br> Frist: " + duetime + "<br>" + 
-                "Beskrivelse: " + description + "<div><br>";
-                break;
-        }
-
+        } else if (document.querySelector("#dropdown").value == "various"){
+            taskOutputEl3.appendChild(taskEl);
+            
+        } else{
+            taskOutputEl4.appendChild(taskEl);
+        } 
 
 
     taskOutputEl.appendChild(taskEl);
     taskOutputEl2.appendChild(taskEl);
- 
-    }
+    taskOutputEl3.appendChild(taskEl);
+    taskOutputEl4.appendChild(taskEl);
 
-}
+
+    }
+    
+
+    
+/*
+     if (document.querySelector("#dropdown").value == "work"){
+            taskOutputEl.appendChild(taskEl);
+        } else if (document.querySelector("#dropdown").value == "subjects"){
+            taskOutputE2.appendChild(taskE1);
+        } else if (document.querySelector("#dropdown").value == "various"){
+            taskOutputE3.appendChild(taskE1);
+        } else{
+            taskOutputE4.appendChild(taskE1);
+        } */
+
+    }
     
 // adds data to localStorage
 function addTask(event) {
     event.preventDefault();
     
     const dropdown = document.querySelector("[name = 'dropdown']").value;
-    const subject = document.querySelector("[name = 'subject']").value;
     const participant = document.querySelector("[name = 'participant']").value;
     const duetime = document.querySelector("[name = 'duetime']").value;
     const description = document.querySelector("[name = 'description']").value;
     
-    const task = {dropdown, subject, participant, duetime, description};
+    const task = {dropdown, participant, duetime, description};
     
     const taskList = JSON.parse(window.localStorage.getItem("taskList")) || [];
     taskList.push(task);
