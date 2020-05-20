@@ -2,6 +2,7 @@
 function renderTask(){
     const taskOutput = JSON.parse(window.localStorage.getItem("taskList")) || [];
     
+    // with subject
     const taskOutputEl = document.getElementById("combinedOutput");
     const taskOutputE2 = document.getElementById("combinedOutput2");
     const taskOutputE3 = document.getElementById("combinedOutput3");
@@ -12,21 +13,15 @@ function renderTask(){
         const taskEl = document.createElement("div");
         const {subject, participant, duetime, description} = task;
         
-        taskEl.innerHTML = "<div><b> Fag: </b>" + subject + "<br><b> Deltaker(e): </b>" + participant +
-                            "<br><b> Frist: </b>" + duetime + "<br>" + 
-                            "<b>Beskrivelse: </b>" + description + "<div><br>";
-        
-    /*
-        if (dropdown) {
+        if (document.querySelector('#dropdown').value == 'school'){
             taskEl.innerHTML = "<div> Fag: " + subject + "<br> Deltaker(e): " + participant +
-                            "<br> Frist: " + duetime + "<br>" + 
-                            "Beskrivelse: " + description + "<div><br>";
+            "<br> Frist: " + duetime + "<br>" + 
+            "Beskrivelse: " + description + "<div><br>";
         } else {
             taskEl.innerHTML = "<div> Deltaker(e): " + participant +
                             "<br> Frist: " + duetime + "<br>" + 
                             "Beskrivelse: " + description + "<div><br>";
         }
-    */
 
 
     }
@@ -40,6 +35,7 @@ function renderTask(){
     }else{
         taskOutputE4.appendChild(taskE1);
     }
+
 }
     
 // adds data to localStorage

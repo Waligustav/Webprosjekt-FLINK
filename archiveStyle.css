@@ -41,7 +41,7 @@ body {
     border-radius: 10px;
 }
 
-/*Nudes*/
+/*Images*/
 #pingu {
     position: absolute;
     top: 370px;
@@ -70,3 +70,8 @@ pre {
     font-weight: bold;
     z-index: 1;
 }
+
+#pingu:hover {
+    filter:drop-shadow(0px 0px 50px 
+    rgb(0, 0, 0));
+} 
