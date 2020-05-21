@@ -13,10 +13,10 @@ function renderTask(){
 
     for (const task of taskOutput) {
         const taskEl = document.createElement("div");
-        const {participant, duetime, description} = task;
+        const {participant, duetime, description, } = task;
         
         
-        taskEl.innerHTML = "<div style = 'border: 1px solid black'> <strong> Deltaker(e): </strong> " + participant +
+        taskEl.innerHTML = "<div style = 'border: 1px solid black' draggable = 'true'> <strong> Deltaker(e): </strong> " + participant +
                             "<br> <strong> Frist: </strong> " + duetime + "<br>" + 
                             "<strong> Beskrivelse: </strong> " + description + "<div><br>";
         
@@ -30,6 +30,7 @@ function renderTask(){
                             "Beskrivelse: " + description + "<div><br>";
         } */
 
+        /*
         if (document.querySelector("#dropdown").value == "work"){
             taskOutputEl.appendChild(taskEl);
 
@@ -42,9 +43,28 @@ function renderTask(){
         } else{
             taskOutputEl4.appendChild(taskEl);
         } 
+        */
+
+       if(document.querySelector("#dropdown").value === task.dropdown) {
+        switch (document.querySelector("#dropdown").value) {
+            case "work":
+                taskOutputEl.appendChild(taskEl);
+                break;
+            case "subjects":
+                taskOutputEl2.appendChild(taskEl);   
+                break;
+            case "hobby":
+                taskOutputEl3.appendChild(taskEl);
+                break;
+            case "various":
+                taskOutputEl4.appendChild(taskEl);
+                break;
+        }
+        }
 
 
-    taskOutputEl.appendChild(taskEl);
+
+    //taskOutputEl.appendChild(taskEl);
     //taskOutputEl2.appendChild(taskEl);
     //taskOutputEl3.appendChild(taskEl);
     //taskOutputEl4.appendChild(taskEl);
