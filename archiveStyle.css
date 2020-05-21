@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0; 
+}
+
+body {
+    position: relative;
+}
+
+#archiveText{
+    position: absolute;
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+    font-style: initial;
+    margin-top: 8px;
+    margin-left: 450px;
+    color: rgb(48, 41, 41);
+}
+
+#archiveSec{
+    width: 1280px;
+    height: 720px;
+    margin-left: 319px;
+    margin-top: 71px;
+    position: relative;
+    border: 1px rgb(0, 0, 0) solid;
+    background-color: rgb(197, 200, 190);
+    border-width: 1px;
+    border-radius: 15px;
+}
+
+#output {
+    width: 980px;
+    height: 590px;
+    position: absolute;
+    border: 1px rgb(0, 0, 0) solid;
+    top: 90px;
+    left: 20px;
+    background-color: rgb(170, 170, 70);
+    border-radius: 10px;
+}
+
+/*Images*/
+#logoImage {
+    position: absolute;
+    top: 300px;
+    left: 1000px;
+    width: 150px;
+    z-index: 1;
+    animation: owlSlide 1.5s alternate;
+}
+
+
+@keyframes owlSlide{
+    0%{
+        left: 1250px;
+    }
+    100%{
+        left: 1000px;
+    }
+}
+
+/*Speechbubble in archive*/
+#speechBubble2 {
+    position: relative;
+    background-color: aliceblue;
+    width: 200px;
+    height: 100px;
+    top: 492px;
+    left: 950px;
+    z-index: 0;
+    border: 4px rgb(0, 0, 0) solid;
+    border-radius: 18%;
+    animation: bubbleFade 3s alternate;
+}
+
+
+@keyframes bubbleFade{
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%
+    }
+}
+
+pre {
+    position: absolute;
+    top: 510px;
+    left: 835px;
+    font-size: 19px;
+    font-weight: bold;
+    z-index: 1;
+    animation: bubbleFade 3s alternate;
+}
+
+#logoImage:hover {
+    filter:drop-shadow(0px 0px 50px 
+    rgb(0, 0, 0));
+} 

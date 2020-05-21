@@ -2,6 +2,7 @@
 <head>
     <title>Exam group 29</title>
     <meta charset = "utf-8">
+    <link rel="shortcut icon" type="image/png" href="images/logoImage.png">
     <link href = "style.css" type = "text/css" rel = "stylesheet">
 </head>
 <body>
@@ -14,31 +15,69 @@
         </label>
     </div>
     <section id = "mainview">
+        <!-- Main page presentation text -->
+        <h1 id="logoText">E-booker</h1>
+        <!-- Form start -->
+        <form onsubmit = "addTask(event)">
         <section id = "formInput">
             <form class = "form-input">
-                <select name = "dropdown">
+                <select id = "category" name = "category" required>
+                <option value = "categories">Kategori</option>
+                <option value = "work">Jobb</option>
                 <option value = "subjects">Emner</option>
-                <option value = "school">Skolefag</option>
-                <option value = "sport">Sport</option>
-                <option value = "leisure">Fritid</option>
+                <option value = "hobby">Hobby</option>
                 <option value = "various">Diverse</option>
                 </select>
             </form>
             <div>
-                <input name = "participant" type = "text" class = "form-input" placeholder = "Deltaker">
-            </div>
-            <!-- Frist for oppgave -->
-            <div>
-                <textarea name = "description" class = "form-input" placeholder = "Beskrivelse.."></textarea>
+                <input name = "participant" type = "text" class = "form-input" placeholder = "Deltaker" required>
             </div>
             <div>
-                <input type = "submit" id = "submitBtn" value = "+"/>
+                <input name = "duetime" type = "text" class = "form-input" placeholder = "Frist: 10/06" required>
+            </div>
+            <div>
+                <textarea name = "description" id = "form-desc" placeholder = "Beskrivelse.." required></textarea>
+            </div>
+            <div>
+                <input type = "submit" id = "submitBtn" value = "Legg til"/>
             </div>
         </section>
-        <img src = "Images/pingu.png" id = "helpingCharacter" alt = "Pingu hjelpe karakter">
+    </form>
+        <!-- Form end -->
+        <!-- Hyperlink to archive -->
+        <a href="archive.html">
+            <img src="images/archive.png" id="transportToArchivePic" alt="Takes a user to thier archive">
+        </a>
+
+        <div id="speechBubble"></div>
+        <pre ID="speech">LAG NY OPPGAVE</pre>
+
+        <img src = "Images/logoImage.png" id = "helpingCharacter" alt = "Owl help character">
         <div class="verticalLine"> </div>
+
+        <div id="overviewOne" class="taskOverview">
+            <!-- output: work -->
+            <div id = "combinedOutput"></div> 
+        </div>
+        <div id="overviewTwo" class="taskOverview">
+            <!-- output: subjects -->
+            <div id = "combinedOutput2"></div> 
+        </div>
+        <div id="overviewThree" class="taskOverview">
+            <!-- output: hobby -->
+            <div id = "combinedOutput3"></div> 
+        </div>
+        <div id="overviewFour" class="taskOverview">
+            <!-- output: various -->
+            <div id = "combinedOutput4"></div> 
+        </div>
+        
+        <input id="taskBtnOne" type="button" value="Jobb" class="taskBtns">
+        <input id="taskBtnTwo" type="button" value="Emner" class="taskBtns">
+        <input id="taskBtnThree" type="button" value="Hobby" class="taskBtns">
+        <input id="taskBtnFour" type="button" value="Diverse" class="taskBtns">
     </section>
 </body>
-<script src = "member.js"></script>
-<script src = "task.js"></script>
+<script src = "addTask.js"></script>
+<script src = "taskOverview.js"></script>
 </html>

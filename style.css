@@ -3,6 +3,17 @@ body {
     position: relative;
 }
 
+#logoText{
+    position: absolute;
+    text-align: center;
+    font-weight: bold;
+    font-size: 50px;
+    font-style: initial;
+    margin-top: 8px;
+    margin-left: 650px;
+    color: rgb(48, 41, 41);
+}
+
 #mainview {
     width: 1280px;
     height: 720px;
@@ -12,6 +23,7 @@ body {
     margin: 0 auto;
     /*margin-top: 70px;*/
     border-width: 1px;
+    border-radius: 15px;
 }
 
 #formInput {
@@ -21,12 +33,19 @@ body {
     border: 1px rgb(0, 0, 0) dashed;
     margin-top: 360px;
     margin-left: 13px;
+    border-radius: 5px;
 }
 
 .form-input {
-    width: 200px;
+    width: 202px;
     height: 17px;
 }
+
+#form-desc {
+    width: 202px;
+    height: 60px;
+}
+
 
 .verticalLine {
     border-left: 2px solid rgb(0, 0, 0);
@@ -47,15 +66,155 @@ body {
     position: absolute;
     margin-right: 50px;
     align-content: center;
-    width: 200px;
-    margin-top: 110px;
-    margin-left: 70px;
+    width: 150px;
+    margin-top: 32px;
+    margin-left: 50px;
+    animation: owlFall 3s alternate;
+}
+
+
+@keyframes owlFall{
+    0%{
+        margin-top: -250px;
+    }
+    100%{
+        margin-top: 32px;
+    }
+}
+
+#helpingCharacter:hover {
+    filter:drop-shadow(0px 0px 50px 
+    rgb(0, 0, 0));
 }
 
 #submitBtn {
-    width: 40px;
+    width: 60px;
     height: 30px;
     background-color:rgb(255, 255, 255);
     border: solid 1px rgb(0, 0, 0);
     border-radius: 80px;
+}
+
+/* settings for main page task overview */
+.taskOverview{
+    position: absolute;
+    width: 650px;
+    height: 500px;
+    background-color: rgb(179, 184, 145);
+    border: solid 1px rgb(0, 0, 0);
+    margin-top: -650px;
+    margin-left: 445px;
+    overflow: scroll;
+    border-radius: 5px;
+}
+
+.taskOverview::-webkit-scrollbar{
+    width: 10px;
+}
+
+.taskOverview::-webkit-scrollbar-track{
+    background: rgb(207, 198, 198);
+}
+
+.taskOverview::-webkit-scrollbar-thumb{
+    background: rgb(109, 105, 105);
+}
+
+.taskOverview::-webkit-scrollbar-thumb:hover{
+    background: rgb(109, 105, 105);
+}
+
+#overviewOne{
+    background-color: rgb(184, 145, 145);
+    display: block;
+}
+
+#overviewTwo{
+    background-color: rgb(184, 166, 145);
+    display: none;
+}
+
+#overviewThree{
+    background-color: rgb(184, 183, 145);
+    display: none;
+}
+
+#overviewFour{
+    background-color: rgb(145, 184, 176);
+    display: none;
+}
+
+/* settings for main page task buttons */
+.taskBtns{
+    position: absolute;
+    width: 120px;
+    height: 40px;
+    background-color: rgb(213, 219, 168);
+    border: solid 1px rgb(0, 0, 0);
+    margin-left: 325px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+    font-style: initial;
+    border-radius: 3px;
+}
+
+#taskBtnOne{
+    margin-top: -650px;
+    background-color: rgb(184, 145, 145);
+}
+
+#taskBtnTwo{
+    margin-top: -608px;
+    background-color: rgb(184, 166, 145);
+}
+
+#taskBtnThree{
+    margin-top: -566px;
+    background-color: rgb(184, 183, 145);
+}
+
+#taskBtnFour{
+    margin-top: -524px;
+    background-color: rgb(145, 184, 176);
+}
+
+
+/*Images*/
+#transportToArchivePic{
+    position: absolute; 
+    width: 100px;
+    top: 580px;
+    left: 1100px;
+}
+
+/*Speech-Bubble*/
+#speech{
+    position: absolute;
+    font-weight: bold;
+    font-size: 20px;
+    top: 227px;
+    left: 45px;
+    animation: bubbleFade2 4s alternate;
+}
+
+@keyframes bubbleFade2{
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%
+    }
+}
+
+#speechBubble{
+    position: absolute;
+    width: 180px;
+    height: 60px;
+    top: 227px;
+    left: 30px;
+    border: 4.2px rgb(0, 0, 0) solid;
+    border-radius: 20px;
+    background-color: white;
+    animation: bubbleFade2 3s alternate;
 }
