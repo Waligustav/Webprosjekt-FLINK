@@ -218,3 +218,7 @@ body {
     background-color: white;
     animation: bubbleFade2 3s alternate;
 }
+
+#taskInnerHTML {
+    border: 1px solid rgb(0, 0, 0);
+}
