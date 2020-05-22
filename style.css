@@ -222,3 +222,14 @@ body {
 #taskInnerHTML {
     border: 1px solid rgb(0, 0, 0);
 }
+
+#myProgress {
+    width: 100%;
+    background-color: grey;
+  }
+  
+  #myBar {
+    width: 1%;
+    height: 21px;
+    background-color: rgb(235, 173, 42);
+  }

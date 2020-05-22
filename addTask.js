@@ -13,13 +13,17 @@ function renderTask(){
 
     for (const task of taskOutput) {
         const taskEl = document.createElement("div");
-        const {participant, duetime, description, } = task;
+        const {participant, duetime, description, status} = task;
         
         // the output text
-        taskEl.innerHTML = "<div id = 'taskInnerHTML' draggable = 'true'>" + 
-                            "<input type='checkbox' id='myCheck' onclick='myFunction()'> <strong> Deltaker(e): </strong> " + participant +
+        taskEl.innerHTML = "<div id = 'taskInnerHTML' draggable = 'true'> <strong> Deltaker(e): </strong> " + participant +
                             "<br> <strong> Frist: </strong> " + duetime + "<br>" + 
-                            "<strong> Beskrivelse: </strong> " + description + "<div>";
+                            "<strong> Beskrivelse: </strong> " + description  + "<br>" +
+                            "<button onclick='move()'>Status</button>" +
+                            "<div id='myProgress'>" + "<div id='myBar'></div>" + 
+                          "</div></div>";
+
+        //<input type = 'checkbox' id = 'myCheck' onclick = 'myFunction()'>
         
         // into the different subjects
         switch (document.querySelector("#category").value && task.category) {
@@ -53,8 +57,9 @@ function addTask(event) {
     const participant = document.querySelector("[name = 'participant']").value;
     const duetime = document.querySelector("[name = 'duetime']").value;
     const description = document.querySelector("[name = 'description']").value;
+    const status = false;
     
-    const task = {category, participant, duetime, description};
+    const task = {category, participant, duetime, description, status};
     
     const taskList = JSON.parse(window.localStorage.getItem("taskList")) || [];
     taskList.push(task);
