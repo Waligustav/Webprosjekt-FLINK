@@ -14,7 +14,23 @@
     <!--Hovedboksen-->
     <section id="archiveSec">
         <h1 id="archiveText">E-booker arkiv</h1>
-        <div id="output"></div>
+
+        <div id="aOverviewOne" class="archiveOverview">
+            <!-- archive-output: work -->
+            <div id="archiveOutput"></div>
+        </div>
+        <div id="aOverviewTwo" class="archiveOverview">
+            <!-- archive-output: subjects -->
+            <div id="archiveOutput2"></div>
+        </div>
+        <div id="aOverviewThree" class="archiveOverview">
+            <!-- archive-output: hobby -->
+            <div id="archiveOutput3"></div>
+        </div>
+        <div id="aOverviewFour" class="archiveOverview">
+            <!-- archive-output: various -->
+            <div id="archiveOutput4"></div>
+        </div>
         <a href="index.html">
             <img src="images/logoImage.png" alt="Our dearly logo mascot Owl!" id="logoImage">
         </a>
@@ -27,8 +43,13 @@
              komme tilbake til
                 forsiden!
         </pre> 
+        <input id="archiveBtnOne" type="button" value="Jobb" class="archiveBtns">
+        <input id="archiveBtnTwo" type="button" value="Emner" class="archiveBtns">
+        <input id="archiveBtnThree" type="button" value="Hobby" class="archiveBtns">
+        <input id="archiveBtnFour" type="button" value="Diverse" class="archiveBtns">
     </section>
 
 <script src="archive.js"></script>
+<script src = "archiveOverview.js"></script>
 </body>
 </html>
