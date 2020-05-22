@@ -30,15 +30,34 @@ body {
     border-radius: 15px;
 }
 
-#output {
+.archiveOverview {
     width: 980px;
-    height: 590px;
+    height: 540px;
     position: absolute;
     border: 1px rgb(0, 0, 0) solid;
-    top: 90px;
+    top: 120px;
     left: 20px;
-    background-color: rgb(170, 170, 70);
     border-radius: 10px;
+}
+
+#aOverviewOne{
+    background-color: rgb(184, 145, 145);
+    display: block;
+}
+
+#aOverviewTwo{
+    background-color: rgb(184, 166, 145);
+    display: none;
+}
+
+#aOverviewThree{
+    background-color: rgb(184, 183, 145);
+    display: none;
+}
+
+#aOverviewFour{
+    background-color: rgb(145, 184, 176);
+    display: none;
 }
 
 /*Images*/
@@ -99,3 +118,36 @@ pre {
     filter:drop-shadow(0px 0px 50px 
     rgb(0, 0, 0));
 } 
+
+.archiveBtns{
+    position: absolute;
+    width: 120px;
+    height: 40px;
+    border: solid 1px rgb(0, 0, 0);
+    margin-top: -27px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 20px;
+    font-style: initial;
+    border-radius: 3px;
+}
+
+#archiveBtnOne{
+    margin-left: 20px;
+    background-color: rgb(184, 145, 145);
+}
+
+#archiveBtnTwo{
+    margin-left: 140px;
+    background-color: rgb(184, 166, 145);
+}
+
+#archiveBtnThree{
+    margin-left: 260px;
+    background-color: rgb(184, 183, 145);
+}
+
+#archiveBtnFour{
+    margin-left: 380px;
+    background-color: rgb(145, 184, 176);
+}

@@ -100,7 +100,6 @@ body {
     position: absolute;
     width: 650px;
     height: 500px;
-    background-color: rgb(179, 184, 145);
     border: solid 1px rgb(0, 0, 0);
     margin-top: -650px;
     margin-left: 445px;
@@ -149,7 +148,6 @@ body {
     position: absolute;
     width: 120px;
     height: 40px;
-    background-color: rgb(213, 219, 168);
     border: solid 1px rgb(0, 0, 0);
     margin-left: 325px;
     font-weight: bold;
