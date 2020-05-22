@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="login.css">
+    
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    
+    <script>
+    function passvalues()
+        {
+            var firstname=document.getElementById("txt").value;
+            localStorage.setItem("textvalue",firstname);
+            return false;
+        }
+    
+    </script>
+
+<title>E-booker | Innlogging</title>
+</head>
+
+<body>
+    
+    <div class="loginbox">
+        <!--avataren på innlogginskjema-->
+    <img src="profilepic.png" class="avatar">
+        <h1>Logg inn</h1>
+        <br>
+        
+        
+        <form action="index.html">
+        <legend>Brukernavn</legend>
+        
+        <input type="text" id="txt" placeholder="Skriv inn brukernavn" required>
+        
+        <input type="Submit" class="button" value="Logg inn" onclick="passvalues();">
+
+        </form>
+        
+        
+    </div>
+    
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital@1&family=Roboto:ital,wght@1,500&display=swap');
+</style>
+
+</body>
+</html>

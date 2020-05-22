@@ -100,7 +100,6 @@ body {
     position: absolute;
     width: 650px;
     height: 500px;
-    background-color: rgb(179, 184, 145);
     border: solid 1px rgb(0, 0, 0);
     margin-top: -650px;
     margin-left: 445px;
@@ -149,7 +148,6 @@ body {
     position: absolute;
     width: 120px;
     height: 40px;
-    background-color: rgb(213, 219, 168);
     border: solid 1px rgb(0, 0, 0);
     margin-left: 325px;
     font-weight: bold;
@@ -217,4 +215,37 @@ body {
     border-radius: 20px;
     background-color: white;
     animation: bubbleFade2 3s alternate;
+}
+
+#notificationBell{
+    display: none;
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    top: 10px;
+    right: 20px;
+    animation: pulsingAnimation 2s linear infinite;
+}
+
+#notificationBell:hover{
+    filter:drop-shadow(0px 0px 50px 
+    rgb(250, 143, 3));
+    border: 2px rgb(218, 141, 41) solid;
+    border-radius: 50px;
+}
+
+@keyframes pulsingAnimation
+{
+    0%
+    {
+        opacity: 70%;
+    }
+    50%
+    {
+        opacity: 20%;
+    }
+    100%
+    {
+        opacity: 70%;
+    }
 }

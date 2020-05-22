@@ -10,9 +10,11 @@
         <label>
             <input name = "image" type = "file" value = "Profilbilde"/>
         </label>
-        <label>
-            Brukernavn
-        </label>
+        <!--Her ser du navnet på den som er logget inn-->
+       Hei, <span id="result"></span>!
+        <script>
+        document.getElementById("result").innerHTML=localStorage.getItem("textvalue");
+        </script>
     </div>
 
     <section id = "mainview">
@@ -51,6 +53,8 @@
             <div></div>
         </a>
 
+        <img id="notificationBell" src="Images/notificationBell.png" onclick="notificationTrigger()" alt="notification icon">
+    
         <div id="speechBubble"></div>
         <pre ID="speech">LAG NY OPPGAVE</pre>
 
