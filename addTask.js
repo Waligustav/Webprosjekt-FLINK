@@ -16,7 +16,7 @@ function renderTask(){
         const {participant, duetime, description, } = task;
         
         // the output text
-        taskEl.innerHTML = "<div style = 'border: 1px solid black' draggable = 'true'> <strong> Deltaker(e): </strong> " + participant +
+        taskEl.innerHTML = "<div style = 'border: 1px solid black' draggable='true'> <strong> Deltaker(e): </strong> " + participant +
                             "<br> <strong> Frist: </strong> " + duetime + "<br>" + 
                             "<strong> Beskrivelse: </strong> " + description + "<div>";
         

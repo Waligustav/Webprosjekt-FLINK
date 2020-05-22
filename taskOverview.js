@@ -62,8 +62,44 @@ function showContent(){
 } 
 */
 
+(function(){
+    //exclude older browsers by the features we need them to support
+    //and legacy opera explicitly so we don't waste time on a dead browser
+    if(
+      !document.querySelectorAll || !('draggable' in document.createElement('span'))) 
+    { return; }
+    
+    for(var 
+      outputs = document.querySelectorAll('[data-draggable="dragtarget"]'), 
+      count = outputs.length, 
+      i = 0; i < count; i ++)
+      {
+        outputs[i].setAttribute('draggable', 'true');
+      }
 
+    var dragtarget = null;
 
+        document.addEventListener('dragstart', function(e){
+          dragtarget = e.target;
+          e.dataTransfer.setData('text', '');
+        }, false);
 
+        document.addEventListener('dragover', function(e){
+          if(dragtarget){
+            e.preventDefault();
+          }
+        }, false);	
+
+        document.addEventListener('drop', function(e){
+           if(e.target.getAttribute('data-draggable') == 'target'){
+             e.target.appendChild(dragtarget);
+             e.preventDefault();
+          }
+        }, false);
+        
+        document.addEventListener('dragend', function(e){
+          dragtarget = null;
+        }, false);  
+ })();	
 
 

@@ -30,7 +30,7 @@ body {
     border-radius: 15px;
 }
 
-#output {
+#archivedOutput {
     width: 980px;
     height: 590px;
     position: absolute;

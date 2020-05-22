@@ -218,3 +218,26 @@ body {
     background-color: white;
     animation: bubbleFade2 3s alternate;
 }
+
+  .userOutput {
+    position: relative;
+    width: 640px;
+    top: 5px;
+    left: 5px;
+    cursor: pointer;
+  }
+  
+  .hold {
+    border: solid 1px black;
+  }
+  
+  .archive {
+    width: 100px;
+    margin: 10px;
+    background:rgb(217, 214, 213);
+  }
+  
+  .hovered {
+    background:rgb(217, 214, 213);
+    border: dashed  black;
+  }
