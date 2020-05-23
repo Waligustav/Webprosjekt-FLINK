@@ -1,12 +1,15 @@
+/* General margin & padding on page*/
 * {
     margin: 0;
     padding: 0; 
 }
 
+/* Body settings */
 body {
     position: relative;
 }
 
+/* Page presentation text */
 #archiveText{
     position: absolute;
     text-align: center;
@@ -18,11 +21,11 @@ body {
     color: rgb(48, 41, 41);
 }
 
+/* Main container */
 #archiveSec{
     width: 1280px;
     height: 720px;
     margin-left: 319px;
-    margin-top: 71px;
     position: relative;
     border: 1px rgb(0, 0, 0) solid;
     background-color: rgb(197, 200, 190);
@@ -30,6 +33,7 @@ body {
     border-radius: 15px;
 }
 
+/* Main page task overview */
 .archiveOverview {
     width: 980px;
     height: 540px;
@@ -60,7 +64,15 @@ body {
     display: none;
 }
 
-/*Images*/
+/* Top section bar */
+#participant-bar {
+    width: 1280px;
+    margin: 0 auto;
+    text-align: right;
+    margin-top: 50px;
+}
+
+/* Hyperlink logo to main-page */
 #logoImage {
     position: absolute;
     top: 300px;
@@ -69,7 +81,6 @@ body {
     z-index: 1;
     animation: owlSlide 1.5s alternate;
 }
-
 
 @keyframes owlSlide{
     0%{
@@ -80,7 +91,12 @@ body {
     }
 }
 
-/*Speechbubble in archive*/
+#logoImage:hover {
+    filter:drop-shadow(0px 0px 50px 
+    rgb(0, 0, 0));
+}
+
+/* Hyperlink information speech-bubble */
 #speechBubble2 {
     position: relative;
     background-color: aliceblue;
@@ -94,7 +110,6 @@ body {
     animation: bubbleFade 3s alternate;
 }
 
-
 @keyframes bubbleFade{
     0%{
         opacity: 0%;
@@ -104,7 +119,7 @@ body {
     }
 }
 
-pre {
+#infoText {
     position: absolute;
     top: 510px;
     left: 835px;
@@ -112,13 +127,9 @@ pre {
     font-weight: bold;
     z-index: 1;
     animation: bubbleFade 3s alternate;
-}
-
-#logoImage:hover {
-    filter:drop-shadow(0px 0px 50px 
-    rgb(0, 0, 0));
 } 
 
+/* Archive task buttons */
 .archiveBtns{
     position: absolute;
     width: 120px;

@@ -1,8 +1,16 @@
+/* General margin & padding on page*/
+* {
+    margin: 0;
+    padding: 0; 
+}
+
+/* Body settings */
 body {
     background-color: rgb(255, 255, 255);
     position: relative;
 }
 
+/* Page presentation text */
 #logoText{
     position: absolute;
     text-align: center;
@@ -14,6 +22,7 @@ body {
     color: rgb(48, 41, 41);
 }
 
+/* Main container */
 #mainview {
     width: 1280px;
     height: 720px;
@@ -21,11 +30,11 @@ body {
     border: 1px rgb(0, 0, 0) solid;
     background-color: rgb(217, 214, 213);
     margin: 0 auto;
-    /*margin-top: 70px;*/
     border-width: 1px;
     border-radius: 15px;
 }
 
+/* User Input form */
 #formInput {
     width: 220px;
     height: 220px;
@@ -46,7 +55,15 @@ body {
     height: 60px;
 }
 
+#submitBtn {
+    width: 60px;
+    height: 30px;
+    background-color:rgb(255, 255, 255);
+    border: solid 1px rgb(0, 0, 0);
+    border-radius: 80px;
+}
 
+/* Vertical line dividing main page */
 .verticalLine {
     border-left: 2px solid rgb(0, 0, 0);
     height: 690px;
@@ -55,6 +72,7 @@ body {
     margin-bottom: 15px;
 }
 
+/* Top section bar */
 #participant-bar {
     width: 1280px;
     margin: 0 auto;
@@ -62,6 +80,7 @@ body {
     margin-top: 50px;
 }
 
+/* Logo/mascot */
 #helpingCharacter {
     position: absolute;
     margin-right: 50px;
@@ -71,7 +90,6 @@ body {
     margin-left: 50px;
     animation: owlFall 3s alternate;
 }
-
 
 @keyframes owlFall{
     0%{
@@ -87,15 +105,39 @@ body {
     rgb(0, 0, 0));
 }
 
-#submitBtn {
-    width: 60px;
-    height: 30px;
-    background-color:rgb(255, 255, 255);
-    border: solid 1px rgb(0, 0, 0);
-    border-radius: 80px;
+/* Information Speech-Bubble */
+#speech{
+    position: absolute;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    top: 247px;
+    left: 45px;
+    animation: bubbleFade2 4s alternate;
 }
 
-/* settings for main page task overview */
+@keyframes bubbleFade2{
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%
+    }
+}
+
+#speechBubble{
+    position: absolute;
+    width: 180px;
+    height: 60px;
+    top: 227px;
+    left: 30px;
+    border: 4.2px rgb(0, 0, 0) solid;
+    border-radius: 20px;
+    background-color: white;
+    animation: bubbleFade2 3s alternate;
+}
+
+/* Main page task overview */
 .taskOverview{
     position: absolute;
     width: 650px;
@@ -143,7 +185,7 @@ body {
     display: none;
 }
 
-/* settings for main page task buttons */
+/* Main page task buttons */
 .taskBtns{
     position: absolute;
     width: 120px;
@@ -177,8 +219,7 @@ body {
     background-color: rgb(145, 184, 176);
 }
 
-
-/*Images*/
+/* Hyperlink logo to archive */
 #transportToArchivePic{
     position: absolute; 
     width: 100px;
@@ -186,37 +227,7 @@ body {
     left: 1100px;
 }
 
-/*Speech-Bubble*/
-#speech{
-    position: absolute;
-    font-weight: bold;
-    font-size: 20px;
-    top: 227px;
-    left: 45px;
-    animation: bubbleFade2 4s alternate;
-}
-
-@keyframes bubbleFade2{
-    0%{
-        opacity: 0%;
-    }
-    100%{
-        opacity: 100%
-    }
-}
-
-#speechBubble{
-    position: absolute;
-    width: 180px;
-    height: 60px;
-    top: 227px;
-    left: 30px;
-    border: 4.2px rgb(0, 0, 0) solid;
-    border-radius: 20px;
-    background-color: white;
-    animation: bubbleFade2 3s alternate;
-}
-
+/* Notification image */
 #notificationBell{
     display: none;
     position: absolute;

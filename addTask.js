@@ -1,41 +1,43 @@
-// gets data from localStorage
+// Gets data from localStorage
 function renderTask(){
     const taskOutput = JSON.parse(window.localStorage.getItem("taskList")) || [];
     
+    // Gets HTML-output divs
     const taskOutputEl = document.getElementById("combinedOutput");
-    const taskOutputEl2 = document.getElementById("combinedOutput2");
-    const taskOutputEl3 = document.getElementById("combinedOutput3");
-    const taskOutputEl4 = document.getElementById("combinedOutput4");
+    const taskOutputE2 = document.getElementById("combinedOutput2");
+    const taskOutputE3 = document.getElementById("combinedOutput3");
+    const taskOutputE4 = document.getElementById("combinedOutput4");
     taskOutputEl.innerHTML = "";
-    taskOutputEl2.innerHTML = "";
-    taskOutputEl3.innerHTML = "";
-    taskOutputEl4.innerHTML = "";
+    taskOutputE2.innerHTML = "";
+    taskOutputE3.innerHTML = "";
+    taskOutputE4.innerHTML = "";
 
+    // Loop to put local-storage values into their matching output-tab
     for (const task of taskOutput) {
         const taskEl = document.createElement("div");
-        const {participant, duetime, description, } = task;
+        const {participant, duetime, description} = task;
         
-        // the output text
+        // Output text
         taskEl.innerHTML = "<div style = 'border: 1px solid black' draggable = 'true'> <strong> Deltaker(e): </strong> " + participant +
                             "<br> <strong> Frist: </strong> " + duetime + "<br>" + 
                             "<strong> Beskrivelse: </strong> " + description + "<div>";
         
-        // into the different subjects
+        // Text into the different tabs
         switch (document.querySelector("#category").value && task.category) {
             case "work":
                 taskOutputEl.appendChild(taskEl);
                 break;
 
             case "subjects":
-                taskOutputEl2.appendChild(taskEl);   
+                taskOutputE2.appendChild(taskEl);   
                 break;
 
             case "hobby":
-                taskOutputEl3.appendChild(taskEl);
+                taskOutputE3.appendChild(taskEl);
                 break;
 
             case "various":
-                taskOutputEl4.appendChild(taskEl);
+                taskOutputE4.appendChild(taskEl);
                 break;
         }
 
@@ -43,7 +45,7 @@ function renderTask(){
         var currentDate = new Date();
         currentDate = ("0"+currentDate.getDate()).slice(-2) + "/" + ("0"+(currentDate.getMonth() + 1)).slice(-2) + "/" + currentDate.getFullYear();
 
-        // Trigger notification image if a projects deadline is today
+        // Display clickable notification image if any projects deadline has passed
         if(task.duetime < currentDate){
             document.getElementById("notificationBell").style.display = "block";
         }else{
@@ -53,13 +55,13 @@ function renderTask(){
     }
 }
 
-// alerts notification message
+// Alerts notification message on notification image onclick
 function notificationTrigger(){
     alert("Du har prosjekt med utgått tidsfrist!");
 }
 
     
-// adds data to localStorage
+// Adds user-input data to localStorage
 function addTask(event) {
     event.preventDefault();
     
@@ -79,7 +81,7 @@ function addTask(event) {
     event.target.reset();
 }
 
-// runs when new inputs get added
+// Runs when new inputs get added
 window.addEventListener("storage", function(event) {
         if (event.key === "taskList") {
             renderTask();
@@ -87,5 +89,5 @@ window.addEventListener("storage", function(event) {
 });
 
     
-// output will stay even when user update the page
+// Output will stay even when user update the page
 renderTask();
