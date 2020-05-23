@@ -63,10 +63,6 @@ function showContent(){
 */
 
 
-function notificationTrigger(){
-    alert("Husk! Sideprosjekt #1 skal utføres i løpet av dagen");
-}
-
 
 
 
