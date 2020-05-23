@@ -238,7 +238,7 @@ body {
 {
     0%
     {
-        opacity: 70%;
+        opacity: 90%;
     }
     50%
     {
@@ -246,6 +246,6 @@ body {
     }
     100%
     {
-        opacity: 70%;
+        opacity: 90%;
     }
 }
