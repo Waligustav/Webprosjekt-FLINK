@@ -108,9 +108,10 @@ body {
 /* Information Speech-Bubble */
 #speech{
     position: absolute;
+    text-align: center;
     font-weight: bold;
     font-size: 20px;
-    top: 227px;
+    top: 247px;
     left: 45px;
     animation: bubbleFade2 4s alternate;
 }
