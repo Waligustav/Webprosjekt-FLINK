@@ -39,10 +39,25 @@ function renderTask(){
                 break;
         }
 
-    }
-    
+        // Variable containing todays date (dd/mm/yyyy)
+        var currentDate = new Date();
+        currentDate = ("0"+currentDate.getDate()).slice(-2) + "/" + ("0"+(currentDate.getMonth() + 1)).slice(-2) + "/" + currentDate.getFullYear();
+
+        // Trigger notification image if a projects deadline is today
+        if(task.duetime < currentDate){
+            document.getElementById("notificationBell").style.display = "block";
+        }else{
+            document.getElementById("notificationBell").style.display = "none";
+        }
 
     }
+}
+
+// alerts notification message
+function notificationTrigger(){
+    alert("Du har prosjekt med utgått tidsfrist!");
+}
+
     
 // adds data to localStorage
 function addTask(event) {
@@ -70,6 +85,7 @@ window.addEventListener("storage", function(event) {
             renderTask();
         }
 });
+
     
 // output will stay even when user update the page
 renderTask();
