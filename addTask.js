@@ -1,23 +1,30 @@
-// gets data from localStorage
+// Gets data from localStorage
 function renderTask(){
     const taskOutput = JSON.parse(window.localStorage.getItem("taskList")) || [];
     
+    // Gets HTML-output divs
     const taskOutputEl = document.getElementById("combinedOutput");
-    const taskOutputEl2 = document.getElementById("combinedOutput2");
-    const taskOutputEl3 = document.getElementById("combinedOutput3");
-    const taskOutputEl4 = document.getElementById("combinedOutput4");
+    const taskOutputE2 = document.getElementById("combinedOutput2");
+    const taskOutputE3 = document.getElementById("combinedOutput3");
+    const taskOutputE4 = document.getElementById("combinedOutput4");
     taskOutputEl.innerHTML = "";
-    taskOutputEl2.innerHTML = "";
-    taskOutputEl3.innerHTML = "";
-    taskOutputEl4.innerHTML = "";
+    taskOutputE2.innerHTML = "";
+    taskOutputE3.innerHTML = "";
+    taskOutputE4.innerHTML = "";
 
+    // Loop to put local-storage values into their matching output-tab
     for (const task of taskOutput) {
         const taskEl = document.createElement("div");
         const {participant, duetime, description} = task;
         
+<<<<<<< HEAD
         // the output text
                 /* Dette er den opprinnelige jeg lagde før vi skulle implementere status */
         /*taskEl.innerHTML = "<div id = 'taskInnerHTML' draggable = 'true'> <strong> Deltaker(e): </strong> " + participant +
+=======
+        // Output text
+        taskEl.innerHTML = "<div style = 'border: 1px solid black' draggable = 'true'> <strong> Deltaker(e): </strong> " + participant +
+>>>>>>> 676c12cc194cfeab9da06821d5fc7b260e477945
                             "<br> <strong> Frist: </strong> " + duetime + "<br>" + 
                             "<strong> Beskrivelse: </strong> " + description  + "<br>" +
                             "<button onclick='move()'>Fullført</button>" +
@@ -31,7 +38,7 @@ function renderTask(){
 
         //<input type = 'checkbox' id = 'myCheck' onclick = 'myFunction()'> --> kan fjernes senere bare noe jeg startet med
         
-        // into the different subjects
+        // Text into the different tabs
         switch (document.querySelector("#category").value && task.category) {
             case "work":
                 taskOutputEl.appendChild(taskEl);
@@ -39,18 +46,19 @@ function renderTask(){
                 break;
 
             case "subjects":
-                taskOutputEl2.appendChild(taskEl);   
+                taskOutputE2.appendChild(taskEl);   
                 break;
 
             case "hobby":
-                taskOutputEl3.appendChild(taskEl);
+                taskOutputE3.appendChild(taskEl);
                 break;
 
             case "various":
-                taskOutputEl4.appendChild(taskEl);
+                taskOutputE4.appendChild(taskEl);
                 break;
         }
 
+<<<<<<< HEAD
         
     // koden til Laurent
     btn2.onclick = function status() {
@@ -77,10 +85,29 @@ function renderTask(){
     }
 
 
+=======
+        // Variable containing todays date (dd/mm/yyyy)
+        var currentDate = new Date();
+        currentDate = ("0"+currentDate.getDate()).slice(-2) + "/" + ("0"+(currentDate.getMonth() + 1)).slice(-2) + "/" + currentDate.getFullYear();
+
+        // Display clickable notification image if any projects deadline has passed
+        if(task.duetime < currentDate){
+            document.getElementById("notificationBell").style.display = "block";
+        }else{
+            document.getElementById("notificationBell").style.display = "none";
+        }
+>>>>>>> 676c12cc194cfeab9da06821d5fc7b260e477945
 
     }
+}
+
+// Alerts notification message on notification image onclick
+function notificationTrigger(){
+    alert("Du har prosjekt med utgått tidsfrist!");
+}
+
     
-// adds data to localStorage
+// Adds user-input data to localStorage
 function addTask(event) {
     event.preventDefault();
     
@@ -101,6 +128,7 @@ function addTask(event) {
     event.target.reset();
 }
 
+<<<<<<< HEAD
 
 const btn2 = document.getElementById("btn2");
 const statusTasks = document.getElementById("statusTasks");
@@ -135,11 +163,15 @@ var progressbars="";
    document.querySelector(".feefo").innerHTML=progressbars; */
 
 // runs when new inputs get added
+=======
+// Runs when new inputs get added
+>>>>>>> 676c12cc194cfeab9da06821d5fc7b260e477945
 window.addEventListener("storage", function(event) {
         if (event.key === "taskList") {
             renderTask();
         }
 });
+
     
-// output will stay even when user update the page
+// Output will stay even when user update the page
 renderTask();

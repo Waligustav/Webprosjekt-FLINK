@@ -8,27 +8,60 @@
     <link rel="stylesheet" href="archiveStyle.css" type="text/css">
 </head>
 <body>
-    <!--Alt av brukernavn og night/light-mode antar jeg går øverst inne i nav-bar-->
-    <nav></nav>
-   
-    <!--Hovedboksen-->
+    <!-- Container for user-information / on top of main-container  -->
+    <div id = "participant-bar">
+        <label>
+            <input name = "image" type = "file" value = "Profilbilde"/>
+        </label>
+        <!--User-name from login-page -->
+       Hei, <span id="result"></span>!
+        <script>
+        document.getElementById("result").innerHTML=localStorage.getItem("textvalue");
+        </script>
+    </div>
+
+    <!-- Main container -->
     <section id="archiveSec">
-        <h1 id="archiveText">E-booker arkiv</h1>
-        <div id="output"></div>
+        <!--Archive page presentation text-->
+        <h1 id="archiveText">Flink arkiv</h1>
+
+        <!-- Output containers -->
+        <div id="aOverviewOne" class="archiveOverview">
+            <!-- archive-output: work -->
+            <div id="archiveOutput"></div>
+        </div>
+        <div id="aOverviewTwo" class="archiveOverview">
+            <!-- archive-output: subjects -->
+            <div id="archiveOutput2"></div>
+        </div>
+        <div id="aOverviewThree" class="archiveOverview">
+            <!-- archive-output: hobby -->
+            <div id="archiveOutput3"></div>
+        </div>
+        <div id="aOverviewFour" class="archiveOverview">
+            <!-- archive-output: various -->
+            <div id="archiveOutput4"></div>
+        </div>
+
+        <!-- Logo/Mascot presenting information -->
         <a href="index.html">
             <img src="images/logoImage.png" alt="Our dearly logo mascot Owl!" id="logoImage">
         </a>
-
-        <!--<img src="images/speechBubble2.png" id="pinguText2" alt="Owl helps you get back to front-page">-->
-
         <div id="speechBubble2"></div>
-        <pre>
+        <pre id="infoText">
             Klikk på meg for å 
              komme tilbake til
                 forsiden!
         </pre> 
+
+        <!-- Tabs to switch between output-divs -->
+        <input id="archiveBtnOne" type="button" value="Jobb" class="archiveBtns">
+        <input id="archiveBtnTwo" type="button" value="Emner" class="archiveBtns">
+        <input id="archiveBtnThree" type="button" value="Hobby" class="archiveBtns">
+        <input id="archiveBtnFour" type="button" value="Diverse" class="archiveBtns">
     </section>
 
 <script src="archive.js"></script>
+<script src = "archiveOverview.js"></script>
 </body>
 </html>
