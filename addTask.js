@@ -39,26 +39,19 @@ function renderTask(){
                             "<div id='myProgress'> <div id='myBar'></div>" + 
                           "</div></div>";
 
-<<<<<<< HEAD
-=======
                 taskEl.innerHTML = "<div id = 'taskInnerHTML' draggable = 'true'> <strong> Deltaker(e): </strong> " + participant +
                             "<br> <strong> Frist: </strong> " + duetime + "<br>" + "<strong> Beskrivelse: </strong> " + description  + "<br>";
 
                             
->>>>>>> b3cfb7237a438c6333bf2b48b90cb8c36c06a8cd
 
         //<input type = 'checkbox' id = 'myCheck' onclick = 'myFunction()'> --> kan fjernes senere bare noe jeg startet med
         
         // Text into the different tabs
         switch (document.querySelector("#category").value && task.category) {
             case "work":
-<<<<<<< HEAD
-                taskOutputEl.appendChild(taskEl);
-=======
                 taskOutputEl.appendChild(taskEl); 
                 taskOutputEl.appendChild(newDiv); 
                 taskOutputEl.appendChild(newBtn); 
->>>>>>> b3cfb7237a438c6333bf2b48b90cb8c36c06a8cd
                 break;
 
             case "subjects":
@@ -80,14 +73,9 @@ function renderTask(){
                 taskOutputE4.appendChild(newBtn); 
                 break;
         }
-<<<<<<< HEAD
-        
-        
-=======
     
 
 
->>>>>>> b3cfb7237a438c6333bf2b48b90cb8c36c06a8cd
         // Variable containing todays date (dd/mm/yyyy)
         var currentDate = new Date();
         currentDate = ("0"+currentDate.getDate()).slice(-2) + "/" + ("0"+(currentDate.getMonth() + 1)).slice(-2) + "/" + currentDate.getFullYear();
@@ -129,8 +117,6 @@ function addTask(event) {
     event.target.reset();
 }
 
-<<<<<<< HEAD
-=======
 
 /*
 var progressbars="";
@@ -141,7 +127,6 @@ var progressbars="";
   }
    document.querySelector(".feefo").innerHTML=progressbars; */
 
->>>>>>> b3cfb7237a438c6333bf2b48b90cb8c36c06a8cd
 // Runs when new inputs get added
 window.addEventListener("storage", function(event) {
         if (event.key === "taskList") {

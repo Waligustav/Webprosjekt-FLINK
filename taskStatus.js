@@ -45,13 +45,7 @@ function move() {
   }
 }
 
-<<<<<<< HEAD
-
-/*
-// koden til Laurent
-=======
 /* koden til Laurent
->>>>>>> b3cfb7237a438c6333bf2b48b90cb8c36c06a8cd
 const btn2 = document.getElementById("btn2");
 btn2.onclick = function() {
     var newDiv = document.createElement("div");
@@ -71,9 +65,4 @@ btn2.onclick = function() {
         newDiv.style.backgroundColor = "green";
     }
 
-<<<<<<< HEAD
-}
-*/
-=======
 }*/
->>>>>>> b3cfb7237a438c6333bf2b48b90cb8c36c06a8cd
