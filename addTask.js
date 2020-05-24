@@ -16,15 +16,11 @@ function renderTask(){
     for (const task of taskOutput) {
         const taskEl = document.createElement("div");
         const {participant, duetime, description} = task;
-        
-<<<<<<< HEAD
-        // the output text
+ 
                 /* Dette er den opprinnelige jeg lagde før vi skulle implementere status */
-        /*taskEl.innerHTML = "<div id = 'taskInnerHTML' draggable = 'true'> <strong> Deltaker(e): </strong> " + participant +
-=======
         // Output text
-        taskEl.innerHTML = "<div style = 'border: 1px solid black' draggable = 'true'> <strong> Deltaker(e): </strong> " + participant +
->>>>>>> 676c12cc194cfeab9da06821d5fc7b260e477945
+
+        /*taskEl.innerHTML = "<div style = 'border: 1px solid black' draggable = 'true'> <strong> Deltaker(e): </strong> " + participant +
                             "<br> <strong> Frist: </strong> " + duetime + "<br>" + 
                             "<strong> Beskrivelse: </strong> " + description  + "<br>" +
                             "<button onclick='move()'>Fullført</button>" +
@@ -58,7 +54,6 @@ function renderTask(){
                 break;
         }
 
-<<<<<<< HEAD
         
     // koden til Laurent
     btn2.onclick = function status() {
@@ -82,10 +77,9 @@ function renderTask(){
 
     }
 
-    }
+    
 
 
-=======
         // Variable containing todays date (dd/mm/yyyy)
         var currentDate = new Date();
         currentDate = ("0"+currentDate.getDate()).slice(-2) + "/" + ("0"+(currentDate.getMonth() + 1)).slice(-2) + "/" + currentDate.getFullYear();
@@ -96,7 +90,6 @@ function renderTask(){
         }else{
             document.getElementById("notificationBell").style.display = "none";
         }
->>>>>>> 676c12cc194cfeab9da06821d5fc7b260e477945
 
     }
 }
@@ -128,7 +121,6 @@ function addTask(event) {
     event.target.reset();
 }
 
-<<<<<<< HEAD
 
 const btn2 = document.getElementById("btn2");
 const statusTasks = document.getElementById("statusTasks");
@@ -162,10 +154,7 @@ var progressbars="";
   }
    document.querySelector(".feefo").innerHTML=progressbars; */
 
-// runs when new inputs get added
-=======
 // Runs when new inputs get added
->>>>>>> 676c12cc194cfeab9da06821d5fc7b260e477945
 window.addEventListener("storage", function(event) {
         if (event.key === "taskList") {
             renderTask();

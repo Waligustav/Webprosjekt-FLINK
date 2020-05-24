@@ -245,7 +245,6 @@ body {
     border-radius: 50px;
 }
 
-<<<<<<< HEAD
 #speechBubble{
     position: absolute;
     width: 180px;
@@ -272,7 +271,6 @@ body {
     height: 21px;
     background-color: rgb(235, 173, 42);
   }
-=======
 @keyframes pulsingAnimation
 {
     0%
@@ -288,4 +286,3 @@ body {
         opacity: 90%;
     }
 }
->>>>>>> 676c12cc194cfeab9da06821d5fc7b260e477945
