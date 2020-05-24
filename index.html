@@ -10,6 +10,7 @@
     <div id = "participant-bar">
         <label>
         <!--Sett inn en generisk avatar her eller noe--->
+        <link
         </label>
         <!--User-name from login-page -->
        Hei, <span id="result"></span>!
@@ -52,12 +53,10 @@
     </form>
         <!-- Hyperlink (image) to archive -->
         <div>
-            <a href="archive.html">
-                <!--"Shoppingcart"-->
-                <img src="images/archive.png" data-draggable="target" id="transportToArchivePic" alt="Takes a user to thier archive">
-            </a>
-        </div> 
-        
+        <a href="archive.html">
+            <img src="images/archive.png" data-draggable="target" id="transportToArchivePic" alt="Takes a user to thier archive">
+        </a>
+        </div>
         <!-- Logo/Mascot presenting information -->
         <div id="speechBubble"></div>
         <pre id="speech">LAG NY OPPGAVE</pre>
@@ -77,11 +76,11 @@
         </div>
         <div id="overviewThree" class="taskOverview">
             <!-- output: hobby -->
-            <div id = "combinedOutput3" data-draggable="dragtarget" ></div> 
+            <div id = "combinedOutput3" data-draggable="dragtarget"></div> 
         </div>
         <div id="overviewFour" class="taskOverview">
             <!-- output: various -->
-            <div id = "combinedOutput4" data-draggable="dragtarget" ></div> 
+            <div id = "combinedOutput4" data-draggable="dragtarget"></div> 
         </div>
 
         <!-- Tabs to switch between output-divs -->
@@ -98,5 +97,4 @@
 
 <script src = "addTask.js"></script>
 <script src = "taskOverview.js"></script>
-<script src = "taskStatus.js"></script>
 </html>
