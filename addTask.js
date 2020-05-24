@@ -14,6 +14,19 @@ function renderTask(){
 
     // Loop to put local-storage values into their matching output-tab
     for (const task of taskOutput) {
+        let newDiv = document.createElement("div"); 
+        // Lager ny knapp, lager ny tekst + limer teksten på knappen
+        let newBtn = document.createElement("button");
+        let btnText = document.createTextNode("Fullfør");
+        newBtn.appendChild(btnText);
+        newDiv.style.border = "3px solid black";
+        newDiv.style.height = "10px";   
+        newDiv.style.backgroundColor = "orange"; 
+
+        newBtn.onclick = function() {
+            newDiv.style.backgroundColor = "green"; 
+        }
+
         const taskEl = document.createElement("div");
         const {participant, duetime, description} = task;
  
@@ -28,55 +41,39 @@ function renderTask(){
                           "</div></div>";*/
 
                 taskEl.innerHTML = "<div id = 'taskInnerHTML' draggable = 'true'> <strong> Deltaker(e): </strong> " + participant +
-                            "<br> <strong> Frist: </strong> " + duetime + "<br>" + 
-                            "<strong> Beskrivelse: </strong> " + description  + "<br>" +
-                            "<button id = 'btn2'>Fullført</button> </div>";
+                            "<br> <strong> Frist: </strong> " + duetime + "<br>" + "<strong> Beskrivelse: </strong> " + description  + "<br>";
+
+                            
 
         //<input type = 'checkbox' id = 'myCheck' onclick = 'myFunction()'> --> kan fjernes senere bare noe jeg startet med
         
         // Text into the different tabs
         switch (document.querySelector("#category").value && task.category) {
             case "work":
-                taskOutputEl.appendChild(taskEl);
-                taskOutputEl.appendChild(status());
+                taskOutputEl.appendChild(taskEl); 
+                taskOutputEl.appendChild(newDiv); 
+                taskOutputEl.appendChild(newBtn); 
                 break;
 
             case "subjects":
-                taskOutputE2.appendChild(taskEl);   
+                taskOutputE2.appendChild(taskEl); 
+                taskOutputE2.appendChild(newDiv); 
+                taskOutputE2.appendChild(newBtn); 
                 break;
 
             case "hobby":
                 taskOutputE3.appendChild(taskEl);
+                taskOutputE3.appendChild(newDiv); 
+                taskOutputE3.appendChild(newBtn); 
+        
                 break;
 
             case "various":
                 taskOutputE4.appendChild(taskEl);
+                taskOutputE4.appendChild(newDiv); 
+                taskOutputE4.appendChild(newBtn); 
                 break;
         }
-
-        
-    // koden til Laurent
-    btn2.onclick = function status() {
-        
-        var newDiv = document.createElement("div");
-        
-        var newBtn = document.createElement("buttom");
-        var btnText = document.createTextNode("Fullfør");
-        newBtn.appendChild(btnText);
-
-        newDiv.style.border = "3px solid black";
-        newDiv.style.height = "40px";
-        newDiv.style.backgroundColor = "red";
-
-        taskEl.appendChild(newDiv);
-        taskEl.appendChild(newBtn);
-
-        newBtn.onclick = function() {
-            newDiv.style.backgroundColor = "green";
-        }
-
-    }
-
     
 
 
@@ -95,9 +92,9 @@ function renderTask(){
 }
 
 // Alerts notification message on notification image onclick
-function notificationTrigger(){
+/*function notificationTrigger(){
     alert("Du har prosjekt med utgått tidsfrist!");
-}
+}*/
 
     
 // Adds user-input data to localStorage
@@ -122,29 +119,6 @@ function addTask(event) {
 }
 
 
-const btn2 = document.getElementById("btn2");
-const statusTasks = document.getElementById("statusTasks");
-
-btn2.onclick = function() {
-    var newDiv = document.createElement("div");
-    
-    var newBtn = document.createElement("buttom");
-    var btnText = document.createTextNode("Fullfør");
-    newBtn.appendChild(btnText);
-
-    newDiv.style.border = "3px solid black";
-    newDiv.style.height = "40px";
-    newDiv.style.backgroundColor = "red";
-
-    taskEl.appendChild(newDiv);
-    taskEl.appendChild(newBtn);
-
-    newBtn.onclick = function() {
-        newDiv.style.backgroundColor = "green";
-    }
-
-}
-
 /*
 var progressbars="";
   for (var i = 1; i <=10; i++) { 
@@ -164,3 +138,28 @@ window.addEventListener("storage", function(event) {
     
 // Output will stay even when user update the page
 renderTask();
+
+
+
+
+
+/*
+function makeBoxAndBtn(){
+        let newDiv = document.createElement("div"); 
+        // Lager ny knapp, lager ny tekst + limer teksten på knappen
+        let newBtn = document.createElement("button");
+        let btnText = document.createTextNode("Fullfør");
+        newBtn.appendChild(btnText);   
+
+        newDiv.style.border = "3px solid black";
+        newDiv.style.height = "70px";   
+        newDiv.style.backgroundColor = "red"; 
+
+        taskOutputEl.appendChild(newDiv); 
+        taskOutputEl.appendChild(newBtn); 
+
+        newBtn.onclick = function() {
+            newDiv.style.backgroundColor = "green"; 
+        }
+}
+*/
