@@ -62,16 +62,22 @@ function showContent(){
 } 
 */
 
+
+/* const outputTarget = document.querySelector('[data-draggable="dragtarget"]');
+const dropTarget = document.querySelector("#transportToArchivePic");
+
+for(const dropTarget of drops){
+  dropTarget.addEventListener('dragover', dragOver);
+}
+*/
 (function(){
-    if(
-      !document.querySelectorAll || !('draggable' in document.createElement('div'))
+    if(!document.querySelectorAll || !('draggable' in document.createElement('div'))
       ){
         return; 
       }
     
     //get the collection of draggable items and add their draggable attribute
-    for(
-      var outputs = document.querySelectorAll('[data-draggable="dragtarget"]'), 
+    for(var outputs = document.querySelectorAll('[data-draggable="dragtarget"]'), 
       count = outputs.length, 
       i = 0; i < count; i ++)
       {
@@ -85,6 +91,7 @@ function showContent(){
         document.addEventListener('dragstart', function(e){
           dragtarget = e.target;
           e.dataTransfer.setData('text', '');
+         
         }, false);
 
         //dragover event to allow the drag by preventing its default
