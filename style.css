@@ -6,7 +6,7 @@
 
 /* Body settings */
 body {
-    background: url(/images/wavedaymode.png);
+    background: url(images/wavedaymode.png);
     background-color: #bdcce3;
     background-size: cover;
     font-family: 'Nunito Sans', sans-serif;
@@ -23,6 +23,17 @@ body {
     margin-top: 8px;
     margin-left: 650px;
     color: rgb(0, 0, 0);
+}
+
+/* Darkmode button */
+#darkmodeBtn{
+    position: absolute;
+    left: 0px;
+    top: -20px;
+    opacity: 80%;
+    background-color: rgb(105, 100, 100);
+    color: rgb(3, 3, 3);
+    border-radius: 5px;
 }
 
 /* Main container */
@@ -108,7 +119,6 @@ body {
     rgb(0, 0, 0));
 }
 
-<<<<<<< HEAD
 #submitBtn {
     width: 100px;
     height: 40px;
@@ -118,7 +128,7 @@ body {
     outline: none;
     font-size: 18px;
     border-radius: 20px;
-=======
+}
 /* Information Speech-Bubble */
 #speech{
     position: absolute;
@@ -149,7 +159,6 @@ body {
     border-radius: 20px;
     background-color: white;
     animation: bubbleFade2 3s alternate;
->>>>>>> master
 }
 
 /* Main page task overview */
@@ -157,12 +166,9 @@ body {
     position: absolute;
     width: 650px;
     height: 500px;
-<<<<<<< HEAD
     background-color: rgb(179, 184, 145);
     border: none;
-=======
     border: solid 1px rgb(0, 0, 0);
->>>>>>> master
     margin-top: -650px;
     margin-left: 445px;
     overflow: scroll;
@@ -210,12 +216,9 @@ body {
     position: absolute;
     width: 120px;
     height: 40px;
-<<<<<<< HEAD
     background-color: rgb(213, 219, 168);
     border:none;
-=======
     border: solid 1px rgb(0, 0, 0);
->>>>>>> master
     margin-left: 325px;
     font-weight: bold;
     text-align: center;
