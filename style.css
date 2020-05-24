@@ -6,7 +6,7 @@
 
 /* Body settings */
 body {
-    background: url(/images/wavedaymode.png);
+    background: url(images/wavedaymode.png);
     background-color: #bdcce3;
     background-size: cover;
     font-family: 'Nunito Sans', sans-serif;
@@ -108,7 +108,6 @@ body {
     rgb(0, 0, 0));
 }
 
-<<<<<<< HEAD
 #submitBtn {
     width: 100px;
     height: 40px;
@@ -118,7 +117,7 @@ body {
     outline: none;
     font-size: 18px;
     border-radius: 20px;
-=======
+}
 /* Information Speech-Bubble */
 #speech{
     position: absolute;
@@ -149,7 +148,6 @@ body {
     border-radius: 20px;
     background-color: white;
     animation: bubbleFade2 3s alternate;
->>>>>>> master
 }
 
 /* Main page task overview */
@@ -157,12 +155,9 @@ body {
     position: absolute;
     width: 650px;
     height: 500px;
-<<<<<<< HEAD
     background-color: rgb(179, 184, 145);
     border: none;
-=======
     border: solid 1px rgb(0, 0, 0);
->>>>>>> master
     margin-top: -650px;
     margin-left: 445px;
     overflow: scroll;
@@ -210,12 +205,9 @@ body {
     position: absolute;
     width: 120px;
     height: 40px;
-<<<<<<< HEAD
     background-color: rgb(213, 219, 168);
     border:none;
-=======
     border: solid 1px rgb(0, 0, 0);
->>>>>>> master
     margin-left: 325px;
     font-weight: bold;
     text-align: center;
