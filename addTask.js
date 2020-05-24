@@ -29,19 +29,7 @@ function renderTask(){
         const {participant, duetime, description} = task;
  
         // Output text
-<<<<<<< HEAD
-
-        taskEl.innerHTML = "<div style = 'border: 1px solid black' draggable = 'true'> <strong> Deltaker(e): </strong> " + participant +
-                            "<br> <strong> Frist: </strong> " + duetime + "<br>" + 
-                            "<strong> Beskrivelse: </strong> " + description  + "<br>" +
-                            "<button onclick='move()'>Fullfør</button>" +
-                            "<div id='myProgress'> <div id='myBar'></div>" + 
-                          "</div></div>";
-
-                taskEl.innerHTML = "<div id = 'taskInnerHTML' draggable = 'true'> <strong> Deltaker(e): </strong> " + participant +
-=======
         taskEl.innerHTML = "<div id = 'taskInnerHTML' draggable = 'true'> <strong> Deltaker(e): </strong> " + participant +
->>>>>>> 32cf82bf876b0ccd40d42666b0dc845dfb2e6d29
                             "<br> <strong> Frist: </strong> " + duetime + "<br>" + "<strong> Beskrivelse: </strong> " + description  + "<br>";
         
         // Text into the different tabs
