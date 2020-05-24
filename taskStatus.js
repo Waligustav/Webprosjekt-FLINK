@@ -1,10 +1,11 @@
+/*
 function myFunction() {
     // Get the checkbox
     let tInnerHTML = document.getElementById("taskInnerHTML");
     let checkBox = document.getElementById("myCheck");
 
     // If the checkbox is checked, display the output background colour
-  /* if (checkBox.checked == addTask.status) {
+   if (checkBox.checked == addTask.status) {
         tInnerHTML.style.backgroundColor = "green";
     } else {
         tInnerHTML.style.backgroundColor = "red";
@@ -13,8 +14,8 @@ function myFunction() {
     if(checkBox.checked) {
         move();
     }
-*/
-}
+
+} */
 
 
 /*
@@ -23,6 +24,7 @@ function myFunction() {
 - sjekke om status på html stemmer med localstorage
 */ 
 
+/*
 var i = 0;
 function move() {
   if (i == 0) {
@@ -40,4 +42,27 @@ function move() {
       }
     }
   }
+}
+*/
+
+// koden til Laurent
+const btn2 = document.getElementById("btn2");
+btn2.onclick = function() {
+    var newDiv = document.createElement("div");
+    
+    var newBtn = document.createElement("buttom");
+    var btnText = document.createTextNode("Fullfør");
+    newBtn.appendChild(btnText);
+
+    newDiv.style.border = "3px solid black";
+    newDiv.style.height = "40px";
+    newDiv.style.backgroundColor = "red";
+
+    taskEl.appendChild(newDiv);
+    taskEl.appendChild(newBtn);
+
+    newBtn.onclick = function() {
+        newDiv.style.backgroundColor = "green";
+    }
+
 }

@@ -16,6 +16,7 @@ function renderTask(){
         const {participant, duetime, description} = task;
         
         // the output text
+                /* Dette er den opprinnelige jeg lagde før vi skulle implementere status */
         /*taskEl.innerHTML = "<div id = 'taskInnerHTML' draggable = 'true'> <strong> Deltaker(e): </strong> " + participant +
                             "<br> <strong> Frist: </strong> " + duetime + "<br>" + 
                             "<strong> Beskrivelse: </strong> " + description  + "<br>" +
@@ -26,16 +27,15 @@ function renderTask(){
                 taskEl.innerHTML = "<div id = 'taskInnerHTML' draggable = 'true'> <strong> Deltaker(e): </strong> " + participant +
                             "<br> <strong> Frist: </strong> " + duetime + "<br>" + 
                             "<strong> Beskrivelse: </strong> " + description  + "<br>" +
-                            "<button onclick='move()'>Fullført</button>" +
-                            "<div id='myProgress'>" + "<div id='myBar'></div>" + 
-                          "</div></div>";
+                            "<button id = 'btn2'>Fullført</button> </div>";
 
-        //<input type = 'checkbox' id = 'myCheck' onclick = 'myFunction()'>
+        //<input type = 'checkbox' id = 'myCheck' onclick = 'myFunction()'> --> kan fjernes senere bare noe jeg startet med
         
         // into the different subjects
         switch (document.querySelector("#category").value && task.category) {
             case "work":
                 taskOutputEl.appendChild(taskEl);
+                taskOutputEl.appendChild(status());
                 break;
 
             case "subjects":
@@ -50,6 +50,29 @@ function renderTask(){
                 taskOutputEl4.appendChild(taskEl);
                 break;
         }
+
+        
+    // koden til Laurent
+    btn2.onclick = function status() {
+        
+        var newDiv = document.createElement("div");
+        
+        var newBtn = document.createElement("buttom");
+        var btnText = document.createTextNode("Fullfør");
+        newBtn.appendChild(btnText);
+
+        newDiv.style.border = "3px solid black";
+        newDiv.style.height = "40px";
+        newDiv.style.backgroundColor = "red";
+
+        taskEl.appendChild(newDiv);
+        taskEl.appendChild(newBtn);
+
+        newBtn.onclick = function() {
+            newDiv.style.backgroundColor = "green";
+        }
+
+    }
 
     }
 
@@ -79,6 +102,28 @@ function addTask(event) {
 }
 
 
+const btn2 = document.getElementById("btn2");
+const statusTasks = document.getElementById("statusTasks");
+
+btn2.onclick = function() {
+    var newDiv = document.createElement("div");
+    
+    var newBtn = document.createElement("buttom");
+    var btnText = document.createTextNode("Fullfør");
+    newBtn.appendChild(btnText);
+
+    newDiv.style.border = "3px solid black";
+    newDiv.style.height = "40px";
+    newDiv.style.backgroundColor = "red";
+
+    taskEl.appendChild(newDiv);
+    taskEl.appendChild(newBtn);
+
+    newBtn.onclick = function() {
+        newDiv.style.backgroundColor = "green";
+    }
+
+}
 
 /*
 var progressbars="";
