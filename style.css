@@ -245,6 +245,32 @@ body {
     border-radius: 50px;
 }
 
+#speechBubble{
+    position: absolute;
+    width: 180px;
+    height: 60px;
+    top: 227px;
+    left: 30px;
+    border: 4.2px rgb(0, 0, 0) solid;
+    border-radius: 20px;
+    background-color: white;
+    animation: bubbleFade2 3s alternate;
+}
+
+#taskInnerHTML {
+    border: 1px solid rgb(0, 0, 0);
+}
+
+#myProgress {
+    width: 100%;
+    background-color: grey;
+  }
+  
+  #myBar {
+    width: 1%;
+    height: 21px;
+    background-color: rgb(235, 173, 42);
+  }
 @keyframes pulsingAnimation
 {
     0%
