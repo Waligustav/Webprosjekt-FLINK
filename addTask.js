@@ -13,13 +13,20 @@ function renderTask(){
 
     for (const task of taskOutput) {
         const taskEl = document.createElement("div");
-        const {participant, duetime, description, status} = task;
+        const {participant, duetime, description} = task;
         
         // the output text
-        taskEl.innerHTML = "<div id = 'taskInnerHTML' draggable = 'true'> <strong> Deltaker(e): </strong> " + participant +
+        /*taskEl.innerHTML = "<div id = 'taskInnerHTML' draggable = 'true'> <strong> Deltaker(e): </strong> " + participant +
                             "<br> <strong> Frist: </strong> " + duetime + "<br>" + 
                             "<strong> Beskrivelse: </strong> " + description  + "<br>" +
-                            "<button onclick='move()'>Status</button>" +
+                            "<button onclick='move()'>Fullført</button>" +
+                            "<div id='myProgress'>" + "<div id='myBar'></div>" + 
+                          "</div></div>";*/
+
+                taskEl.innerHTML = "<div id = 'taskInnerHTML' draggable = 'true'> <strong> Deltaker(e): </strong> " + participant +
+                            "<br> <strong> Frist: </strong> " + duetime + "<br>" + 
+                            "<strong> Beskrivelse: </strong> " + description  + "<br>" +
+                            "<button onclick='move()'>Fullført</button>" +
                             "<div id='myProgress'>" + "<div id='myBar'></div>" + 
                           "</div></div>";
 
@@ -45,7 +52,8 @@ function renderTask(){
         }
 
     }
-    
+
+
 
     }
     
@@ -57,18 +65,29 @@ function addTask(event) {
     const participant = document.querySelector("[name = 'participant']").value;
     const duetime = document.querySelector("[name = 'duetime']").value;
     const description = document.querySelector("[name = 'description']").value;
-    const status = false;
     
-    const task = {category, participant, duetime, description, status};
-    
+    const task = {category, participant, duetime, description};
+
     const taskList = JSON.parse(window.localStorage.getItem("taskList")) || [];
     taskList.push(task);
 
     window.localStorage.setItem("taskList", JSON.stringify(taskList));
     renderTask();
-        
+
+
     event.target.reset();
 }
+
+
+
+/*
+var progressbars="";
+  for (var i = 1; i <=10; i++) { 
+    progressbars+='<div class="progress">'
+        +'<div class="progress-bar" role="progressbar" style="width: '+i+'%" aria-valuenow="'+i+'" aria-valuemin="0" aria-valuemax="100">'+i+'%</div>'
+    +'</div>';
+  }
+   document.querySelector(".feefo").innerHTML=progressbars; */
 
 // runs when new inputs get added
 window.addEventListener("storage", function(event) {
