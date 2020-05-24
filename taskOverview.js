@@ -70,50 +70,11 @@ for(const dropTarget of drops){
   dropTarget.addEventListener('dragover', dragOver);
 }
 */
-(function(){
-    if(!document.querySelectorAll || !('draggable' in document.createElement('div'))
-      ){
-        return; 
-      }
-    
-    //get the collection of draggable items and add their draggable attribute
-    for(var outputs = document.querySelectorAll('[data-draggable="dragtarget"]'), 
-      count = outputs.length, 
-      i = 0; i < count; i ++)
-      {
-        outputs[i].setAttribute('draggable', 'true');
-      }
 
-  //variable for storing the dragging target reference 
-    var dragtarget = null;
-
-    	//dragstart event to initiate mouse dragging
-        document.addEventListener('dragstart', function(e){
-          dragtarget = e.target;
-          e.dataTransfer.setData('text', '');
-         
-        }, false);
-
-        //dragover event to allow the drag by preventing its default
-        document.addEventListener('dragover', function(e){
-          if(dragtarget){
-            e.preventDefault();
-          }
-        }, false);	
-
-        //drop event to allow the element to be dropped into valid targets
-        document.addEventListener('drop', function(e){
-           if(e.target.getAttribute('data-draggable') == 'target'){
-             e.target.appendChild(dragtarget);
-             e.preventDefault();
-          }
-        }, false);
-        
-        //dragend event to clean-up after drop or abort
-        document.addEventListener('dragend', function(e){
-          dragtarget = null;
-        }, false);  
- })();	
+/*
+const transportToArchivePic = JSON.parse(window.localStorage.getItem("transportToArchivePic")) || [];
+window.localStorage.setItem("transportToArchivePic", JSON.stringify(transportToArchivePic));
+*/
 
 
 
