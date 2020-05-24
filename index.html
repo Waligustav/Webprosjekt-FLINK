@@ -6,24 +6,27 @@
     <link href = "style.css" type = "text/css" rel = "stylesheet">
 </head>
 <body>
+    <!-- Container for user-information / on top of main-container  -->
     <div id = "participant-bar">
         <label>
             <input name = "image" type = "file" value = "Profilbilde"/>
         </label>
-        <!--Her ser du navnet på den som er logget inn-->
+        <!--User-name from login-page -->
        Hei, <span id="result"></span>!
         <script>
         document.getElementById("result").innerHTML=localStorage.getItem("textvalue");
         </script>
     </div>
 
+    <!-- Main container -->
     <section id = "mainview">
         <!-- Main page presentation text -->
-        <h1 id="logoText">E-booker</h1>
-        <!-- Form start -->
+        <h1 id="logoText">Flink</h1>
+        <!-- User-input form -->
         <form onsubmit = "addTask(event)">
         <section id = "formInput">
             <form class = "form-input">
+                <!-- User-input form categories -->
                 <select id = "category" name = "category" required>
                 <option value = "categories">Kategori</option>
                 <option value = "work">Jobb</option>
@@ -32,6 +35,7 @@
                 <option value = "various">Diverse</option>
                 </select>
             </form>
+            <!-- User-input fields -->
             <div>
                 <input name = "participant" type = "text" class = "form-input" placeholder = "Deltaker" required>
             </div>
@@ -46,23 +50,25 @@
             </div>
         </section>
     </form>
-        <!-- Form end -->
-        <!-- Hyperlink to archive -->
+        <!-- Hyperlink (image) to archive -->
         <div>
-            <a href="archive.html">
-                <img src="images/archive.png" data-draggable="target" id="transportToArchivePic" alt="Takes a user to thier archive">
-                <div></div>
-            </a>
-        </div>
-
-        <img id="notificationBell" src="Images/notificationBell.png" onclick="notificationTrigger()" alt="notification icon">
-    
+        <a href="archive.html">
+            <img src="images/archive.png" id="transportToArchivePic" alt="Takes a user to thier archive">
+        </a>
+        </div> 
+        
+        <!-- Logo/Mascot presenting information -->
         <div id="speechBubble"></div>
-        <pre ID="speech">LAG NY OPPGAVE</pre>
-
+        <pre id="speech">LAG NY OPPGAVE</pre>
         <img src = "Images/logoImage.png" id = "helpingCharacter" alt = "Owl help character">
+
+        <!-- Notification image (alert function)-->
+        <img id="notificationBell" src="Images/notificationBell.png" onclick="notificationTrigger()" alt="notification icon">
+
+        <!-- Vertical line to divide main page -->
         <div class="verticalLine"> </div>
 
+        <!-- Output containers -->
         <div id="overviewOne" class="taskOverview">
             <!-- output: work -->
             <div id = "combinedOutput" data-draggable="dragtarget"></div> 
@@ -79,7 +85,8 @@
             <!-- output: various -->
             <div id = "combinedOutput4" data-draggable="dragtarget" ></div> 
         </div>
-        
+
+        <!-- Tabs to switch between output-divs -->
         <input id="taskBtnOne" type="button" value="Jobb" class="taskBtns">
         <input id="taskBtnTwo" type="button" value="Emner" class="taskBtns">
         <input id="taskBtnThree" type="button" value="Hobby" class="taskBtns">
