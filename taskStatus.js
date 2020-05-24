@@ -1,4 +1,4 @@
-/*
+
 function myFunction() {
     // Get the checkbox
     let tInnerHTML = document.getElementById("taskInnerHTML");
@@ -15,7 +15,8 @@ function myFunction() {
         move();
     }
 
-} */
+} 
+
 
 
 /*
@@ -24,7 +25,7 @@ function myFunction() {
 - sjekke om status på html stemmer med localstorage
 */ 
 
-/*
+
 var i = 0;
 function move() {
   if (i == 0) {
@@ -43,8 +44,9 @@ function move() {
     }
   }
 }
-*/
 
+
+/*
 // koden til Laurent
 const btn2 = document.getElementById("btn2");
 btn2.onclick = function() {
@@ -66,3 +68,4 @@ btn2.onclick = function() {
     }
 
 }
+*/
