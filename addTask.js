@@ -75,11 +75,6 @@ function renderTask(){
     }
 }
 
-// Alerts notification message on notification image onclick
-function notificationTrigger(){
-    alert("Du har prosjekt med utgått tidsfrist!");
-}
-
     
 // Adds user-input data to localStorage
 function addTask(event) {
