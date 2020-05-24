@@ -1,3 +1,10 @@
+/* General margin & padding on page*/
+* {
+    margin: 0;
+    padding: 0; 
+}
+
+/* Body settings */
 body {
     background: url(/images/wavedaymode.png);
     background-color: #bdcce3;
@@ -6,6 +13,7 @@ body {
     /*bakgrunn*/
 }
 
+/* Page presentation text */
 #logoText{
     position: absolute;
     text-align: center;
@@ -17,6 +25,7 @@ body {
     color: rgb(0, 0, 0);
 }
 
+/* Main container */
 #mainview {
     width: 1280px;
     height: 720px;
@@ -24,11 +33,11 @@ body {
     border: 1px rgb(255, 255, 255, 0.3) solid;
     background: rgba(255, 255, 255, 0.3);
     margin: 0 auto;
-    /*margin-top: 70px;*/
     border-width: 1px;
     border-radius: 15px;
 }
 
+/* User Input form */
 #formInput {
     width: 220px;
     height: 220px;
@@ -49,7 +58,15 @@ body {
     height: 60px;
 }
 
+#submitBtn {
+    width: 60px;
+    height: 30px;
+    background-color:rgb(255, 255, 255);
+    border: solid 1px rgb(0, 0, 0);
+    border-radius: 80px;
+}
 
+/* Vertical line dividing main page */
 .verticalLine {
     border-left: 2px solid rgb(255, 255, 255, 0.3);
     height: 690px;
@@ -58,6 +75,7 @@ body {
     margin-bottom: 15px;
 }
 
+/* Top section bar */
 #participant-bar {
     width: 1280px;
     margin: 0 auto;
@@ -65,6 +83,7 @@ body {
     margin-top: 50px;
 }
 
+/* Logo/mascot */
 #helpingCharacter {
     position: absolute;
     margin-right: 50px;
@@ -74,7 +93,6 @@ body {
     margin-left: 50px;
     animation: owlFall 3s alternate;
 }
-
 
 @keyframes owlFall{
     0%{
@@ -90,6 +108,7 @@ body {
     rgb(0, 0, 0));
 }
 
+<<<<<<< HEAD
 #submitBtn {
     width: 100px;
     height: 40px;
@@ -99,15 +118,51 @@ body {
     outline: none;
     font-size: 18px;
     border-radius: 20px;
+=======
+/* Information Speech-Bubble */
+#speech{
+    position: absolute;
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    top: 247px;
+    left: 45px;
+    animation: bubbleFade2 4s alternate;
 }
 
-/* settings for main page task overview */
+@keyframes bubbleFade2{
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%
+    }
+}
+
+#speechBubble{
+    position: absolute;
+    width: 180px;
+    height: 60px;
+    top: 227px;
+    left: 30px;
+    border: 4.2px rgb(0, 0, 0) solid;
+    border-radius: 20px;
+    background-color: white;
+    animation: bubbleFade2 3s alternate;
+>>>>>>> master
+}
+
+/* Main page task overview */
 .taskOverview{
     position: absolute;
     width: 650px;
     height: 500px;
+<<<<<<< HEAD
     background-color: rgb(179, 184, 145);
     border: none;
+=======
+    border: solid 1px rgb(0, 0, 0);
+>>>>>>> master
     margin-top: -650px;
     margin-left: 445px;
     overflow: scroll;
@@ -150,13 +205,17 @@ body {
     display: none;
 }
 
-/* settings for main page task buttons */
+/* Main page task buttons */
 .taskBtns{
     position: absolute;
     width: 120px;
     height: 40px;
+<<<<<<< HEAD
     background-color: rgb(213, 219, 168);
     border:none;
+=======
+    border: solid 1px rgb(0, 0, 0);
+>>>>>>> master
     margin-left: 325px;
     font-weight: bold;
     text-align: center;
@@ -185,32 +244,12 @@ body {
     background-color: rgb(145, 184, 176);
 }
 
-
-/*Images*/
+/* Hyperlink logo to archive */
 #transportToArchivePic{
     position: absolute; 
     width: 100px;
     top: 580px;
     left: 1100px;
-}
-
-/*Speech-Bubble*/
-#speech{
-    position: absolute;
-    font-weight: bold;
-    font-size: 20px;
-    top: 227px;
-    left: 45px;
-    animation: bubbleFade2 4s alternate;
-}
-
-@keyframes bubbleFade2{
-    0%{
-        opacity: 0%;
-    }
-    100%{
-        opacity: 100%
-    }
 }
 
 #speechBubble{
@@ -224,3 +263,20 @@ body {
     background-color: white;
     animation: bubbleFade2 3s alternate;
 }
+
+#taskInnerHTML {
+    border: 1px solid rgb(0, 0, 0);
+    overflow: auto;
+}
+
+#myProgress {
+    width: 100%;
+    background-color: grey;
+  }
+  
+  #myBar {
+    width: 1%;
+    height: 21px;
+    background-color: rgb(235, 173, 42);
+  }
+
