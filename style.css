@@ -25,6 +25,17 @@ body {
     color: rgb(0, 0, 0);
 }
 
+/* Darkmode button */
+#darkmodeBtn{
+    position: absolute;
+    left: 0px;
+    top: -20px;
+    opacity: 80%;
+    background-color: rgb(105, 100, 100);
+    color: rgb(3, 3, 3);
+    border-radius: 5px;
+}
+
 /* Main container */
 #mainview {
     width: 1280px;
@@ -118,7 +129,10 @@ body {
     font-size: 18px;
     border-radius: 20px;
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> c67fe98bc80ffe295c2cf4efbff0fccbee304c60
 /* Information Speech-Bubble */
 #speech{
     position: absolute;

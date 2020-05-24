@@ -21,6 +21,17 @@ body {
     color: rgb(48, 41, 41);
 }
 
+/* Darkmode button */
+#darkmodeBtn{
+    position: absolute;
+    left: 0px;
+    top: -20px;
+    opacity: 80%;
+    background-color: rgb(105, 100, 100);
+    color: rgb(3, 3, 3);
+    border-radius: 5px;
+}
+
 /* Main container */
 #archiveSec{
     width: 1280px;
