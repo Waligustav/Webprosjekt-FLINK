@@ -73,19 +73,6 @@ function renderTask(){
                 }
                 break;
         }
-    
-
-
-        // Variable containing todays date (dd/mm/yyyy)
-        var currentDate = new Date();
-        currentDate = ("0"+currentDate.getDate()).slice(-2) + "/" + ("0"+(currentDate.getMonth() + 1)).slice(-2) + "/" + currentDate.getFullYear();
-
-        // Display clickable notification image if any projects deadline has passed
-        if(task.duetime < currentDate){
-            document.getElementById("notificationBell").style.display = "block";
-        }else{
-            document.getElementById("notificationBell").style.display = "none";
-        }
 
     }
 }
