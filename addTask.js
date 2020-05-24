@@ -77,11 +77,6 @@ function renderTask(){
     }
 }
 
-// Alerts notification message on notification image onclick
-function notificationTrigger(){
-    alert("Du har prosjekt med utgått tidsfrist!");
-}
-
     
 // Adds user-input data to localStorage
 function addTask(event) {
@@ -161,4 +156,13 @@ renderTask();
           dragtarget = null;
         }, false);  
  })();	
+ 
+/* Trigger darkmode function */
+let darkmodeButton = document.getElementById("darkmodeBtn");
+let bodyObj = document.getElementsByTagName("body");
+
+darkmodeButton.addEventListener("click", function () {
+    bodyObj[0].style.backgroundImage = "url('images/wave2.png')"
+});
+
 
