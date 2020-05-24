@@ -45,7 +45,7 @@ function move() {
 }
 */
 
-// koden til Laurent
+/* koden til Laurent
 const btn2 = document.getElementById("btn2");
 btn2.onclick = function() {
     var newDiv = document.createElement("div");
@@ -65,4 +65,4 @@ btn2.onclick = function() {
         newDiv.style.backgroundColor = "green";
     }
 
-}
+}*/
