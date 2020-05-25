@@ -45,7 +45,7 @@ body {
 #archiveSec{
     width: 1280px;
     height: 720px;
-    margin-left: 319px;
+    margin: 0 auto;
     position: relative;
     border: 1px rgb(255, 255, 255, 0.3) solid;
     background: rgba(255, 255, 255, 0.3);
@@ -56,12 +56,12 @@ body {
 
 /* Main page task overview */
 .archiveOverview {
-    width: 900px;
-    height: 477px;
+    width: 750px;
+    height: 500px;
     position: absolute;
     border: 1px rgb(0, 0, 0) solid;
     top: 120px;
-    left: 140px;
+    left: 300px;
     border-radius: 10px;
     font-family: 'Roboto', sans-serif;
 }
@@ -96,25 +96,15 @@ body {
 }
 
 /* Hyperlink logo to main-page */
-#logoImage {
+#returnImage {
     position: absolute;
-    top: 300px;
-    left: 1042px;
-    width: 150px;
+    top: 595px;
+    left: 1135px;
+    width: 75px;
     z-index: 1;
-    animation: owlSlide 1.5s alternate;
 }
 
-@keyframes owlSlide{
-    0%{
-        left: 1250px;
-    }
-    100%{
-        left: 1042px;
-    }
-}
-
-#logoImage:hover {
+#returnImage:hover {
     filter:drop-shadow(0px 0px 50px 
     rgb(0, 0, 0));
 }
@@ -159,7 +149,7 @@ body {
     width: 120px;
     height: 40px;
     border: solid 1px rgb(0, 0, 0);
-    margin-top: -27px;
+    margin-top: 80px;
     font-weight: bold;
     text-align: center;
     font-size: 20px;
@@ -168,21 +158,70 @@ body {
 }
 
 #archiveBtnOne{
-    margin-left: 140px;
+    margin-left: 300px;
     background-color: #00BFA6;
 }
 
+#archiveBtnOne:hover{
+    transform: scale(1.1);
+    z-index: 1;
+}
+
 #archiveBtnTwo{
-    margin-left: 260px;
+    margin-left: 420px;
     background-color: #ffcf54;
 }
 
+#archiveBtnTwo:hover{
+    transform: scale(1.1);
+    z-index: 1;
+}
+
 #archiveBtnThree{
-    margin-left: 380px;
+    margin-left: 540px;
     background-color: #db97a5;
 }
 
+#archiveBtnThree:hover{
+    transform: scale(1.1);
+    z-index: 1;
+}
+
 #archiveBtnFour{
-    margin-left: 500px;
+    margin-left: 660px;
     background-color: rgb(145, 184, 176);
+}
+
+#archiveBtnFour:hover{
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+/* Vertical line dividing main page */
+.verticalLine2 {
+    position: absolute;
+    border-left: 2px solid rgb(255, 255, 255, 0.3);
+    height: 690px;
+    margin-left: 250px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#archiveLogoContainer {
+    position: absolute;
+    margin-right: 50px;
+    align-content: center;
+    width: 180px;
+    margin-top: 32px;
+    margin-left: 40px;
+    animation: owlFall 3s alternate;
+}
+
+@keyframes owlFall{
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
 }

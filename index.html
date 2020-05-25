@@ -23,8 +23,6 @@
     <section id = "mainview">
         <!-- Darkmode button -->
         <button onclick="toggleDark()" id="darkmodeBtn">Darkmode</button>
-        <!-- Main page presentation text -->
-        <h1 id="logoText">Flink</h1>
         <!-- User-input form -->
         <form onsubmit = "addTask(event)">
         <section id = "formInput">
@@ -61,8 +59,9 @@
         <!-- Logo/Mascot presenting information -->
         <div id="speechBubble"></div>
         <pre id="speech">LAG NY OPPGAVE</pre>
-        <img src = "Images/logoImage.png" id = "helpingCharacter" alt = "Owl help character">
-
+        <div id="logoContainer">
+          <img src = "Images/flink_logo_sort_smol.png" id = "logoImage" alt = "Website logo image">
+        </div>
         <!-- Vertical line to divide main page -->
         <div class="verticalLine"> </div>
 
