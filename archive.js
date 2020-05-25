@@ -8,16 +8,15 @@ function toggleDarkArchive(){
     bodyObject.classList.toggle("dark-mode");
 
     /* Import objects to change */
-    let speechBubbleObject = document.getElementById("speechBubble2");
-    let archiveTextObject = document.getElementById("archiveText");
+    let logoContainerObject = document.getElementById("archiveLogoContainer");
 
     /* Even/Uneven counter toggles object change */
     if( (counter % 2) == 1 ){
-        speechBubbleObject.style.backgroundColor = "black";
-        archiveTextObject.style.color = "white";
+        logoContainerObject.innerHTML = "<img src = 'Images/flink_logo_hvit_smol.png' id = 'logoImage' alt = 'Website logo image'>";
+        logoContainerObject.style.marginTop = "41px";
     }else if( (counter % 2) == 0 ){
-        speechBubbleObject.style.backgroundColor = "white";
-        archiveTextObject.style.color = "black";
+        logoContainerObject.innerHTML = "<img src = 'Images/flink_logo_sort_smol.png' id = 'logoImage' alt = 'Website logo image'>";
+        logoContainerObject.style.marginTop = "32px";
     }
 }
 

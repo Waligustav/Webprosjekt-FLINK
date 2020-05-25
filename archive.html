@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< HEAD
     <title>Flink arkiv</title>
+=======
+    <title>Flink archive</title>
+>>>>>>> 0ea29d59e71c7430f02b8ff8e674367c1adfac1b
     <link rel="shortcut icon" type="image/png" href="images/favicon_sort.png">
     <link rel="stylesheet" href="archiveStyle.css" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
@@ -22,8 +26,13 @@
     <section id="archiveSec">
         <!-- Darkmode button -->
         <button onclick="toggleDarkArchive()" id="darkmodeBtn">Darkmode</button>
-        <!--Archive page presentation text-->
-        <h1 id="archiveText">Flink arkiv</h1>
+
+        <div id="archiveLogoContainer">
+            <img src = "Images/flink_logo_sort_smol.png" id = "logoImage" alt = "Website logo image">
+          </div>
+
+        <!-- Vertical line to divide main page -->
+        <div class="verticalLine2"> </div>
 
         <!-- Output containers -->
         <div id="aOverviewOne" class="archiveOverview">
@@ -45,14 +54,9 @@
 
         <!-- Logo/Mascot presenting information -->
         <a href="index.html">
-            <img src="images/logoImage.png" alt="Our dearly logo mascot Owl!" id="logoImage">
+            <img src="images/returnImg.png" alt="Return image!" id="returnImage">
         </a>
-        <div id="speechBubble2"></div>
-        <pre id="infoText">
-            Klikk på meg for å 
-             komme tilbake til
-                forsiden!
-        </pre> 
+        
 
         <!-- Tabs to switch between output-divs -->
         <input id="archiveBtnOne" type="button" value="Jobb" class="archiveBtns">

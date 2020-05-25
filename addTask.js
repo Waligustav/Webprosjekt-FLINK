@@ -121,15 +121,17 @@ function toggleDark(){
 
     /* Import objects to change */
     let speechBubbleObject = document.getElementById("speechBubble");
-    let logoTextObject = document.getElementById("logoText");
+    let logoImageObject = document.getElementById("logoContainer");
 
     /* Even/Uneven counter toggles object change */
     if( (counter % 2) == 1 ){
         speechBubbleObject.style.backgroundColor = "black";
-        logoTextObject.style.color = "white";
+        logoImageObject.innerHTML = "<img src = 'Images/flink_logo_hvit_smol.png' id = 'logoImage' alt = 'Website logo image'>";
+        logoImageObject.style.marginTop = "41px";
     }else if( (counter % 2) == 0 ){
         speechBubbleObject.style.backgroundColor = "white";
-        logoTextObject.style.color = "black";
+        logoImageObject.innerHTML = "<img src = 'Images/flink_logo_sort_smol.png' id = 'logoImage' alt = 'Website logo image'>";
+        logoImageObject.style.marginTop = "32px";
     }
 }
 
