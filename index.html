@@ -22,7 +22,16 @@
     <!-- Main container -->
     <section id = "mainview">
         <!-- Darkmode button -->
-        <button onclick="toggleDark()" id="darkmodeBtn">Darkmode</button>
+        <div class="wrapper" onclick="toggleDark()" id="darkmodeBtn">
+            <div class="toggle">
+              <input class="toggle-input" type="checkbox" />
+              <div class="toggle-bg"></div>
+              <div class="toggle-switch">
+                <div class="toggle-switch-figure"></div>
+                <div class="toggle-switch-figureAlt"></div>
+              </div>  
+            </div>
+          </div>
         <!-- User-input form -->
         <form onsubmit = "addTask(event)">
         <section id = "formInput">
@@ -57,8 +66,8 @@
         </a>
         
         <!-- Logo/Mascot presenting information -->
-        <div id="speechBubble"></div>
-        <pre id="speech">LAG NY OPPGAVE</pre>
+        <div id="infoBubbleBorder"></div>
+        <pre id="infoBubble">LAG NY OPPGAVE</pre>
         <div id="logoContainer">
           <img src = "Images/flink_logo_sort_smol.png" id = "logoImage" alt = "Website logo image">
         </div>
