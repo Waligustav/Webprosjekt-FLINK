@@ -22,7 +22,7 @@ body {
     font-style: initial;
     margin-top: 8px;
     margin-left: 650px;
-    color: rgb(0, 0, 0);
+    color: rgb(48, 41, 41);
 }
 
 /* Darkmode button */
@@ -34,6 +34,12 @@ body {
     background-color: rgb(105, 100, 100);
     color: rgb(3, 3, 3);
     border-radius: 5px;
+}
+
+.dark-mode{
+    background: url(images/wave2dark.png);
+    background-size: cover;
+    color: rgb(255, 255, 255);
 }
 
 /* Main container */
