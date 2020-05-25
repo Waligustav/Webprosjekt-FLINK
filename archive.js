@@ -4,9 +4,8 @@ let counter = 0;
 function toggleDark(){
     counter++;
 
-<<<<<<< HEAD
 darkmodeButton.addEventListener("click", function () {
-    bodyObj[0].style.backgroundImage = "url('images/wave2.png')"
+    bodyObj[0].style.backgroundImage = "url('images/wave2.png')";
 });
 
 const taskOutputE2 = document.getElementById("combinedOutput2");
@@ -22,7 +21,6 @@ switch (newDiv.style.backgroundColor = "rgb(8, 201, 60)") {
     case "category.work":
         archiveOutput2.appendChild(taskEl); 
         break;
-=======
     let bodyObject = document.body;
     bodyObject.classList.toggle("dark-mode");
 
@@ -38,5 +36,5 @@ switch (newDiv.style.backgroundColor = "rgb(8, 201, 60)") {
         speechBubbleObject.style.backgroundColor = "white";
         archiveTextObject.style.color = "black";
     }
->>>>>>> fe7fe9e2c0e035401f7200baee5500dadb2173ce
+}
 }
