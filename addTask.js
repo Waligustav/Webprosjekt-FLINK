@@ -131,8 +131,10 @@ renderTask();
 
     	//dragstart event to initiate mouse dragging
         document.addEventListener('dragstart', function(e){
-          dragtarget = e.target;
-          e.dataTransfer.setData('text', '');
+            const testBror = JSON.parse(window.localStorage.getItem("testBror")) || [];
+            window.localStorage.setItem("testBror", JSON.stringify("category"));
+            dragtarget = e.target;
+             e.dataTransfer.setData('text', '');
          
         }, false);
 
@@ -146,8 +148,10 @@ renderTask();
         //drop event to allow the element to be dropped into valid targets
         document.addEventListener('drop', function(e){
            if(e.target.getAttribute('data-draggable') == 'target'){
+             localStorage.removeItem("category");
              e.target.appendChild(dragtarget);
              e.preventDefault();
+             
           }
         }, false);
         
@@ -155,8 +159,9 @@ renderTask();
         document.addEventListener('dragend', function(e){
           dragtarget = null;
         }, false);  
- })();	
- 
+ })();
+ 	
+
 /* Trigger darkmode function */
 let darkmodeButton = document.getElementById("darkmodeBtn");
 let bodyObj = document.getElementsByTagName("body");
