@@ -6,13 +6,11 @@
     <title>Document</title>
     <link rel="shortcut icon" type="image/png" href="images/logoImage.png">
     <link rel="stylesheet" href="archiveStyle.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Container for user-information / on top of main-container  -->
     <div id = "participant-bar">
-        <label>
-            <input name = "image" type = "file" value = "Profilbilde"/>
-        </label>
         <!--User-name from login-page -->
        Hei, <span id="result"></span>!
         <script>
@@ -22,6 +20,8 @@
 
     <!-- Main container -->
     <section id="archiveSec">
+        <!-- Darkmode button -->
+        <button onclick="toggleDarkArchive()" id="darkmodeBtn">Darkmode</button>
         <!--Archive page presentation text-->
         <h1 id="archiveText">Flink arkiv</h1>
 

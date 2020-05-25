@@ -9,8 +9,7 @@ body {
     background: url(images/wavedaymode.png);
     background-color: #bdcce3;
     background-size: cover;
-    font-family: 'Nunito Sans', sans-serif;
-    /*bakgrunn*/
+    font-family: 'Roboto', sans-serif;
 }
 
 /* Page presentation text */
@@ -19,10 +18,27 @@ body {
     text-align: center;
     font-weight: bold;
     font-size: 50px;
-    font-style: initial;
+    font-family: 'Roboto', sans-serif;
     margin-top: 8px;
-    margin-left: 650px;
-    color: rgb(0, 0, 0);
+    margin-left: 680px;
+    color: rgb(48, 41, 41);
+}
+
+/* Darkmode button */
+#darkmodeBtn{
+    position: absolute;
+    left: 0px;
+    top: -20px;
+    opacity: 80%;
+    background-color: rgb(105, 100, 100);
+    color: rgb(3, 3, 3);
+    border-radius: 5px;
+}
+
+.dark-mode{
+    background: url(images/wave2dark.png);
+    background-size: cover;
+    color: rgb(255, 255, 255);
 }
 
 /* Main container */
@@ -35,6 +51,7 @@ body {
     margin: 0 auto;
     border-width: 1px;
     border-radius: 15px;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* User Input form */
@@ -46,24 +63,18 @@ body {
     margin-top: 360px;
     margin-left: 13px;
     border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .form-input {
     width: 220px;
     height: 17px;
+    font-family: 'Roboto', sans-serif;
 }
 
 #form-desc {
     width: 220px;
     height: 60px;
-}
-
-#submitBtn {
-    width: 60px;
-    height: 30px;
-    background-color:rgb(255, 255, 255);
-    border: solid 1px rgb(0, 0, 0);
-    border-radius: 80px;
 }
 
 /* Vertical line dividing main page */
@@ -81,6 +92,7 @@ body {
     margin: 0 auto;
     text-align: right;
     margin-top: 50px;
+    font-family: 'Roboto', sans-serif;
 }
 
 /* Logo/mascot */
@@ -117,6 +129,10 @@ body {
     outline: none;
     font-size: 18px;
     border-radius: 20px;
+<<<<<<< HEAD
+=======
+    font-family: 'Roboto', sans-serif;
+>>>>>>> master
 }
 /* Information Speech-Bubble */
 #speech{
@@ -124,6 +140,7 @@ body {
     text-align: center;
     font-weight: bold;
     font-size: 20px;
+    font-family: 'Roboto', sans-serif;
     top: 247px;
     left: 45px;
     animation: bubbleFade2 4s alternate;
@@ -162,6 +179,7 @@ body {
     margin-left: 445px;
     overflow: scroll;
     border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .taskOverview::-webkit-scrollbar{
@@ -212,7 +230,7 @@ body {
     font-weight: bold;
     text-align: center;
     font-size: 20px;
-    font-style: initial;
+    font-family: 'Roboto', sans-serif;
     border-radius: 3px;
 }
 
@@ -264,11 +282,11 @@ body {
 #myProgress {
     width: 100%;
     background-color: grey;
-  }
+}
   
-  #myBar {
+#myBar {
     width: 1%;
     height: 21px;
     background-color: rgb(235, 173, 42);
-  }
+}
 

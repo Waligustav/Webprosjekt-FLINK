@@ -16,6 +16,7 @@ function renderTask(){
     for (const task of taskOutput) {
         // Progression system
         let newDiv = document.createElement("div"); 
+        // Creates a new button and new text. It also puts the text and button together
         // Lager ny knapp, lager ny tekst + limer teksten på knappen
         let newBtn = document.createElement("button");
         let btnText = document.createTextNode("Fullfør");
@@ -39,7 +40,7 @@ function renderTask(){
                 taskOutputEl.appendChild(newDiv); 
                 taskOutputEl.appendChild(newBtn); 
                 newBtn.onclick = function() {
-                    newDiv.style.backgroundColor = "green"; 
+                    newDiv.style.backgroundColor = "rgb(8, 201, 60)"; 
                 }
                 break;
 
@@ -48,7 +49,7 @@ function renderTask(){
                 taskOutputE2.appendChild(newDiv); 
                 taskOutputE2.appendChild(newBtn); 
                 newBtn.onclick = function() {
-                    newDiv.style.backgroundColor = "green"; 
+                    newDiv.style.backgroundColor = "rgb(8, 201, 60)"; 
                 }
                 break;
 
@@ -57,7 +58,7 @@ function renderTask(){
                 taskOutputE3.appendChild(newDiv); 
                 taskOutputE3.appendChild(newBtn); 
                 newBtn.onclick = function() {
-                    newDiv.style.backgroundColor = "green"; 
+                    newDiv.style.backgroundColor = "rgb(8, 201, 60)"; 
                 }
         
                 break;
@@ -67,17 +68,12 @@ function renderTask(){
                 taskOutputE4.appendChild(newDiv); 
                 taskOutputE4.appendChild(newBtn); 
                 newBtn.onclick = function() {
-                    newDiv.style.backgroundColor = "green"; 
+                    newDiv.style.backgroundColor = "rgb(8, 201, 60)"; 
                 }
                 break;
         }
 
     }
-}
-
-// Alerts notification message on notification image onclick
-function notificationTrigger(){
-    alert("Du har prosjekt med utgått tidsfrist!");
 }
 
     
@@ -114,4 +110,26 @@ window.addEventListener("storage", function(event) {
 // Output will stay even when user update the page
 renderTask();
 
+/* Trigger darkmode function 
++ Counter to increment per button-click */
+let counter = 0;
+function toggleDark(){
+    counter++;
+
+    let bodyObject = document.body;
+    bodyObject.classList.toggle("dark-mode");
+
+    /* Import objects to change */
+    let speechBubbleObject = document.getElementById("speechBubble");
+    let logoTextObject = document.getElementById("logoText");
+
+    /* Even/Uneven counter toggles object change */
+    if( (counter % 2) == 1 ){
+        speechBubbleObject.style.backgroundColor = "black";
+        logoTextObject.style.color = "white";
+    }else if( (counter % 2) == 0 ){
+        speechBubbleObject.style.backgroundColor = "white";
+        logoTextObject.style.color = "black";
+    }
+}
 
