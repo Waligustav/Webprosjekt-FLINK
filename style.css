@@ -12,18 +12,6 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-/* Page presentation text */
-#logoText{
-    position: absolute;
-    text-align: center;
-    font-weight: bold;
-    font-size: 50px;
-    font-family: 'Roboto', sans-serif;
-    margin-top: 8px;
-    margin-left: 680px;
-    color: rgb(48, 41, 41);
-}
-
 /* Darkmode button */
 #darkmodeBtn{
     position: absolute;
@@ -60,7 +48,7 @@ body {
     height: 220px;
     position: absolute;
     border: none;
-    margin-top: 360px;
+    margin-top: 500px;
     margin-left: 13px;
     border-radius: 5px;
     font-family: 'Roboto', sans-serif;
@@ -96,28 +84,23 @@ body {
 }
 
 /* Logo/mascot */
-#helpingCharacter {
+#logoContainer {
     position: absolute;
     margin-right: 50px;
     align-content: center;
-    width: 150px;
+    width: 180px;
     margin-top: 32px;
-    margin-left: 50px;
+    margin-left: 40px;
     animation: owlFall 3s alternate;
 }
 
 @keyframes owlFall{
     0%{
-        margin-top: -250px;
+        opacity: 0%;
     }
     100%{
-        margin-top: 32px;
+        opacity: 100%;
     }
-}
-
-#helpingCharacter:hover {
-    filter:drop-shadow(0px 0px 50px 
-    rgb(0, 0, 0));
 }
 
 #submitBtn {
@@ -139,10 +122,11 @@ body {
     position: absolute;
     text-align: center;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 15px;
     font-family: 'Roboto', sans-serif;
-    top: 247px;
-    left: 45px;
+    top: 470px;
+    left: 60px;
+    opacity: 85%;
     animation: bubbleFade2 4s alternate;
 }
 
@@ -151,20 +135,8 @@ body {
         opacity: 0%;
     }
     100%{
-        opacity: 100%
+        opacity: 85%
     }
-}
-
-#speechBubble{
-    position: absolute;
-    width: 180px;
-    height: 60px;
-    top: 227px;
-    left: 30px;
-    border: 4.2px rgb(0, 0, 0) solid;
-    border-radius: 20px;
-    background-color: white;
-    animation: bubbleFade2 3s alternate;
 }
 
 /* Main page task overview */
@@ -172,9 +144,7 @@ body {
     position: absolute;
     width: 650px;
     height: 500px;
-    background-color: rgb(179, 184, 145);
-    border: none;
-    border: solid 1px rgb(0, 0, 0);
+    border: 1px rgb(0, 0, 0) solid;
     margin-top: -650px;
     margin-left: 445px;
     overflow: scroll;
@@ -239,9 +209,19 @@ body {
     background-color: #00BFA6;
 }
 
+#taskBtnOne:hover{
+    transform: scale(1.1);
+    z-index: 1;
+}
+
 #taskBtnTwo{
     margin-top: -608px;
     background-color: #ffcf54;
+}
+
+#taskBtnTwo:hover{
+    transform: scale(1.1);
+    z-index: 1;
 }
 
 #taskBtnThree{
@@ -249,9 +229,19 @@ body {
     background-color: #db97a5;
 }
 
+#taskBtnThree:hover{
+    transform: scale(1.1);
+    z-index: 1;
+}
+
 #taskBtnFour{
     margin-top: -524px;
     background-color: rgb(145, 184, 176);
+}
+
+#taskBtnFour:hover{
+    transform: scale(1.1);
+    z-index: 1;
 }
 
 /* Hyperlink logo to archive */
@@ -259,19 +249,26 @@ body {
     position: absolute; 
     width: 100px;
     top: 580px;
-    left: 1100px;
+    left: 1130px;
+}
+
+#transportToArchivePic:hover {
+    filter:drop-shadow(0px 0px 40px 
+    rgb(0, 0, 0));
+    transform: scale(1.1);
 }
 
 #speechBubble{
     position: absolute;
-    width: 180px;
-    height: 60px;
-    top: 227px;
-    left: 30px;
-    border: 4.2px rgb(0, 0, 0) solid;
-    border-radius: 20px;
+    width: 215px;
+    height: 20px;
+    top: 466px;
+    left: 15px;
+    border: 2.2px rgb(0, 0, 0) solid;
+    border-radius: 6px;
     background-color: white;
     animation: bubbleFade2 3s alternate;
+    opacity: 85%;
 }
 
 #taskInnerHTML {
