@@ -14,21 +14,31 @@ function renderTask(){
 
     // Loop to put local-storage values into their matching output-tab
     for (const task of taskOutput) {
-        // Progression system
+        const taskEl = document.createElement("div");
+        const {participant, duetime, description} = task;
+
+        // PROGRESSION-BAR
         let newDiv = document.createElement("div"); 
-        // Creates a new button and new text. It also puts the text and button together
-        // Lager ny knapp, lager ny tekst + limer teksten på knappen
         let newBtn = document.createElement("button");
         let btnText = document.createTextNode("Fullfør");
         newBtn.appendChild(btnText);
-        newDiv.style.border = "3px solid black";
-        newDiv.style.height = "10px";   
-        newDiv.style.backgroundColor = "orange"; 
 
-       
-        const taskEl = document.createElement("div");
-        const {participant, duetime, description} = task;
- 
+        newDiv.style.border = "3px solid black";newDiv.style.height = "10px";newDiv.style.backgroundColor = "red"; 
+        newBtn.style.position = "absolute"; newBtn.style.top = "4px"; newBtn.style.left = "570px";
+        
+
+
+        newBtn.onclick = function() {
+            if(task.color === "red"){
+                newDiv.style.backgroundColor = "green"; 
+            }
+            else if(task.color === "green"){
+                newDiv.style.backgroundColor = "red"; 
+            }
+        }
+
+
+
         // Output text
         taskEl.innerHTML = "<div id = 'taskInnerHTML' draggable = 'true'> <strong> Deltaker(e): </strong> " + participant +
                             "<br> <strong> Frist: </strong> " + duetime + "<br>" + "<strong> Beskrivelse: </strong> " + description  + "<br>";
@@ -39,43 +49,27 @@ function renderTask(){
                 taskOutputEl.appendChild(taskEl); 
                 taskOutputEl.appendChild(newDiv); 
                 taskOutputEl.appendChild(newBtn); 
-                newBtn.onclick = function() {
-                    newDiv.style.backgroundColor = "rgb(8, 201, 60)"; 
-                }
                 break;
 
             case "subjects":
-                taskOutputE2.appendChild(taskEl); 
+                taskOutputE2.appendChild(taskEl);
                 taskOutputE2.appendChild(newDiv); 
-                taskOutputE2.appendChild(newBtn); 
-                newBtn.onclick = function() {
-                    newDiv.style.backgroundColor = "rgb(8, 201, 60)"; 
-                }
+                taskOutputE2.appendChild(newBtn);  
                 break;
 
             case "hobby":
                 taskOutputE3.appendChild(taskEl);
                 taskOutputE3.appendChild(newDiv); 
                 taskOutputE3.appendChild(newBtn); 
-                newBtn.onclick = function() {
-                    newDiv.style.backgroundColor = "rgb(8, 201, 60)"; 
-                }
-        
                 break;
-
             case "various":
                 taskOutputE4.appendChild(taskEl);
                 taskOutputE4.appendChild(newDiv); 
                 taskOutputE4.appendChild(newBtn); 
-                newBtn.onclick = function() {
-                    newDiv.style.backgroundColor = "rgb(8, 201, 60)"; 
-                }
                 break;
         }
-
     }
 }
-
     
 // Adds user-input data to localStorage
 function addTask(event) {
@@ -85,7 +79,7 @@ function addTask(event) {
     const participant = document.querySelector("[name = 'participant']").value;
     const duetime = document.querySelector("[name = 'duetime']").value;
     const description = document.querySelector("[name = 'description']").value;
-    const color = false; 
+    let color = "red"; 
     
     const task = {category, participant, duetime, description, color};
 
@@ -94,7 +88,6 @@ function addTask(event) {
 
     window.localStorage.setItem("taskList", JSON.stringify(taskList));
     renderTask();
-
 
     event.target.reset();
 }
@@ -105,7 +98,6 @@ window.addEventListener("storage", function(event) {
             renderTask();
         }
 });
-
     
 // Output will stay even when user update the page
 renderTask();
