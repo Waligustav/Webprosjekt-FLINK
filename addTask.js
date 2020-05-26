@@ -134,12 +134,17 @@ function toggleDark(){
         logoImageObject.style.marginTop = "32px";
     }
 }
-
+/* Toggle nightmode-slider  -  get/set localstorage values */
 const togglew2 = document.querySelector('.toggle-input');
 const initialStatew2 = localStorage.getItem('toggleStatew2') == 'true';
 togglew2.checked = initialStatew2;
 
-togglew2.addEventListener('change', function() {
-  localStorage.setItem('toggleStatew2', togglew2.checked);
-});
+/* Eventlistener triggers slider function*/
+togglew2.addEventListener('change', slideDark2() );
+
+function slideDark2() {
+    localStorage.setItem('toggleStatew2', togglew2.checked);
+}
+//Trigger function upon page update to reset slider
+slideDark2();
 
