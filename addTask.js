@@ -88,12 +88,8 @@ function addTask(event) {
     const deleted = false;
     let color = "red"; 
     
-<<<<<<< HEAD
-    var task = {id: Date.now().toString() + 1, category, participant, duetime, description, color};
-=======
     //Generating unique id 
     var task = {id: Date.now().toString() + 1 , category, participant, duetime, description, color, deleted};
->>>>>>> 4c527cd07ed649705c911ab975be5533db137e3c
 
     var taskList = JSON.parse(window.localStorage.getItem("taskList")) || [];
     taskList.push(task);
@@ -114,85 +110,4 @@ window.addEventListener("storage", function(event) {
 // Output will stay even when user update the page
 renderTask();
 
-
-//IIFE function for drag and drop
-(function(){
-    if(!document.querySelectorAll || !('draggable' in document.createElement('div')))
-    {
-        return; 
-    }
-    
-    var taskList = JSON.parse(window.localStorage.getItem("taskList")) || [];
-    
-    //get the collection of draggable items and add their draggable attribute
-    for(var outputs = document.querySelectorAll('[data-draggable="dragtarget"]'), 
-      count = outputs.length, 
-      i = 0; i < count; i ++)
-      {
-        outputs[i].setAttribute('draggable', 'true');
-      }
-      
-
-  //variable for storing the dragging target reference 
-    var dragtarget = null;
-
-    	//DRAGSTART event to initiate mouse dragging
-        document.addEventListener('dragstart', function(e){
-            dragtarget = e.target;
-             e.dataTransfer.setData("taskId", dragtarget.getAttribute("taskId"));   
-        }, false);
-
-        //DRAGOVER event to allow the drag by preventing its default
-        document.addEventListener('dragover', function(e){
-          if(dragtarget){
-            e.preventDefault();
-          }
-        }, false);	
-            
-        //DRAGDROP event to allow the element to be dropped into valid targets
-        document.addEventListener('drop', function(e){
-       
-           if(e.target.getAttribute('data-draggable') == 'target'){
-                const taskId = e.dataTransfer.getData("taskId");
-                var taskList = JSON.parse(window.localStorage.getItem("taskList")) || [];
-                const task = taskList.find(task => task.id === taskId);
-                task.deleted = true;
-
-                window.localStorage.setItem("taskList", JSON.stringify(taskList));
-                
-                e.target.appendChild(dragtarget);
-                e.preventDefault();
-                renderTask();
-            }
-        }, false);
-        
-        //DRAGEND event to clean-up after drop or abort
-        document.addEventListener('dragend', function(e){
-        dragtarget = null;
-        }, false);  
- })();
-
-
-/* Trigger darkmode function 
-+ Counter to increment per button-click */
-let counter = 0;
-function toggleDark(){
-    counter++;
-
-    let bodyObject = document.body;
-    bodyObject.classList.toggle("dark-mode");
-
-    /* Import objects to change */
-    let speechBubbleObject = document.getElementById("infoBubbleBorder");
-    let logoTextObject = document.getElementById("logoContainer");
-
-    /* Even/Uneven counter toggles object change */
-    if( (counter % 2) == 1 ){
-        speechBubbleObject.style.backgroundColor = "black";
-        logoTextObject.style.color = "white";
-    }else if( (counter % 2) == 0 ){
-        speechBubbleObject.style.backgroundColor = "white";
-        logoTextObject.style.color = "black";
-    }
-}
 
