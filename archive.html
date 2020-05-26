@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="archiveStyle.css" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
-<body>
+<body onload="renderArchive()">
     <!-- Container for user-information / on top of main-container  -->
     <div id = "participant-bar">
         <!--User-name from login-page -->
@@ -42,19 +42,19 @@
         <!-- Output containers -->
         <div id="aOverviewOne" class="archiveOverview">
             <!-- archive-output: work -->
-            <div id="archiveOutput"></div>
+            <div id="archivedWork"></div>
         </div>
         <div id="aOverviewTwo" class="archiveOverview">
             <!-- archive-output: subjects -->
-            <div id="archiveOutput2"></div>
+            <div id="archivedSubject"></div>
         </div>
         <div id="aOverviewThree" class="archiveOverview">
             <!-- archive-output: hobby -->
-            <div id="archiveOutput3"></div>
+            <div id="archivedHobby"></div>
         </div>
         <div id="aOverviewFour" class="archiveOverview">
             <!-- archive-output: various -->
-            <div id="archiveOutput4"></div>
+            <div id="archivedVarious"></div>
         </div>
 
         <!-- Logo/Mascot presenting information -->
@@ -70,6 +70,8 @@
         <input id="archiveBtnFour" type="button" value="Diverse" class="archiveBtns">
     </section>
 
+    </section>
+    
 <script src="archive.js"></script>
 <script src = "archiveOverview.js"></script>
 </body>

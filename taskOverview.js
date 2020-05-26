@@ -40,6 +40,19 @@ function showFourthTask(){
 }
 
 
+/* const outputTarget = document.querySelector('[data-draggable="dragtarget"]');
+const dropTarget = document.querySelector("#transportToArchivePic");
+
+for(const dropTarget of drops){
+  dropTarget.addEventListener('dragover', dragOver);
+}
+*/
+
+/*
+const transportToArchivePic = JSON.parse(window.localStorage.getItem("transportToArchivePic")) || [];
+window.localStorage.setItem("transportToArchivePic", JSON.stringify(transportToArchivePic));
+*/
+
 
 
 
