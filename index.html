@@ -1,18 +1,16 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
     <title>Flink</title>
     <meta charset = "utf-8">
     <link rel="shortcut icon" type="image/png" href="images/favicon_sort.png">
-    <link href = "style.css" type = "text/css" rel = "stylesheet">
+    <link href = "indexStyle.css" type = "text/css" rel = "stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Container for user-information / on top of main-container  -->
     <div id = "participant-bar">
-        <label>
-        <!--Sett inn en generisk avatar her eller noe--->
-        </label>
-        <!--User-name from login-page -->
+        <!-- User-name from login-page -->
        Hei, <span id="result"></span>!
         <script>
         document.getElementById("result").innerHTML=localStorage.getItem("textvalue");
@@ -31,7 +29,7 @@
                 <div class="toggle-switch-figureAlt"></div>
               </div>  
             </div>
-          </div>
+        </div>
         <!-- User-input form -->
         <form onsubmit = "addTask(event)">
         <section id = "formInput">
@@ -59,14 +57,14 @@
                 <input type = "submit" id = "submitBtn" value = "Legg til"/>
             </div>
         </section>
-    </form>
+        </form>
         <!-- Hyperlink (image) to archive -->
         <div>
         <a href="archive.html">
             <img src="images/archive.png" draggable="false" data-draggable="target" id="transportToArchivePic" alt="Takes a user to thier archive">
         </a>
         </div>
-        <!-- Logo/Mascot presenting information -->
+        <!-- Logo presenting information -->
         <div id="infoBubbleBorder"></div>
         <pre id="infoBubble">LAG NY OPPGAVE</pre>
         <div id="logoContainer">
@@ -75,21 +73,17 @@
         <!-- Vertical line to divide main page -->
         <div class="verticalLine"> </div>
 
-        <!-- Output containers -->
+        <!-- Output containers: work, subjects, hobby and various -->
         <div id="overviewOne" class="taskOverview">
-            <!-- output: work -->
             <div id = "combinedOutput" data-draggable="dragtarget"></div> 
         </div>
         <div id="overviewTwo" class="taskOverview">
-            <!-- output: subjects -->
             <div id = "combinedOutput2" data-draggable="dragtarget"></div> 
         </div>
         <div id="overviewThree" class="taskOverview">
-            <!-- output: hobby -->
             <div id = "combinedOutput3" data-draggable="dragtarget"></div> 
         </div>
         <div id="overviewFour" class="taskOverview">
-            <!-- output: various -->
             <div id = "combinedOutput4" data-draggable="dragtarget"></div> 
         </div>
 
@@ -102,8 +96,10 @@
 
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital@1&family=Roboto:ital,wght@1,500&display=swap');
-        </style>
+    </style>
 </body>
 <script src = "addTask.js"></script>
+<script src = "dragAndDrop.js"></script>
 <script src = "taskOverview.js"></script>
+<script src = "darkmode.js"></script>
 </html>
