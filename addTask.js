@@ -1,8 +1,6 @@
 // Gets data from localStorage
 function renderTask(){
     const taskOutput = JSON.parse(window.localStorage.getItem("taskList")) || [];
-    
-
 
     // Gets HTML-output divs
     const taskOutputEl = document.getElementById("combinedOutput");
@@ -16,6 +14,7 @@ function renderTask(){
 
     // Loop to put local-storage values into their matching output-tab
     for (const task of taskOutput) {
+        
         // Progression system
         let newDiv = document.createElement("div"); 
         // Creates a new button and new text. It also puts the text and button together
@@ -24,15 +23,15 @@ function renderTask(){
         let btnText = document.createTextNode("Fullfør");
         newBtn.appendChild(btnText);
         newDiv.style.border = "3px solid black";
-        newDiv.style.height = "10px";   
+        newDiv.style.height = "10px";
         newDiv.style.backgroundColor = "orange"; 
 
        
         const taskEl = document.createElement("div");
-        const {participant, duetime, description} = task;
+        const {participant, duetime, description, id} = task;
  
         // Output text
-        taskEl.innerHTML = "<div id = 'taskInnerHTML' draggable = 'true' id='userOutput'> <strong> Deltaker(e): </strong> " + participant +
+        taskEl.innerHTML = "<div id = 'taskInnerHTML' draggable = 'true'> <strong> Deltaker(e): </strong> " + participant +
                             "<br> <strong> Frist: </strong> " + duetime + "<br>" + "<strong> Beskrivelse: </strong> " + description  + "<br>";
         
         // Text into the different tabs
@@ -78,28 +77,31 @@ function renderTask(){
     }
 }
 
-    
+   
+
 // Adds user-input data to localStorage
 function addTask(event) {
     event.preventDefault();
-    
+     
     const category = document.querySelector("[name = 'category']").value;
     const participant = document.querySelector("[name = 'participant']").value;
     const duetime = document.querySelector("[name = 'duetime']").value;
     const description = document.querySelector("[name = 'description']").value;
     const color = false; 
+    const deleted = false;
     
-    const task = {category, participant, duetime, description, color};
+    var task = {id: Date.now().toString() + 1 , category, participant, duetime, description, color, deleted};
 
-    const taskList = JSON.parse(window.localStorage.getItem("taskList")) || [];
+    var taskList = JSON.parse(window.localStorage.getItem("taskList")) || [];
     taskList.push(task);
-
     window.localStorage.setItem("taskList", JSON.stringify(taskList));
+   
+    //this.stopedArray.push(task);
+  
     renderTask();
-
-
     event.target.reset();
 }
+
 
 // Runs when new inputs get added
 window.addEventListener("storage", function(event) {
@@ -108,9 +110,9 @@ window.addEventListener("storage", function(event) {
         }
 });
 
-    
 // Output will stay even when user update the page
 renderTask();
+
 
 //IIFE function for drag and drop
 (function(){
@@ -119,6 +121,8 @@ renderTask();
         return; 
     }
     
+    var taskList = JSON.parse(window.localStorage.getItem("taskList")) || [];
+    
     //get the collection of draggable items and add their draggable attribute
     for(var outputs = document.querySelectorAll('[data-draggable="dragtarget"]'), 
       count = outputs.length, 
@@ -126,50 +130,40 @@ renderTask();
       {
         outputs[i].setAttribute('draggable', 'true');
       }
+      
 
   //variable for storing the dragging target reference 
     var dragtarget = null;
 
-    	//dragstart event to initiate mouse dragging
+    	//DRAGSTART event to initiate mouse dragging
         document.addEventListener('dragstart', function(e){
-            const testBror = JSON.parse(window.localStorage.getItem("testBror")) || [];
-            window.localStorage.setItem("testBror", JSON.stringify("category"));
             dragtarget = e.target;
-             e.dataTransfer.setData('text', '');
-         
+                console.log(dragtarget);
+             e.dataTransfer.getData('id');
+             console.log(e.dataTransfer.getData('id'));    
         }, false);
 
-        //dragover event to allow the drag by preventing its default
+        //DRAGOVER event to allow the drag by preventing its default
         document.addEventListener('dragover', function(e){
           if(dragtarget){
             e.preventDefault();
           }
         }, false);	
-
-        //drop event to allow the element to be dropped into valid targets
+            
+        //DRAGDROP event to allow the element to be dropped into valid targets
         document.addEventListener('drop', function(e){
            if(e.target.getAttribute('data-draggable') == 'target'){
-             localStorage.removeItem("category");
-             e.target.appendChild(dragtarget);
-             e.preventDefault();
-             
+                e.target.appendChild(dragtarget);
+                e.preventDefault();
           }
         }, false);
         
-        //dragend event to clean-up after drop or abort
+        //DRAGEND event to clean-up after drop or abort
         document.addEventListener('dragend', function(e){
-          dragtarget = null;
+        dragtarget = null;
         }, false);  
  })();
- 	
 
-/* Trigger darkmode function */
-let darkmodeButton = document.getElementById("darkmodeBtn");
-let bodyObj = document.getElementsByTagName("body");
-
-darkmodeButton.addEventListener("click", function () {
-    bodyObj[0].style.backgroundImage = "url('images/wave2.png')"
-});
 
 /* Trigger darkmode function 
 + Counter to increment per button-click */
