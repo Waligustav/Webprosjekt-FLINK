@@ -61,10 +61,11 @@
         </section>
     </form>
         <!-- Hyperlink (image) to archive -->
+        <div>
         <a href="archive.html">
-            <img src="images/archive.png" id="transportToArchivePic" alt="Takes a user to thier archive">
+            <img src="images/archive.png" draggable="false" data-draggable="target" id="transportToArchivePic" alt="Takes a user to thier archive">
         </a>
-        
+        </div>
         <!-- Logo/Mascot presenting information -->
         <div id="infoBubbleBorder"></div>
         <pre id="infoBubble">LAG NY OPPGAVE</pre>
@@ -77,19 +78,19 @@
         <!-- Output containers -->
         <div id="overviewOne" class="taskOverview">
             <!-- output: work -->
-            <div id = "combinedOutput"></div> 
+            <div id = "combinedOutput" data-draggable="dragtarget"></div> 
         </div>
         <div id="overviewTwo" class="taskOverview">
             <!-- output: subjects -->
-            <div id = "combinedOutput2"></div> 
+            <div id = "combinedOutput2" data-draggable="dragtarget"></div> 
         </div>
         <div id="overviewThree" class="taskOverview">
             <!-- output: hobby -->
-            <div id = "combinedOutput3"></div> 
+            <div id = "combinedOutput3" data-draggable="dragtarget"></div> 
         </div>
         <div id="overviewFour" class="taskOverview">
             <!-- output: various -->
-            <div id = "combinedOutput4"></div> 
+            <div id = "combinedOutput4" data-draggable="dragtarget"></div> 
         </div>
 
         <!-- Tabs to switch between output-divs -->
@@ -105,5 +106,4 @@
 </body>
 <script src = "addTask.js"></script>
 <script src = "taskOverview.js"></script>
-<script src = "archive.js"></script>
 </html>

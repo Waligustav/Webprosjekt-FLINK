@@ -4,7 +4,7 @@ body{
     background: url(/images/wavedaymode.png);
     background-color: #bdcce3;
     background-size: cover;
-    background-position:;
+    background-position:absolute;
     font-family: 'Nunito Sans', sans-serif;
     /*bakgrunn*/
 }
