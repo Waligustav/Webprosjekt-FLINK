@@ -1,22 +1,10 @@
-/* General margin & padding on page*/
+/* General margin & padding on page */
 * {
     margin: 0;
     padding: 0; 
 }
 
 /* Body settings */
-<<<<<<< HEAD
-body{
-    margin: 0;
-    padding: 0;
-    background: url(/images/wave1.png);
-    background-color: #ebf5fc;
-    background-size: cover;
-    background-position:absolute;
-    font-family: 'Nunito Sans', sans-serif;
-    /*bakgrunn*/
-}
-=======
 body {
     background: url(images/wavedaymode.png);
     background-color: #bdcce3;
@@ -24,22 +12,16 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
->>>>>>> 6ead9b62ba07e8b1bffc8aebf1ceec15510ba4e4
 /* Main container */
 #mainview {
     width: 1280px;
     height: 720px;
     position: relative;
-    background: rgba(255, 255, 255, 0.4);
-    box-shadow: -6px -6px 20px rgba(255,255,255,0.1),
-                6px 6px 20px rgba(0,0,0,0.1);
+    border: 1px rgb(255, 255, 255, 0.3) solid;
+    background: rgba(255, 255, 255, 0.3);
     margin: 0 auto;
-<<<<<<< HEAD
-    border-radius: 10px;
-=======
     border-width: 1px;
     border-radius: 15px;
->>>>>>> 6ead9b62ba07e8b1bffc8aebf1ceec15510ba4e4
     font-family: 'Roboto', sans-serif;
 }
 
@@ -49,74 +31,24 @@ body {
     height: 220px;
     position: absolute;
     border: none;
-<<<<<<< HEAD
-    margin-top: 490px;
-=======
     margin-top: 500px;
->>>>>>> 6ead9b62ba07e8b1bffc8aebf1ceec15510ba4e4
     margin-left: 13px;
     border-radius: 5px;
     font-family: 'Roboto', sans-serif;
 }
 
 .form-input {
-<<<<<<< HEAD
-    width: 210px;
-    height: 30px;
-    margin-left: 0px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    border: none;
-    border-bottom: 1px solid #000000;
-    background: transparent;
-    font-weight: bold;
-    outline: none;
-=======
     width: 220px;
     height: 17px;
->>>>>>> 6ead9b62ba07e8b1bffc8aebf1ceec15510ba4e4
     font-family: 'Roboto', sans-serif;
 }
-::placeholder {
-    color: black;
-    opacity: 1;
-  }
 
 #form-desc {
-    width: 210px;
-    height: 50px;
-    margin-left: 0px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border: none;
-    color: black;
-    border-bottom: 1px solid #000000;
-    background: transparent;
-    font-weight: bold;
-    outline: none;
-    font-family: 'Roboto', sans-serif;
+    width: 220px;
+    height: 60px;
 }
 
 #submitBtn {
-<<<<<<< HEAD
-    width: 200px;
-    height: 30px;
-    background:linear-gradient(90deg,#00BFA6,#55e7fc);
-    color: #fff;
-    filter:drop-shadow(0px 0px 2px 
-     rgb(117, 117, 117));
-    border: none;
-    outline: none;
-    text-transform: uppercase;
-    font-size: 18px;
-    margin-left: 10px;
-    border-radius: 20px;
-    font-family: 'Roboto', sans-serif;
-}
-#submitBtn:hover{
-    transform: scale(1.1);
-    z-index: 1;
-=======
     width: 100px;
     height: 40px;
     background:#00BFA6;
@@ -126,14 +58,13 @@ body {
     font-size: 18px;
     border-radius: 20px;
     font-family: 'Roboto', sans-serif;
->>>>>>> 6ead9b62ba07e8b1bffc8aebf1ceec15510ba4e4
 }
 
 /* Vertical line dividing main page */
 .verticalLine {
-    border-left: 2px solid rgb(255, 255, 255, 0.5);
-    height: 710px;
-    margin-left: 260px;
+    border-left: 2px solid rgb(255, 255, 255, 0.3);
+    height: 690px;
+    margin-left: 250px;
     margin-top: 15px;
     margin-bottom: 15px;
 }
@@ -186,75 +117,52 @@ body {
     height: 20px;
     top: 466px;
     left: 15px;
-<<<<<<< HEAD
-    /*border: 2.2px rgb(0, 0, 0) solid;*/
-    /*border-radius: 6px;*/
-    background: none;
-=======
     border: 2.2px rgb(0, 0, 0) solid;
     border-radius: 6px;
     background-color: white;
->>>>>>> 6ead9b62ba07e8b1bffc8aebf1ceec15510ba4e4
     animation: bubbleFade2 3s alternate;
     opacity: 85%;
 }
 
-<<<<<<< HEAD
-/*@keyframes bubbleFade2{
-=======
 @keyframes bubbleFade2{
->>>>>>> 6ead9b62ba07e8b1bffc8aebf1ceec15510ba4e4
     0%{
         opacity: 0%;
     }
     100%{
         opacity: 85%
     }
-<<<<<<< HEAD
-}*/
-=======
 }
->>>>>>> 6ead9b62ba07e8b1bffc8aebf1ceec15510ba4e4
 
 /* Main page task overview */
 .taskOverview{
     position: absolute;
     width: 650px;
     height: 500px;
-<<<<<<< HEAD
-    /*border: 1px rgb(0, 0, 0) solid;*/
-    box-shadow: -6px -6px 20px rgba(255,255,255,1),
-                6px 6px 20px rgba(0,0,0,0.1);
-    margin-top: -650px;
-    margin-left: 445px;
-    overflow: hidden;
-=======
     border: 1px rgb(0, 0, 0) solid;
     margin-top: -650px;
     margin-left: 445px;
-    overflow: auto;
->>>>>>> 6ead9b62ba07e8b1bffc8aebf1ceec15510ba4e4
+    overflow: hidden;
     border-radius: 5px;
     font-family: 'Roboto', sans-serif;
 }
 
 #overviewOne{
-    background-color:rgb(#ebf5fc, 0.9);
+    background-color:rgb(0, 191, 166, 0.9);
     display: block;
 }
 
 #overviewTwo{
-    background-color:rgb(#ebf5fc, 0.9);
+    background-color: rgb(255, 207, 84, 0.9);
     display: none;
 }
 
 #overviewThree{
-    background-color:rgb(#ebf5fc, 0.9);
+    background-color: rgb(219, 151, 165, 0.9);
     display: none;
 }
 
 #overviewFour{
-    background-color:rgb(#ebf5fc, 0.9);
+    background-color: rgb(145, 184, 176);
     display: none;
 }
 
@@ -263,15 +171,9 @@ body {
     position: absolute;
     width: 120px;
     height: 40px;
-<<<<<<< HEAD
-    background: #ebf5fc;
-    border:none;
-    /*border: solid 1px rgb(0, 0, 0);*/
-=======
     background-color: rgb(213, 219, 168);
     border:none;
     border: solid 1px rgb(0, 0, 0);
->>>>>>> 6ead9b62ba07e8b1bffc8aebf1ceec15510ba4e4
     margin-left: 325px;
     font-weight: bold;
     text-align: center;
@@ -282,14 +184,7 @@ body {
 
 #taskBtnOne{
     margin-top: -650px;
-    background-color: #A88BEB;
-    filter:drop-shadow(0px 0px 2px 
-     rgb(117, 117, 117));
-}
-
-#taskBtnOne:hover{
-    transform: scale(1.1);
-    z-index: 1;
+    background-color: #00BFA6;
 }
 
 #taskBtnOne:hover{
@@ -299,14 +194,7 @@ body {
 
 #taskBtnTwo{
     margin-top: -608px;
-    background-color: #EC9F05;
-    filter:drop-shadow(0px 0px 2px 
-    rgb(117, 117, 117));
-}
-
-#taskBtnTwo:hover{
-    transform: scale(1.1);
-    z-index: 1;
+    background-color: #ffcf54;
 }
 
 #taskBtnTwo:hover{
@@ -316,14 +204,7 @@ body {
 
 #taskBtnThree{
     margin-top: -566px;
-    background-color: #00BFA6;
-    filter:drop-shadow(0px 0px 2px 
-    rgb(117, 117, 117));
-}
-
-#taskBtnThree:hover{
-    transform: scale(1.1);
-    z-index: 1;
+    background-color: #db97a5;
 }
 
 #taskBtnThree:hover{
@@ -333,14 +214,7 @@ body {
 
 #taskBtnFour{
     margin-top: -524px;
-    background-color: #3EADCF;
-    filter:drop-shadow(0px 0px 2px 
-    rgb(117, 117, 117));
-}
-
-#taskBtnFour:hover{
-    transform: scale(1.1);
-    z-index: 1;
+    background-color: rgb(145, 184, 176);
 }
 
 #taskBtnFour:hover{
@@ -351,16 +225,6 @@ body {
 /* Hyperlink logo to archive */
 #transportToArchivePic{
     position: absolute; 
-<<<<<<< HEAD
-    width: 300px;
-    top: 500px;
-    Bottom: 500px;
-    left: 1050px;
-}
-
-#transportToArchivePic:hover {
-    filter:drop-shadow(0px 0px 20px 
-=======
     width: 100px;
     top: 580px;
     left: 1130px;
@@ -368,15 +232,12 @@ body {
 
 #transportToArchivePic:hover {
     filter:drop-shadow(0px 0px 40px 
->>>>>>> 6ead9b62ba07e8b1bffc8aebf1ceec15510ba4e4
     rgb(0, 0, 0));
     transform: scale(1.1);
 }
 
-/*Oppgavene*/
 #taskInnerHTML {
-    background-color: rgb(255, 255, 255, 0.5);
-    border: 1px solid rgb(255, 255, 255, 0.1);
+    border: 1px solid rgb(0, 0, 0);
     overflow: auto;
 }
 
@@ -404,29 +265,9 @@ body {
 }
 
 .dark-mode{
-<<<<<<< HEAD
-    background: linear-gradient(-45deg, #4C4177
-    , #000000
-    , #A29BFE);
-	background-size: 400% 400%;
-	animation: gradient 15s ease infinite;
-}
-
-@keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-=======
     background: url(images/wave2dark.png);
     background-size: cover;
     color: rgb(255, 255, 255);
->>>>>>> 6ead9b62ba07e8b1bffc8aebf1ceec15510ba4e4
 }
 
 /* Day State */
@@ -533,21 +374,7 @@ body {
     transform: scale(1);
 }
 
-<<<<<<< HEAD
-.pull {
-    position: absolute; 
-    height: auto;
-    width: auto;
-    top: auto;
-    bottom: 1px;
-    right: 1200px;
-    
-}
-
- 
-=======
  
 
 
->>>>>>> 6ead9b62ba07e8b1bffc8aebf1ceec15510ba4e4
 

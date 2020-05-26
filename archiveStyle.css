@@ -5,6 +5,7 @@
 }
 
 /* Body settings */
+<<<<<<< HEAD
 body{
     margin: 0;
     padding: 0;
@@ -14,6 +15,13 @@ body{
     background-position:absolute;
     font-family: 'Nunito Sans', sans-serif;
 
+=======
+body {
+    background: url(images/wavedaymode.png);
+    background-color: #bdcce3;
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
+>>>>>>> 6ead9b62ba07e8b1bffc8aebf1ceec15510ba4e4
 }
 
 /* Main container */
@@ -23,11 +31,17 @@ body{
     margin: 0 auto;
     position: relative;
     border: 1px rgb(255, 255, 255, 0.3) solid;
+<<<<<<< HEAD
     background: rgba(255, 255, 255, 0.5);
     border-width: 1px;
     border-radius: 15px;
     box-shadow: -6px -6px 20px rgba(255,255,255,0.1),
                 6px 6px 20px rgba(0,0,0,0.1);
+=======
+    background: rgba(255, 255, 255, 0.3);
+    border-width: 1px;
+    border-radius: 15px;
+>>>>>>> 6ead9b62ba07e8b1bffc8aebf1ceec15510ba4e4
     font-family: 'Roboto', sans-serif;
 }
 
@@ -41,22 +55,40 @@ body{
                 6px 6px 20px rgba(0,0,0,0.1);
     top: 120px;
     left: 300px;
+<<<<<<< HEAD
     border-radius: 5px;
     font-family: 'Roboto', sans-serif;
 }
 
 #aOverviewOne{
     background-color:rgb(#ebf5fc, 0.9);
+=======
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+    overflow: auto;
+}
+
+#aOverviewOne{
+    background-color:rgb(0, 191, 166, 0.9);
+>>>>>>> 6ead9b62ba07e8b1bffc8aebf1ceec15510ba4e4
     display: block;
 }
 
 #aOverviewTwo{
+<<<<<<< HEAD
     background-color: rgb(#ebf5fc, 0.9);
+=======
+    background-color: rgb(255, 207, 84, 0.9);
+>>>>>>> 6ead9b62ba07e8b1bffc8aebf1ceec15510ba4e4
     display: none;
 }
 
 #aOverviewThree{
+<<<<<<< HEAD
     background-color: rgb(#ebf5fc, 0.9);
+=======
+    background-color: rgb(219, 151, 165, 0.9);
+>>>>>>> 6ead9b62ba07e8b1bffc8aebf1ceec15510ba4e4
     display: none;
 }
 
@@ -93,9 +125,13 @@ body{
     position: absolute;
     width: 120px;
     height: 40px;
+<<<<<<< HEAD
     border: none;
     filter:drop-shadow(0px 0px 2px 
      rgb(117, 117, 117));
+=======
+    border: solid 1px rgb(0, 0, 0);
+>>>>>>> 6ead9b62ba07e8b1bffc8aebf1ceec15510ba4e4
     margin-top: 80px;
     font-weight: bold;
     text-align: center;
@@ -106,7 +142,11 @@ body{
 
 #archiveBtnOne{
     margin-left: 300px;
+<<<<<<< HEAD
     background-color: #A88BEB;
+=======
+    background-color: #00BFA6;
+>>>>>>> 6ead9b62ba07e8b1bffc8aebf1ceec15510ba4e4
 }
 
 #archiveBtnOne:hover{
@@ -116,8 +156,12 @@ body{
 
 #archiveBtnTwo{
     margin-left: 420px;
+<<<<<<< HEAD
     background-color: #EC9F05;
 
+=======
+    background-color: #ffcf54;
+>>>>>>> 6ead9b62ba07e8b1bffc8aebf1ceec15510ba4e4
 }
 
 #archiveBtnTwo:hover{
@@ -137,6 +181,7 @@ body{
 
 #archiveBtnFour{
     margin-left: 660px;
+<<<<<<< HEAD
     background-color: #3EADCF;
 }
 
@@ -302,4 +347,169 @@ body{
     top: auto;
     bottom: 1px;
     left: 900px;
+=======
+    background-color: rgb(145, 184, 176);
+}
+
+#archiveBtnFour:hover{
+    transform: scale(1.1);
+    z-index: 1;
+}
+
+/* Vertical line dividing main page */
+.verticalLine2 {
+    position: absolute;
+    border-left: 2px solid rgb(255, 255, 255, 0.3);
+    height: 690px;
+    margin-left: 250px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* Page logo image */
+#archiveLogoContainer {
+    position: absolute;
+    margin-right: 50px;
+    align-content: center;
+    width: 180px;
+    margin-top: 32px;
+    margin-left: 40px;
+    animation: logoFade 3s alternate;
+}
+
+@keyframes logoFade{
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
+
+/* Darkmode button */
+.wrapper{
+    position: absolute;
+    margin-top: -72px;
+    margin-left: -50px;
+    width: 14px;
+    height: 7px;
+    padding-top: 40px;
+    text-align: center;
+}
+
+.dark-mode{
+    background: url(images/wave2dark.png);
+    background-size: cover;
+    color: rgb(255, 255, 255);
+}
+
+/* Day State */
+.toggle {
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    margin-left: 50px;
+    padding: 5px;  
+    border-radius: 40px;
+}
+  
+.toggle:before,
+.toggle:after {
+    content: '';
+    display: table;
+}
+  
+.toggle:after {
+    clear: both;
+}
+  
+.toggle-bg {
+    position: absolute;
+    top: 1px;
+    left: -4px;
+    width: 100%;  
+    height: 70%;
+    background-color: #C0E6F6;
+    border-radius: 40px;
+    border: 3px solid #81C0D5;
+    transition: all .1s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+  
+.toggle-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;  
+    height: 100%;
+    border: 1px solid red;
+    border-radius: 40px;
+    z-index: 2;
+    opacity: 0;
+}
+  
+.toggle-switch {
+    position: relative;
+    width: 15px;
+    height: 15px;
+    margin-left: 50px;
+    background-color: #F5EB42;
+    border: 4px solid #E4C74D;
+    border-radius: 50%;
+    transition: all .1s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+  
+.toggle-switch-figure {  
+    position: absolute;
+    bottom: -1px;
+    left: -60px;
+    display: block;
+    width: 70px;
+    height: 15px;
+    border: 8px solid #D4D4D2;
+    border-radius: 20px;  
+    background-color: #fff;
+    transform: scale(0.4);
+    transition: all .12s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+}
+  
+.toggle-switch-figureAlt {
+    box-shadow: 
+    42px -7px 0 -3px #FCFCFC,
+    75px -10px 0 -3px #FCFCFC,
+    54px 4px 0 -4px #FCFCFC,
+    83px 7px 0 -2px #FCFCFC,
+    63px 18px 0 -4px #FCFCFC,
+    44px 28px 0 -2px #FCFCFC,
+    78px 23px 0 -3px #FCFCFC;
+    transition: all .12s cubic-bezier(0.250, 0.460, 0.450, 0.940);
+    transform: scale(0);
+}
+
+/* Night State */
+.toggle-input:checked ~ .toggle-switch {
+    margin-left: 0;
+    border-color: #DEE1C5;
+    background-color: #FFFDF2;
+}
+  
+.toggle-input:checked ~ .toggle-bg {
+    background-color: #484848;
+    border-color: #202020;
+}
+  
+.toggle-input:checked ~ .toggle-switch .toggle-switch-figure {
+    margin-left: 40px;
+    opacity: 0;
+    transform: scale(0.1);
+}
+  
+.toggle-input:checked ~ .toggle-switch .toggle-switch-figureAlt {
+    transform: scale(1);
+}
+
+#hLine{
+    height: 3px;
+    background-color: black;
+    border: none;
+>>>>>>> 6ead9b62ba07e8b1bffc8aebf1ceec15510ba4e4
 }

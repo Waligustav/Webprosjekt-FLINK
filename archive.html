@@ -8,8 +8,12 @@
     <link rel="stylesheet" href="archiveStyle.css" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
+<<<<<<< HEAD
 <body>
     <div><img src="images/filingarchive.svg" class="filing"></div>
+=======
+<body onload="renderArchive()">
+>>>>>>> 6ead9b62ba07e8b1bffc8aebf1ceec15510ba4e4
     <!-- Container for user-information / on top of main-container  -->
     <div id = "participant-bar">
         <!--User-name from login-page -->
@@ -32,6 +36,7 @@
               </div>  
             </div>
           </div>
+<<<<<<< HEAD
 
         <div id="archiveLogoContainer">
             <img src = "Images/flink_logo_sort_smol.png" id = "logoImage" alt = "Website logo image">
@@ -39,39 +44,51 @@
 
         <!-- Vertical line to divide main page -->
         <div class="verticalLine2"> </div>
+=======
+>>>>>>> 6ead9b62ba07e8b1bffc8aebf1ceec15510ba4e4
 
-        <!-- Output containers -->
+        <div id="archiveLogoContainer">
+            <img src = "Images/flink_logo_sort_smol.png" id = "logoImage" alt = "The websites logo image in black, transparant with the text 'Flink'">
+          </div>
+
+        <!-- Vertical line to divide main page -->
+        <div class="verticalLine2"> </div>
+
+        <!-- Output containers: work, subjects, hobby and various -->
         <div id="aOverviewOne" class="archiveOverview">
-            <!-- archive-output: work -->
-            <div id="archiveOutput"></div>
+            <div id="archivedWork"></div>
         </div>
         <div id="aOverviewTwo" class="archiveOverview">
-            <!-- archive-output: subjects -->
-            <div id="archiveOutput2"></div>
+            <div id="archivedSubject"></div>
         </div>
         <div id="aOverviewThree" class="archiveOverview">
-            <!-- archive-output: hobby -->
-            <div id="archiveOutput3"></div>
+            <div id="archivedHobby"></div>
         </div>
         <div id="aOverviewFour" class="archiveOverview">
-            <!-- archive-output: various -->
-            <div id="archiveOutput4"></div>
+            <div id="archivedVarious"></div>
         </div>
 
-        <!-- Logo/Mascot presenting information -->
+        <!-- Logo presenting information -->
         <a href="index.html">
+<<<<<<< HEAD
             <img src="images/returnImg.png" alt="Return image!" id="returnImage">
         </a>
         
 
+=======
+            <img src="images/returnImg.png" alt="Image of an arrow representing jumping back to the main page" id="returnImage">
+        </a>
+        
+>>>>>>> 6ead9b62ba07e8b1bffc8aebf1ceec15510ba4e4
         <!-- Tabs to switch between output-divs -->
         <input id="archiveBtnOne" type="button" value="Jobb" class="archiveBtns">
         <input id="archiveBtnTwo" type="button" value="Emner" class="archiveBtns">
         <input id="archiveBtnThree" type="button" value="Hobby" class="archiveBtns">
         <input id="archiveBtnFour" type="button" value="Diverse" class="archiveBtns">
     </section>
-
+    
 <script src="archive.js"></script>
 <script src = "archiveOverview.js"></script>
+<script src ="archiveDarkmode.js"></script>
 </body>
 </html>

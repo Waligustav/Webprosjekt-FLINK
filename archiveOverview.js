@@ -39,6 +39,7 @@ function showFourthTask(){
     fourthContent.style.display = "block";
 }
 
+<<<<<<< HEAD
 /* //Get all HTML elements
 const archiveBtns = document.querySelectorAll(".archiveBtns");
 const aOverviews = document.querySelectorAll(".archiveOverview");
@@ -56,6 +57,8 @@ function showTask(event){
 } */
 
 
+=======
+>>>>>>> 6ead9b62ba07e8b1bffc8aebf1ceec15510ba4e4
 
 
 
