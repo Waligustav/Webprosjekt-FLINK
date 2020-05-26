@@ -23,21 +23,20 @@ function renderTask(){
         let btnText = document.createTextNode("Fullfør");
         newBtn.appendChild(btnText);
 
-        newDiv.style.border = "3px solid black";newDiv.style.height = "10px";newDiv.style.backgroundColor = "red"; 
-        newBtn.style.position = "absolute"; newBtn.style.top = "4px"; newBtn.style.left = "570px";
-        
-
-
+        newDiv.style.border = "3px solid black";newDiv.style.height = "10px";newDiv.style.backgroundColor = task.color; 
+         
         newBtn.onclick = function() {
             if(task.color === "red"){
-                newDiv.style.backgroundColor = "green"; 
+                task.color = "green"; 
+                localStorage.setItem('taskList', JSON.stringify(taskOutput)); 
+                newDiv.style.backgroundColor = task.color; 
             }
             else if(task.color === "green"){
-                newDiv.style.backgroundColor = "red"; 
+                task.color = "red"; 
+                localStorage.setItem('taskList', JSON.stringify(taskOutput)); 
+                newDiv.style.backgroundColor = task.color; 
             }
         }
-
-
 
         // Output text
         taskEl.innerHTML = "<div id = 'taskInnerHTML' draggable = 'true'> <strong> Deltaker(e): </strong> " + participant +
