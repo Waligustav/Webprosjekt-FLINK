@@ -9,36 +9,55 @@ let secondContent = document.getElementById("aOverviewTwo");
 let thirdContent = document.getElementById("aOverviewThree");
 let fourthContent = document.getElementById("aOverviewFour");
 
+
 //Functions to show current object, and hide other stacked objects
 function showFirstTask(){
-    document.getElementById("aOverviewOne").style.display = "block";
-    document.getElementById("aOverviewTwo").style.display = "none";
-    document.getElementById("aOverviewThree").style.display = "none";
-    document.getElementById("aOverviewFour").style.display = "none";
+    firstContent.style.display = "block";
+    secondContent.style.display = "none";
+    thirdContent.style.display = "none";
+    fourthContent.style.display = "none";
 }
 
  function showSecondTask(){
-    document.getElementById("aOverviewOne").style.display = "none";
-    document.getElementById("aOverviewTwo").style.display = "block";
-    document.getElementById("aOverviewThree").style.display = "none";
-    document.getElementById("aOverviewFour").style.display = "none";
+    firstContent.style.display = "none";
+    secondContent.style.display = "block";
+    thirdContent.style.display = "none";
+    fourthContent.style.display = "none";
 }
 
 function showThirdTask(){
-    document.getElementById("aOverviewOne").style.display = "none";
-    document.getElementById("aOverviewTwo").style.display = "none";
-    document.getElementById("aOverviewThree").style.display = "block";
-    document.getElementById("aOverviewFour").style.display = "none";
+    firstContent.style.display = "none";
+    secondContent.style.display = "none";
+    thirdContent.style.display = "block";
+    fourthContent.style.display = "none";
 }
 
 function showFourthTask(){
-    document.getElementById("aOverviewOne").style.display = "none";
-    document.getElementById("aOverviewTwo").style.display = "none";
-    document.getElementById("aOverviewThree").style.display = "none";
-    document.getElementById("aOverviewFour").style.display = "block";
+    firstContent.style.display = "none";
+    secondContent.style.display = "none";
+    thirdContent.style.display = "none";
+    fourthContent.style.display = "block";
 }
 
-/* Need to solve the repetative code above in a function */
+/* //Get all HTML elements
+const archiveBtns = document.querySelectorAll(".archiveBtns");
+const aOverviews = document.querySelectorAll(".archiveOverview");
+//Apply event listener to all tab-buttons
+archiveBtns.forEach(archiveBtn => archiveBtn.addEventListener("click", showTask))
+
+//Function to trigger tab output-boxes on tab-button click
+function showTask(event){
+    //reset all btns
+    archiveBtns.forEach(aOverviews =>{
+        aOverviews.style.display = "none";
+    });
+    //Apply change to clicked element
+    event.target.style.display = "block";
+} */
+
+
+
+
 
 
 
