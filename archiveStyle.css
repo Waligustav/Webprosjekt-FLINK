@@ -284,3 +284,9 @@ body {
 .toggle-input:checked ~ .toggle-switch .toggle-switch-figureAlt {
     transform: scale(1);
 }
+
+#hLine{
+    height: 3px;
+    background-color: black;
+    border: none;
+}
