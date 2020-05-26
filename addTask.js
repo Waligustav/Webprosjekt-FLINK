@@ -78,12 +78,7 @@ function addTask(event) {
     const participant = document.querySelector("[name = 'participant']").value;
     const duetime = document.querySelector("[name = 'duetime']").value;
     const description = document.querySelector("[name = 'description']").value;
-<<<<<<< HEAD
-    const color = false;
-
-=======
     let color = "red"; 
->>>>>>> df3a2bb271404587f5c458c3d197ddbcedf8144f
     
     var task = {id: Date.now().toString() + 1, category, participant, duetime, description, color};
 
@@ -116,8 +111,8 @@ function toggleDark(){
     bodyObject.classList.toggle("dark-mode");
 
     /* Import objects to change */
-    let speechBubbleObject = document.getElementById("speechBubble");
-    let logoTextObject = document.getElementById("logoText");
+    let speechBubbleObject = document.getElementById("infoBubbleBorder");
+    let logoTextObject = document.getElementById("logoContainer");
 
     /* Even/Uneven counter toggles object change */
     if( (counter % 2) == 1 ){
