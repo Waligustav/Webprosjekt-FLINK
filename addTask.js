@@ -85,11 +85,12 @@ function addTask(event) {
     const participant = document.querySelector("[name = 'participant']").value;
     const duetime = document.querySelector("[name = 'duetime']").value;
     const description = document.querySelector("[name = 'description']").value;
-    const color = false; 
+    const color = false;
+    //var nextId = 0;
     
-    const task = {category, participant, duetime, description, color};
+    var task = {id: Date.now().toString() + 1, category, participant, duetime, description, color};
 
-    const taskList = JSON.parse(window.localStorage.getItem("taskList")) || [];
+    var taskList = JSON.parse(window.localStorage.getItem("taskList")) || [];
     taskList.push(task);
 
     window.localStorage.setItem("taskList", JSON.stringify(taskList));
