@@ -28,18 +28,18 @@ function renderTask(){
         let newBtn = document.createElement("button");
         let btnText = document.createTextNode("Fullfør");
         newBtn.appendChild(btnText);
-        newDiv.style.border = "3px solid black";
+        newDiv.style.border = "1px solid black";
         newDiv.style.height = "10px";
         newDiv.style.backgroundColor = task.color; 
          
         newBtn.onclick = function() {
-            if(task.color === "red"){
-                task.color = "green"; 
+            if(task.color === "#900C3F"){
+                task.color = "#00BFA6"; 
                 localStorage.setItem('taskList', JSON.stringify(taskOutput)); 
                 newDiv.style.backgroundColor = task.color; 
             }
-            else if(task.color === "green"){
-                task.color = "red"; 
+            else if(task.color === "#00BFA6"){
+                task.color = "#900C3F"; 
                 localStorage.setItem('taskList', JSON.stringify(taskOutput)); 
                 newDiv.style.backgroundColor = task.color; 
             }
@@ -86,7 +86,7 @@ function addTask(event) {
     const duetime = document.querySelector("[name = 'duetime']").value;
     const description = document.querySelector("[name = 'description']").value;
     const deleted = false;
-    let color = "red"; 
+    let color = "#900C3F"; 
     
     //Generating unique id 
     var task = {id: Date.now().toString() + 1 , category, participant, duetime, description, color, deleted};
