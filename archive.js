@@ -20,11 +20,19 @@ function toggleDarkArchive(){
     }
 }
 
+/* Toggle nightmode-slider  -  get/set localstorage values */
 const togglew1 = document.querySelector('.toggle-input');
 const initialStatew1 = localStorage.getItem('toggleState') == 'true';
 togglew1.checked = initialStatew1;
 
-togglew1.addEventListener('change', function() {
-  localStorage.setItem('toggleState', togglew1.checked);
-});
+/* Eventlistener triggers slider function*/
+togglew1.addEventListener('change', slideDark() );
+
+function slideDark() {
+    localStorage.setItem('toggleState', togglew1.checked);
+}
+//Trigger function upon page update to reset slider
+slideDark();
+
+
 
