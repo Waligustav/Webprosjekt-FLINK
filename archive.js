@@ -1,43 +1,25 @@
-/*Trigger darkmode function Counter to increment per button-click */
-let counter = 0;
-function toggleDark(){
-    counter++;
+/* Trigger darkmode function 
++ Counter to increment per button-click */
+let counterw1 = 0;
+function toggleDarkArchive(){
+    counterw1++;
 
-darkmodeButton.addEventListener("click", function () {
-    bodyObj[0].style.backgroundImage = "url('images/wave2.png')";
-});
-
-const taskOutputE2 = document.getElementById("combinedOutput2");
-const archiveOutput2 = document.getElementById("archiveOutput2");
-
-
-if(taskOutputE2.newBtn.onclick) {
-    archiveOutput2.appendChild(taskEl); 
-}
-
-
-switch (newDiv.style.backgroundColor = "rgb(8, 201, 60)") {
-    case "category.work":
-        archiveOutput2.appendChild(taskEl); 
-        break;
     let bodyObject = document.body;
     bodyObject.classList.toggle("dark-mode");
 
     /* Import objects to change */
-    let speechBubbleObject = document.getElementById("speechBubble2");
-    let archiveTextObject = document.getElementById("archiveText");
+    let logoContainerObject = document.getElementById("archiveLogoContainer");
 
     /* Even/Uneven counter toggles object change */
-    if( (counter % 2) == 1 ){
-        speechBubbleObject.style.backgroundColor = "black";
-        archiveTextObject.style.color = "white";
-    }else if( (counter % 2) == 0 ){
-        speechBubbleObject.style.backgroundColor = "white";
-        archiveTextObject.style.color = "black";
+    if( (counterw1 % 2) == 1 ){
+        logoContainerObject.innerHTML = "<img src = 'Images/flink_logo_hvit_smol.png' id = 'logoImage' alt = 'Website logo image'>";
+        logoContainerObject.style.marginTop = "41px";
+    }else if( (counterw1 % 2) == 0 ){
+        logoContainerObject.innerHTML = "<img src = 'Images/flink_logo_sort_smol.png' id = 'logoImage' alt = 'Website logo image'>";
+        logoContainerObject.style.marginTop = "32px";
     }
 }
 
-}
 
 //document.getElementById("test").innerHTML = window.localStorage.getItem("id");
 /*
@@ -125,4 +107,19 @@ function renderTask(){
 
     }
 }
+/* Toggle nightmode-slider  -  get/set localstorage values */
+const togglew1 = document.querySelector('.toggle-input');
+const initialStatew1 = localStorage.getItem('toggleState') == 'true';
+togglew1.checked = initialStatew1;
+
+/* Eventlistener triggers slider function*/
+togglew1.addEventListener('change', slideDark() );
+
+function slideDark() {
+    localStorage.setItem('toggleState', togglew1.checked);
+}
+//Trigger function upon page update to reset slider
+slideDark();
+
+
 
