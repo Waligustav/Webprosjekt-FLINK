@@ -39,21 +39,6 @@ function showFourthTask(){
     fourthContent.style.display = "block";
 }
 
-/* //Get all HTML elements
-const archiveBtns = document.querySelectorAll(".archiveBtns");
-const aOverviews = document.querySelectorAll(".archiveOverview");
-//Apply event listener to all tab-buttons
-archiveBtns.forEach(archiveBtn => archiveBtn.addEventListener("click", showTask))
-
-//Function to trigger tab output-boxes on tab-button click
-function showTask(event){
-    //reset all btns
-    archiveBtns.forEach(aOverviews =>{
-        aOverviews.style.display = "none";
-    });
-    //Apply change to clicked element
-    event.target.style.display = "block";
-} */
 
 
 
