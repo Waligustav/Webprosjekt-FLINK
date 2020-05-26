@@ -40,9 +40,12 @@ function showFourthTask(){
 }
 
 
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> 6ead9b62ba07e8b1bffc8aebf1ceec15510ba4e4
 
 

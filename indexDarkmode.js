@@ -7,15 +7,19 @@ function toggleDark(){
     bodyObject.classList.toggle("dark-mode");
 
     // Import objects to change 
-    let speechBubbleObject = document.getElementById("infoBubbleBorder");
-    let logoTextObject = document.getElementById("logoContainer");
+    let infoBubbleObject = document.getElementById("infoBubbleBorder");
+    let logoContainerObject2 = document.getElementById("logoContainer");
 
     // Even/Uneven counter toggles object change 
     if( (counter % 2) == 1 ){
-        speechBubbleObject.style.backgroundColor = "black";
-        logoTextObject.style.color = "white";
+        infoBubbleObject.style.backgroundColor = "black";
+        logoContainerObject2.style.color = "white";
+        logoContainerObject2.innerHTML = "<img src = 'Images/flink_logo_hvit_smol.png' id = 'logoImage' alt = 'The websites logo image in white, transparant with the text Flink'>";
+        logoContainerObject2.style.marginTop = "41px";
     }else if( (counter % 2) == 0 ){
-        speechBubbleObject.style.backgroundColor = "white";
-        logoTextObject.style.color = "black";
+        infoBubbleObject.style.backgroundColor = "white";
+        logoContainerObject2.style.color = "black";
+        logoContainerObject2.innerHTML = "<img src = 'Images/flink_logo_sort_smol.png' id = 'logoImage' alt = 'The websites logo image in black, transparant with the text Flink'>";
+        logoContainerObject2.style.marginTop = "32px";
     }
 }

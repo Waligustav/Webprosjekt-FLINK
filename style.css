@@ -13,49 +13,60 @@ body {
 }
 
 /* Main container */
-#archiveSec{
+#mainview {
     width: 1280px;
     height: 720px;
-    margin: 0 auto;
     position: relative;
     border: 1px rgb(255, 255, 255, 0.3) solid;
     background: rgba(255, 255, 255, 0.3);
+    margin: 0 auto;
     border-width: 1px;
     border-radius: 15px;
     font-family: 'Roboto', sans-serif;
 }
 
-/* Main page task overview */
-.archiveOverview {
-    width: 750px;
-    height: 500px;
+/* User Input form */
+#formInput {
+    width: 220px;
+    height: 220px;
     position: absolute;
-    border: 1px rgb(0, 0, 0) solid;
-    top: 120px;
-    left: 300px;
-    border-radius: 10px;
+    border: none;
+    margin-top: 500px;
+    margin-left: 13px;
+    border-radius: 5px;
     font-family: 'Roboto', sans-serif;
-    overflow: auto;
 }
 
-#aOverviewOne{
-    background-color:rgb(0, 191, 166, 0.9);
-    display: block;
+.form-input {
+    width: 220px;
+    height: 17px;
+    font-family: 'Roboto', sans-serif;
 }
 
-#aOverviewTwo{
-    background-color: rgb(255, 207, 84, 0.9);
-    display: none;
+#form-desc {
+    width: 220px;
+    height: 60px;
 }
 
-#aOverviewThree{
-    background-color: rgb(219, 151, 165, 0.9);
-    display: none;
+#submitBtn {
+    width: 100px;
+    height: 40px;
+    background:#00BFA6;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    border-radius: 20px;
+    font-family: 'Roboto', sans-serif;
 }
 
-#aOverviewFour{
-    background-color: rgb(145, 184, 176);
-    display: none;
+/* Vertical line dividing main page */
+.verticalLine {
+    border-left: 2px solid rgb(255, 255, 255, 0.3);
+    height: 690px;
+    margin-left: 250px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 /* Top section bar */
@@ -67,27 +78,103 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
-/* Hyperlink logo to main-page */
-#returnImage {
+/* Main page logo */
+#logoContainer {
     position: absolute;
-    top: 595px;
-    left: 1135px;
-    width: 75px;
-    z-index: 1;
+    margin-right: 50px;
+    align-content: center;
+    width: 180px;
+    margin-top: 32px;
+    margin-left: 40px;
+    animation: logoFading 3s alternate;
 }
 
-#returnImage:hover {
-    filter:drop-shadow(0px 0px 50px 
-    rgb(0, 0, 0));
+@keyframes logoFading{
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 100%;
+    }
 }
 
-/* Archive task buttons */
-.archiveBtns{
+/* Information bubble */
+#infoBubble{
+    position: absolute;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    top: 470px;
+    left: 60px;
+    opacity: 85%;
+    animation: bubbleFade2 4s alternate;
+}
+
+#infoBubbleBorder{
+    position: absolute;
+    width: 215px;
+    height: 20px;
+    top: 466px;
+    left: 15px;
+    border: 2.2px rgb(0, 0, 0) solid;
+    border-radius: 6px;
+    background-color: white;
+    animation: bubbleFade2 3s alternate;
+    opacity: 85%;
+}
+
+@keyframes bubbleFade2{
+    0%{
+        opacity: 0%;
+    }
+    100%{
+        opacity: 85%
+    }
+}
+
+/* Main page task overview */
+.taskOverview{
+    position: absolute;
+    width: 650px;
+    height: 500px;
+    border: 1px rgb(0, 0, 0) solid;
+    margin-top: -650px;
+    margin-left: 445px;
+    overflow: auto;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+}
+
+#overviewOne{
+    background-color:rgb(0, 191, 166, 0.9);
+    display: block;
+}
+
+#overviewTwo{
+    background-color: rgb(255, 207, 84, 0.9);
+    display: none;
+}
+
+#overviewThree{
+    background-color: rgb(219, 151, 165, 0.9);
+    display: none;
+}
+
+#overviewFour{
+    background-color: rgb(145, 184, 176);
+    display: none;
+}
+
+/* Main page task buttons */
+.taskBtns{
     position: absolute;
     width: 120px;
     height: 40px;
+    background-color: rgb(213, 219, 168);
+    border:none;
     border: solid 1px rgb(0, 0, 0);
-    margin-top: 80px;
+    margin-left: 325px;
     font-weight: bold;
     text-align: center;
     font-size: 20px;
@@ -95,74 +182,75 @@ body {
     border-radius: 3px;
 }
 
-#archiveBtnOne{
-    margin-left: 300px;
+#taskBtnOne{
+    margin-top: -650px;
     background-color: #00BFA6;
 }
 
-#archiveBtnOne:hover{
+#taskBtnOne:hover{
     transform: scale(1.1);
     z-index: 1;
 }
 
-#archiveBtnTwo{
-    margin-left: 420px;
+#taskBtnTwo{
+    margin-top: -608px;
     background-color: #ffcf54;
 }
 
-#archiveBtnTwo:hover{
+#taskBtnTwo:hover{
     transform: scale(1.1);
     z-index: 1;
 }
 
-#archiveBtnThree{
-    margin-left: 540px;
+#taskBtnThree{
+    margin-top: -566px;
     background-color: #db97a5;
 }
 
-#archiveBtnThree:hover{
+#taskBtnThree:hover{
     transform: scale(1.1);
     z-index: 1;
 }
 
-#archiveBtnFour{
-    margin-left: 660px;
+#taskBtnFour{
+    margin-top: -524px;
     background-color: rgb(145, 184, 176);
 }
 
-#archiveBtnFour:hover{
+#taskBtnFour:hover{
     transform: scale(1.1);
     z-index: 1;
 }
 
-/* Vertical line dividing main page */
-.verticalLine2 {
-    position: absolute;
-    border-left: 2px solid rgb(255, 255, 255, 0.3);
-    height: 690px;
-    margin-left: 250px;
-    margin-top: 15px;
-    margin-bottom: 15px;
+/* Hyperlink logo to archive */
+#transportToArchivePic{
+    position: absolute; 
+    width: 100px;
+    top: 580px;
+    left: 1130px;
 }
 
-/* Page logo image */
-#archiveLogoContainer {
-    position: absolute;
-    margin-right: 50px;
-    align-content: center;
-    width: 180px;
-    margin-top: 32px;
-    margin-left: 40px;
-    animation: logoFade 3s alternate;
+#transportToArchivePic:hover {
+    filter:drop-shadow(0px 0px 40px 
+    rgb(0, 0, 0));
+    transform: scale(1.1);
 }
 
-@keyframes logoFade{
-    0%{
-        opacity: 0%;
-    }
-    100%{
-        opacity: 100%;
-    }
+#taskInnerHTML {
+    border: 1px solid rgb(0, 0, 0);
+    overflow: auto;
+}
+
+/* Progress bar */
+#myProgress {
+    width: 100%;
+    background-color: grey;
+}
+  
+#myBar {
+    width: 1%;
+    height: 21px;
+    background-color: rgb(235, 173, 42);
 }
 
 /* Darkmode button */
@@ -286,8 +374,7 @@ body {
     transform: scale(1);
 }
 
-#hLine{
-    height: 3px;
-    background-color: black;
-    border: none;
-}
+ 
+
+
+
