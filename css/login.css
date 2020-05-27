@@ -2,12 +2,9 @@ body{
     margin: 0;
     padding: 0;
     background: url(/images/wave1.png);
-    background-repeat: none;
     background-color: #ebf5fc;
     background-size: cover;
-    background-position:absolute;
     font-family: 'Nunito Sans', sans-serif;
-    /*bakgrunn*/
 }
 
 #loginMain{
@@ -77,8 +74,9 @@ body{
     width: 100%;
     margin-bottom: 20px;
 }
-    
-.loginbox input[type="text"] /*Skriv brukernavn feltet*/
+
+/* Username field*/
+.loginbox input[type="text"] 
 {
     border: none;
     border-bottom: 1px solid #000000;
@@ -89,7 +87,8 @@ body{
     font-size: 16px;
 }
 
-.loginbox input[type="submit"] /*logg inn knappen*/
+/* login button */
+.loginbox input[type="submit"] 
 {
     border: none;
     outline: none;
@@ -100,7 +99,6 @@ body{
     border-radius: 20px; 
     
 }
-
 
 .loginbox input[type="submit"]:hover
 

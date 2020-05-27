@@ -11,7 +11,6 @@ body{
     background: url(/images/wave1.png);
     background-color: #ebf5fc;
     background-size: cover;
-    background-position:absolute;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -213,7 +212,6 @@ body{
     position: absolute;
     width: 650px;
     height: 500px;
-    /*border: 1px rgb(0, 0, 0) solid;*/
     box-shadow: -6px -6px 20px rgba(255,255,255,1),
                 6px 6px 20px rgba(0,0,0,0.1);
     margin-top: -650px;
@@ -221,25 +219,23 @@ body{
     overflow: hidden;
     border-radius: 5px;
     font-family: 'Roboto', sans-serif;
+    background-color:rgb(235,245,252, 0.9);
 }
 
 #overviewOne{
-    background-color:rgb(#ebf5fc, 0.9);
     display: block;
 }
 
 #overviewTwo{
-    background-color:rgb(#ebf5fc, 0.9);
+
     display: none;
 }
 
 #overviewThree{
-    background-color:rgb(#ebf5fc, 0.9);
     display: none;
 }
 
 #overviewFour{
-    background-color:rgb(#ebf5fc, 0.9);
     display: none;
 }
 

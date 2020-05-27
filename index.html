@@ -6,10 +6,11 @@
     <link rel="shortcut icon" type="image/png" href="images/favicon_sort.png">
     <link href = "css/indexStyle.css" type = "text/css" rel = "stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital@1&family=Roboto:ital,wght@1,500&display=swap');
+    </style>
 </head>
 <body>
-
-    
     <!-- Container for user-information / on top of main-container  -->
     <div id = "participant-bar">
         <!-- User-name from login-page -->
@@ -52,22 +53,22 @@
         <!-- User-input form -->
         <form onsubmit = "addTask(event)">
         <section id = "formInput">
-            <form class = "form-input">
+            <section class = "form-input">
                 <!-- User-input form categories -->
-                <select id = "category" name = "category" required>
-                <option value = "categories">Kategori</option>
-                <option value = "work">Jobb</option>
-                <option value = "subjects">Emner</option>
-                <option value = "hobby">Hobby</option>
-                <option value = "various">Diverse</option>
+                <select id = "category" name = "category">
+                    <option value = "categories">Kategori</option>
+                    <option value = "work">Jobb</option>
+                    <option value = "subjects">Emner</option>
+                    <option value = "hobby">Hobby</option>
+                    <option value = "various">Diverse</option>
                 </select>
-            </form>
+            </section>
             <!-- User-input fields -->
             <div>
                 <input name = "participant" type = "text" class = "form-input" placeholder = "DELTAKER(E)" required>
             </div>
             <div>
-                <input name = "duetime" type = "date" class = "form-input" placeholder = "Frist: dd/mm/åååå" required>
+                <input name = "duetime" type = "date" class = "form-input" required>
             </div>
             <div>
                 <textarea name = "description" id = "form-desc" placeholder = "BESKRIVELSE.." required></textarea>
@@ -79,9 +80,9 @@
         </form>
         <!-- Hyperlink (image) to archive -->
         <div>
-        <a href="archive.html">
-            <img src="images/archiveboxday.svg" draggable="false" data-draggable="target" id="transportToArchivePic" alt="Image representing an archive box. Takes the user to thier archive page">
-        </a>
+            <a href="archive.html">
+                <img src="images/archiveboxday.svg" draggable="false" data-draggable="target" id="transportToArchivePic" alt="Image representing an archive box. Takes the user to thier archive page">
+            </a>
         </div>
         <!-- Logo presenting information -->
         <div id="infoBubbleBorder"></div>
@@ -91,7 +92,6 @@
         </div>
         <!-- Vertical line to divide main page -->
         <div class="verticalLine"> </div>
-
         <!-- Output containers: work, subjects, hobby and various -->
         <div id="overviewOne" class="taskOverview">
             <div id = "combinedOutput" data-draggable="dragtarget"></div> 
@@ -113,12 +113,9 @@
         <input id="taskBtnFour" type="button" value="Diverse" class="taskBtns">
     </section>
 
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital@1&family=Roboto:ital,wght@1,500&display=swap');
-    </style>
-</body>
-<script src = "scripts/addTask.js"></script>
-<script src = "scripts/dragAndDrop.js"></script>
-<script src = "scripts/taskOverview.js"></script>
-<script src = "scripts/indexDarkmode.js"></script>
+    <script src = "scripts/addTask.js"></script>
+    <script src = "scripts/dragAndDrop.js"></script>
+    <script src = "scripts/taskOverview.js"></script>
+    <script src = "scripts/indexDarkmode.js"></script>
+    </body>
 </html>
