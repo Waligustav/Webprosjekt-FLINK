@@ -11,10 +11,10 @@ function toggleDarkArchive(){
 
     // Even/Uneven counter toggles object change 
     if( (counterw1 % 2) == 1 ){
-        logoContainerObject.innerHTML = "<img src = '../images/flink_logo_hvit_smol.png' id = 'logoImage' alt = 'The websites logo image in white, transparant with the text Flink'>";
+        logoContainerObject.innerHTML = "<img src = './images/flink_logo_hvit_smol.png' id = 'logoImage' alt = 'The websites logo image in white, transparant with the text Flink'>";
         logoContainerObject.style.marginTop = "41px";
     }else if( (counterw1 % 2) == 0 ){
-        logoContainerObject.innerHTML = "<img src = '../images/flink_logo_sort_smol.png' id = 'logoImage' alt = 'The websites logo image in black, transparant with the text Flink'>";
+        logoContainerObject.innerHTML = "<img src = './images/flink_logo_sort_smol.png' id = 'logoImage' alt = 'The websites logo image in black, transparant with the text Flink'>";
         logoContainerObject.style.marginTop = "32px";
     }
 }
