@@ -16,6 +16,61 @@ body{
     /*bakgrunn*/
 }
 
+/* Help section */
+.innerHelp {
+    position: absolute;
+    background: rgb(9, 201, 153);
+    border-radius: 10px;
+    width: 250px;
+    clip-path: circle(10% at 90% 20%);
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+    margin-top: 190px;
+    margin-left: 4px;
+    z-index: 3;
+}
+
+#topLi{
+    font-size: 30px;
+}
+
+.innerHelp:hover{
+    clip-path: circle(100%);
+    background: #00B6FF;
+    color: white;
+    z-index: 5;
+}
+
+.innerHelp:hover + #helpChar{
+    z-index: 0;
+}
+
+#helpP{
+    color:rgb(9, 201, 153);
+    font-family: "Roboto";
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+#helpP:hover{
+    color: white;
+}
+
+#helpChar{
+    position: absolute;
+    color: white;
+    left: 221px;
+    top: 267px;
+    z-index: 4;
+    font-weight: bold;
+    font-size: 50px;
+}
+
+#helpChar:hover{
+    opacity: 0%;
+}
+
+
 /* Main container */
 #mainview {
     width: 1280px;
@@ -312,7 +367,7 @@ body{
 }
 
 .dark-mode{
-    background: url(images/wave2dark.png);
+    background: url(/images/wave2dark.png);
     background-size: cover;
     color: rgb(255, 255, 255);
 }
@@ -422,14 +477,14 @@ body{
 }
 
 /*pull request dude img*/
-.pull {
+#pullx {
     position: absolute; 
     height: auto;
     width: auto;
-    top: auto;
+    top: 120px;
     bottom: 1px;
-    right: 1200px;
-    
+    right: 850px;
+    z-index: -1;
 }
  
 
