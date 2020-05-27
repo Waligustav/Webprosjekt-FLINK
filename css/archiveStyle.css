@@ -185,7 +185,7 @@ body{
 }
 
 .dark-mode{
-    background: url(/images/wave2dark.png);
+    background: url(./images/wave2dark.png);
     background-size: cover;
     color: rgb(255, 255, 255);
 }
