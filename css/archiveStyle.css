@@ -11,7 +11,6 @@ body{
     background: url(/images/wave1.png);
     background-color: #ebf5fc;
     background-size: cover;
-    background-position:absolute;
     font-family: 'Nunito Sans', sans-serif;
 
 }
@@ -43,25 +42,22 @@ body{
     left: 300px;
     border-radius: 5px;
     font-family: 'Roboto', sans-serif;
+    background-color:rgb(235,245,252, 0.9);
 }
 
-aOverviewOne{
-    background-color:rgb(#ebf5fc, 0.9);
+#aOverviewOne{
     display: block;
 }
 
 #aOverviewTwo{
-    background-color: rgb(#ebf5fc, 0.9);
     display: none;
 }
 
 #aOverviewThree{
-    background-color: rgb(#ebf5fc, 0.9);
     display: none;
 }
 
 #aOverviewFour{
-    background-color: rgb(#ebf5fc, 0.9);
     display: none;
 }
 

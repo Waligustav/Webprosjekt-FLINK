@@ -7,9 +7,11 @@
     <link rel="shortcut icon" type="image/png" href="images/favicon_sort.png">
     <link rel="stylesheet" href="css/archiveStyle.css" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital@1&family=Roboto:ital,wght@1,500&display=swap');
+    </style>
 </head>
 <body onload="renderArchive()">
-
     <!-- Container for user-information / on top of main-container  -->
     <div id = "participant-bar">
         <!--User-name from login-page -->
@@ -18,7 +20,6 @@
         document.getElementById("result").innerHTML=localStorage.getItem("textvalue");
         </script>
     </div>
-
     <!-- Main container -->
     <section id="archiveSec">
         <!-- Background image man-->
@@ -67,13 +68,9 @@
         <input id="archiveBtnThree" type="button" value="Hobby" class="archiveBtns">
         <input id="archiveBtnFour" type="button" value="Diverse" class="archiveBtns">
     </section>
-
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital@1&family=Roboto:ital,wght@1,500&display=swap');
-    </style>
     
-<script src="scripts/archive.js"></script>
-<script src = "scripts/archiveOverview.js"></script>
-<script src ="scripts/archiveDarkmode.js"></script>
+    <script src="scripts/archive.js"></script>
+    <script src = "scripts/archiveOverview.js"></script>
+    <script src ="scripts/archiveDarkmode.js"></script>
 </body>
 </html>
