@@ -8,7 +8,7 @@
 body{
     margin: 0;
     padding: 0;
-    background: url(./images/wave1.png);
+    background: url(../images/wave1.png);
     background-color: #ebf5fc;
     background-size: cover;
     font-family: 'Nunito Sans', sans-serif;
@@ -185,7 +185,7 @@ body{
 }
 
 .dark-mode{
-    background: url(./images/wave2dark.png);
+    background: url(../images/wave2dark.png);
     background-size: cover;
     color: rgb(255, 255, 255);
 }

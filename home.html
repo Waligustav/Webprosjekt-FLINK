@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Flink</title>
+    <meta charset = "utf-8">
+    <link rel="shortcut icon" type="image/png" href="./images/favicon_sort.png">
+    <link href = "css/indexStyle.css" type = "text/css" rel = "stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital@1&family=Roboto:ital,wght@1,500&display=swap');
+    </style>
+</head>
+<body>
+    <!-- Container for user-information / on top of main-container  -->
+    <div id = "participant-bar">
+        <!-- User-name from login-page -->
+       Hei, <span id="result"></span>!
+        <script>
+        document.getElementById("result").innerHTML=localStorage.getItem("textvalue");
+        </script>
+    </div>
+
+    <!-- Main container -->
+    <section id = "mainview">
+        <!-- Background image -->
+    <img src="./images/pullrequest.svg" alt="man pulling up arrow" id="pullx">
+        <!-- Darkmode button -->
+        <div class="wrapper" onclick="toggleDark()" id="darkmodeBtn">
+            <div class="toggle">
+              <input class="toggle-input" type="checkbox" />
+              <div class="toggle-bg"></div>
+              <div class="toggle-switch">
+                <div class="toggle-switch-figure"></div>
+                <div class="toggle-switch-figureAlt"></div>
+              </div>  
+            </div>
+        </div>
+         <!-- Help section -->
+         <!--<h1 id="helpChar">i</h1>-->
+         <div class="helpBtn">
+            <div class="innerHelp">
+                <span id ="helpChar">i</span>
+                <p id="helpP">
+                    <strong>Instruksjoner:</strong><br><br>
+                    Fyll skjema nederst til venstre for å opprette en oppgave<br><br>
+                    Oppgaven vil bli lagt under riktig kategori<br><br>
+                    Når oppgaven er blitt utført kan du trykke på ferdig-knappen for å endre status<br><br>
+                    Om du ønsker å arkivere oppgavene, kan du dra dem ned til arkiv-ikonet<br><br>
+                    Ved å trykke på arkiv-ikonet vil du kunne få en oversikt over alle arkiverte oppgaver
+                </p>
+            </div>
+        </div>
+        <!-- User-input form -->
+        <form onsubmit = "addTask(event)">
+        <section id = "formInput">
+            <section class = "form-input">
+                <!-- User-input form categories -->
+                <select id = "category" name = "category">
+                    <option value = "categories">Kategori</option>
+                    <option value = "work">Jobb</option>
+                    <option value = "subjects">Emner</option>
+                    <option value = "hobby">Hobby</option>
+                    <option value = "various">Diverse</option>
+                </select>
+            </section>
+            <!-- User-input fields -->
+            <div>
+                <input name = "participant" type = "text" class = "form-input" placeholder = "DELTAKER(E)" required>
+            </div>
+            <div>
+                <input name = "duetime" type = "date" class = "form-input" required>
+            </div>
+            <div>
+                <textarea name = "description" id = "form-desc" placeholder = "BESKRIVELSE.." required></textarea>
+            </div>
+            <div>
+                <input type = "submit" id = "submitBtn" value = "Legg til"/>
+            </div>
+        </section>
+        </form>
+        <!-- Hyperlink (image) to archive -->
+        <div>
+            <a href="archive.html">
+                <img src="./images/archiveboxday.svg" draggable="false" data-draggable="target" id="transportToArchivePic" alt="Image representing an archive box. Takes the user to thier archive page">
+            </a>
+        </div>
+        <!-- Logo presenting information -->
+        <div id="infoBubbleBorder"></div>
+        <pre id="infoBubble">LAG NY OPPGAVE</pre>
+        <div id="logoContainer">
+          <img src = "./images/flink_logo_sort_smol.png" id = "logoImage" alt = "The websites logo image in black, transparant with the text 'Flink'">
+        </div>
+        <!-- Vertical line to divide main page -->
+        <div class="verticalLine"> </div>
+        <!-- Output containers: work, subjects, hobby and various -->
+        <div id="overviewOne" class="taskOverview">
+            <div id = "combinedOutput" data-draggable="dragtarget"></div> 
+        </div>
+        <div id="overviewTwo" class="taskOverview">
+            <div id = "combinedOutput2" data-draggable="dragtarget"></div> 
+        </div>
+        <div id="overviewThree" class="taskOverview">
+            <div id = "combinedOutput3" data-draggable="dragtarget"></div> 
+        </div>
+        <div id="overviewFour" class="taskOverview">
+            <div id = "combinedOutput4" data-draggable="dragtarget"></div> 
+        </div>
+
+        <!-- Tabs to switch between output-divs -->
+        <input id="taskBtnOne" type="button" value="Jobb" class="taskBtns">
+        <input id="taskBtnTwo" type="button" value="Emner" class="taskBtns">
+        <input id="taskBtnThree" type="button" value="Hobby" class="taskBtns">
+        <input id="taskBtnFour" type="button" value="Diverse" class="taskBtns">
+    </section>
+
+    <script src = "scripts/addTask.js"></script>
+    <script src = "scripts/dragAndDrop.js"></script>
+    <script src = "scripts/taskOverview.js"></script>
+    <script src = "scripts/indexDarkmode.js"></script>
+    </body>
+</html>
