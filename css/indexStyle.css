@@ -13,63 +13,48 @@ body{
     background-size: cover;
     background-position:absolute;
     font-family: 'Roboto', sans-serif;
-    /*bakgrunn*/
 }
 
 /* Help section */
 .innerHelp {
     position: absolute;
     background: rgb(9, 201, 153);
+    padding: 1em;
     border-radius: 10px;
     width: 250px;
-    clip-path: circle(10% at 90% 20%);
+    left: -32px;
+    margin-top: 230px;
+    clip-path: circle(7% at 92% 7%);
     transition: all .5s ease-in-out;
     cursor: pointer;
-    margin-top: 190px;
-    margin-left: 4px;
     z-index: 3;
 }
 
-#topLi{
-    font-size: 30px;
-}
-
-.innerHelp:hover{
-    clip-path: circle(100%);
+.innerHelp:hover {
+    clip-path: circle(75%);
     background: #00B6FF;
+}
+
+#helpId {
     color: white;
-    z-index: 5;
+    font-size: .8rem;
 }
 
-.innerHelp:hover + #helpChar{
-    z-index: 0;
-}
-
-#helpP{
-    color:rgb(9, 201, 153);
-    font-family: "Roboto";
-    font-size: 20px;
-    letter-spacing: 1px;
-}
-
-#helpP:hover{
+#helpChar {
+    float: right;
     color: white;
-}
-
-#helpChar{
-    position: absolute;
-    color: white;
-    left: 221px;
-    top: 267px;
-    z-index: 4;
+    font-size: 30px;
+    left: 8px;
+    top: -5px;;
     font-weight: bold;
-    font-size: 50px;
+    transition: color .5s;
+    position: relative;
+    margin-right: 4%;
 }
 
-#helpChar:hover{
-    opacity: 0%;
+.innerHelp:hover #helpChar {
+    color: rgba(255,255,255,0)
 }
-
 
 /* Main container */
 #mainview {
@@ -209,7 +194,7 @@ body{
     left: 15px;
     /*border: 2.2px rgb(0, 0, 0) solid;*/
     /*border-radius: 6px;*/
-    background: none;
+    background: white;
     animation: bubbleFade2 3s alternate;
     opacity: 85%;
 }
