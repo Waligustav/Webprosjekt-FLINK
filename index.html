@@ -4,12 +4,12 @@
     <title>Flink</title>
     <meta charset = "utf-8">
     <link rel="shortcut icon" type="image/png" href="images/favicon_sort.png">
-    <link href = "indexStyle.css" type = "text/css" rel = "stylesheet">
+    <link href = "css/indexStyle.css" type = "text/css" rel = "stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div><img src="images/pullrequest.svg" alt="man pulling up arrow" class="pull"></div>
+    
     <!-- Container for user-information / on top of main-container  -->
     <div id = "participant-bar">
         <!-- User-name from login-page -->
@@ -21,6 +21,8 @@
 
     <!-- Main container -->
     <section id = "mainview">
+        <!-- Background image -->
+    <img src="images/pullrequest.svg" alt="man pulling up arrow" id="pullx">
         <!-- Darkmode button -->
         <div class="wrapper" onclick="toggleDark()" id="darkmodeBtn">
             <div class="toggle">
@@ -30,6 +32,20 @@
                 <div class="toggle-switch-figure"></div>
                 <div class="toggle-switch-figureAlt"></div>
               </div>  
+            </div>
+        </div>
+         <!-- Help section -->
+         <h1 id="helpChar">i</h1>
+         <div class="helpBtn">
+            <div class="innerHelp">
+                <p id="helpP">
+                    <strong>Instruksjoner:</strong><br><br>
+                    Fyll skjema nederst til venstre for å opprette en oppgave<br><br>
+                    Oppgaven vil bli lagt under riktig kategori<br><br>
+                    Når oppgaven er blitt utført kan du trykke på ferdig-knappen for å endre status<br><br>
+                    Om du ønsker å arkivere oppgavene, kan du dra dem ned til arkiv-ikonet<br><br>
+                    Ved å trykke på arkiv-ikonet vil du kunne få en oversikt over alle arkiverte oppgaver
+                </p>
             </div>
         </div>
         <!-- User-input form -->
@@ -100,8 +116,8 @@
         @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital@1&family=Roboto:ital,wght@1,500&display=swap');
     </style>
 </body>
-<script src = "addTask.js"></script>
-<script src = "dragAndDrop.js"></script>
-<script src = "taskOverview.js"></script>
-<script src = "indexDarkmode.js"></script>
+<script src = "scripts/addTask.js"></script>
+<script src = "scripts/dragAndDrop.js"></script>
+<script src = "scripts/taskOverview.js"></script>
+<script src = "scripts/indexDarkmode.js"></script>
 </html>
