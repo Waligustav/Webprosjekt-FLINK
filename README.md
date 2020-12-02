@@ -8,7 +8,7 @@
 For å bruke FLINK så kan du klikke på denne linken: 
 
 ```
-Lenken til github pages
+https://westerdals.github.io/pro104-eksamen-gruppe29/
 ```
 Du vil bli navigert til en side hvor du lager et brukernavn og kan begynne å lage oppgaver 
 

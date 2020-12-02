@@ -8,10 +8,9 @@
 body{
     margin: 0;
     padding: 0;
-    background: url(/images/wave1.png);
+    background: url(../images/wave1.png);
     background-color: #ebf5fc;
     background-size: cover;
-    background-position:absolute;
     font-family: 'Nunito Sans', sans-serif;
 
 }
@@ -43,25 +42,22 @@ body{
     left: 300px;
     border-radius: 5px;
     font-family: 'Roboto', sans-serif;
+    background-color:rgb(235,245,252, 0.9);
 }
 
-aOverviewOne{
-    background-color:rgb(#ebf5fc, 0.9);
+#aOverviewOne{
     display: block;
 }
 
 #aOverviewTwo{
-    background-color: rgb(#ebf5fc, 0.9);
     display: none;
 }
 
 #aOverviewThree{
-    background-color: rgb(#ebf5fc, 0.9);
     display: none;
 }
 
 #aOverviewFour{
-    background-color: rgb(#ebf5fc, 0.9);
     display: none;
 }
 
@@ -86,6 +82,7 @@ aOverviewOne{
 #returnImage:hover {
     filter:drop-shadow(0px 0px 50px 
     rgb(0, 0, 0));
+    transform: scale(1.15);
 }
 
 
@@ -188,7 +185,7 @@ aOverviewOne{
 }
 
 .dark-mode{
-    background: url(images/wave2dark.png);
+    background: url(../images/wave2dark.png);
     background-size: cover;
     color: rgb(255, 255, 255);
 }
@@ -308,7 +305,7 @@ aOverviewOne{
     position: absolute; 
     height: auto;
     width: auto;
-    top: auto;
-    bottom: 1px;
-    left: 900px;
+    top: 180px;
+    left: 635px;
+    z-index: -1;
 }

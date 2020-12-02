@@ -8,12 +8,50 @@
 body{
     margin: 0;
     padding: 0;
-    background: url(/images/wave1.png);
-    background-color: #ebf5fc;
+    background: url(../images/wave1.png);
     background-size: cover;
-    background-position:absolute;
     font-family: 'Roboto', sans-serif;
-    /*bakgrunn*/
+}
+
+/* Help section */
+.innerHelp {
+    position: absolute;
+    background: rgb(9, 201, 153);
+    padding: 1em;
+    border-radius: 10px;
+    width: 250px;
+    left: -32px;
+    margin-top: 230px;
+    clip-path: circle(7% at 92% 7%);
+    transition: all .5s ease-in-out;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.innerHelp:hover {
+    clip-path: circle(75%);
+    background: #00B6FF;
+}
+
+#helpId {
+    color: white;
+    font-size: .8rem;
+}
+
+#helpChar {
+    float: right;
+    color: white;
+    font-size: 30px;
+    left: 8px;
+    top: -5px;;
+    font-weight: bold;
+    transition: color .5s;
+    position: relative;
+    margin-right: 4%;
+}
+
+.innerHelp:hover #helpChar {
+    color: rgba(255,255,255,0)
 }
 
 /* Main container */
@@ -154,7 +192,7 @@ body{
     left: 15px;
     /*border: 2.2px rgb(0, 0, 0) solid;*/
     /*border-radius: 6px;*/
-    background: none;
+    background: white;
     animation: bubbleFade2 3s alternate;
     opacity: 85%;
 }
@@ -173,7 +211,6 @@ body{
     position: absolute;
     width: 650px;
     height: 500px;
-    /*border: 1px rgb(0, 0, 0) solid;*/
     box-shadow: -6px -6px 20px rgba(255,255,255,1),
                 6px 6px 20px rgba(0,0,0,0.1);
     margin-top: -650px;
@@ -181,25 +218,23 @@ body{
     overflow: hidden;
     border-radius: 5px;
     font-family: 'Roboto', sans-serif;
+    background-color:rgb(235,245,252, 0.9);
 }
 
 #overviewOne{
-    background-color:rgb(#ebf5fc, 0.9);
     display: block;
 }
 
 #overviewTwo{
-    background-color:rgb(#ebf5fc, 0.9);
+
     display: none;
 }
 
 #overviewThree{
-    background-color:rgb(#ebf5fc, 0.9);
     display: none;
 }
 
 #overviewFour{
-    background-color:rgb(#ebf5fc, 0.9);
     display: none;
 }
 
@@ -312,7 +347,7 @@ body{
 }
 
 .dark-mode{
-    background: url(images/wave2dark.png);
+    background: url(../images/wave2dark.png);
     background-size: cover;
     color: rgb(255, 255, 255);
 }
@@ -422,14 +457,14 @@ body{
 }
 
 /*pull request dude img*/
-.pull {
+#pullx {
     position: absolute; 
     height: auto;
     width: auto;
-    top: auto;
+    top: 120px;
     bottom: 1px;
-    right: 1200px;
-    
+    right: 850px;
+    z-index: -1;
 }
  
 
