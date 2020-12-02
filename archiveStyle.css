@@ -5,11 +5,15 @@
 }
 
 /* Body settings */
-body {
-    background: url(images/wavedaymode.png);
-    background-color: #bdcce3;
+body{
+    margin: 0;
+    padding: 0;
+    background: url(/images/wave1.png);
+    background-color: #ebf5fc;
     background-size: cover;
-    font-family: 'Roboto', sans-serif;
+    background-position:absolute;
+    font-family: 'Nunito Sans', sans-serif;
+
 }
 
 /* Main container */
@@ -19,9 +23,11 @@ body {
     margin: 0 auto;
     position: relative;
     border: 1px rgb(255, 255, 255, 0.3) solid;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.5);
     border-width: 1px;
     border-radius: 15px;
+    box-shadow: -6px -6px 20px rgba(255,255,255,0.1),
+                6px 6px 20px rgba(0,0,0,0.1);
     font-family: 'Roboto', sans-serif;
 }
 
@@ -30,30 +36,32 @@ body {
     width: 750px;
     height: 500px;
     position: absolute;
-    border: 1px rgb(0, 0, 0) solid;
+    border:none;
+    box-shadow: -6px -6px 20px rgba(255,255,255,0.1),
+                6px 6px 20px rgba(0,0,0,0.1);
     top: 120px;
     left: 300px;
-    border-radius: 10px;
+    border-radius: 5px;
     font-family: 'Roboto', sans-serif;
 }
 
-#aOverviewOne{
-    background-color:rgb(0, 191, 166, 0.9);
+aOverviewOne{
+    background-color:rgb(#ebf5fc, 0.9);
     display: block;
 }
 
 #aOverviewTwo{
-    background-color: rgb(255, 207, 84, 0.9);
+    background-color: rgb(#ebf5fc, 0.9);
     display: none;
 }
 
 #aOverviewThree{
-    background-color: rgb(219, 151, 165, 0.9);
+    background-color: rgb(#ebf5fc, 0.9);
     display: none;
 }
 
 #aOverviewFour{
-    background-color: rgb(145, 184, 176);
+    background-color: rgb(#ebf5fc, 0.9);
     display: none;
 }
 
@@ -80,12 +88,15 @@ body {
     rgb(0, 0, 0));
 }
 
+
 /* Archive task buttons */
 .archiveBtns{
     position: absolute;
     width: 120px;
     height: 40px;
-    border: solid 1px rgb(0, 0, 0);
+    border: none;
+    filter:drop-shadow(0px 0px 2px 
+     rgb(117, 117, 117));
     margin-top: 80px;
     font-weight: bold;
     text-align: center;
@@ -96,7 +107,7 @@ body {
 
 #archiveBtnOne{
     margin-left: 300px;
-    background-color: #00BFA6;
+    background-color: #A88BEB;
 }
 
 #archiveBtnOne:hover{
@@ -106,7 +117,8 @@ body {
 
 #archiveBtnTwo{
     margin-left: 420px;
-    background-color: #ffcf54;
+    background-color: #EC9F05;
+
 }
 
 #archiveBtnTwo:hover{
@@ -116,7 +128,7 @@ body {
 
 #archiveBtnThree{
     margin-left: 540px;
-    background-color: #db97a5;
+    background-color: #00BFA6;
 }
 
 #archiveBtnThree:hover{
@@ -126,7 +138,7 @@ body {
 
 #archiveBtnFour{
     margin-left: 660px;
-    background-color: rgb(145, 184, 176);
+    background-color: #3EADCF;
 }
 
 #archiveBtnFour:hover{
@@ -137,7 +149,7 @@ body {
 /* Vertical line dividing main page */
 .verticalLine2 {
     position: absolute;
-    border-left: 2px solid rgb(255, 255, 255, 0.3);
+    border-left: 2px solid rgb(255, 255, 255, 0.9);
     height: 690px;
     margin-left: 250px;
     margin-top: 15px;
@@ -285,8 +297,18 @@ body {
     transform: scale(1);
 }
 
+/*Black line that seperates outputs*/
 #hLine{
     height: 3px;
     background-color: black;
     border: none;
+}
+/*man filing papers img*/
+.filing{
+    position: absolute; 
+    height: auto;
+    width: auto;
+    top: auto;
+    bottom: 1px;
+    left: 900px;
 }

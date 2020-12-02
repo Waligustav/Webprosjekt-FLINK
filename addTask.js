@@ -28,18 +28,18 @@ function renderTask(){
         let newBtn = document.createElement("button");
         let btnText = document.createTextNode("Fullfør");
         newBtn.appendChild(btnText);
-        newDiv.style.border = "3px solid black";
+        newDiv.style.border = "1px solid black";
         newDiv.style.height = "10px";
         newDiv.style.backgroundColor = task.color; 
          
         newBtn.onclick = function() {
-            if(task.color === "red"){
-                task.color = "green"; 
+            if(task.color === "#900C3F"){
+                task.color = "#00BFA6"; 
                 localStorage.setItem('taskList', JSON.stringify(taskOutput)); 
                 newDiv.style.backgroundColor = task.color; 
             }
-            else if(task.color === "green"){
-                task.color = "red"; 
+            else if(task.color === "#00BFA6"){
+                task.color = "#900C3F"; 
                 localStorage.setItem('taskList', JSON.stringify(taskOutput)); 
                 newDiv.style.backgroundColor = task.color; 
             }
@@ -86,7 +86,7 @@ function addTask(event) {
     const duetime = document.querySelector("[name = 'duetime']").value;
     const description = document.querySelector("[name = 'description']").value;
     const deleted = false;
-    let color = "red"; 
+    let color = "#900C3F"; 
     
     //Generating unique id 
     var task = {id: Date.now().toString() + 1 , category, participant, duetime, description, color, deleted};
@@ -110,100 +110,4 @@ window.addEventListener("storage", function(event) {
 // Output will stay even when user update the page
 renderTask();
 
-
-//IIFE function for drag and drop
-(function(){
-    if(!document.querySelectorAll || !('draggable' in document.createElement('div')))
-    {
-        return; 
-    }
-    
-    var taskList = JSON.parse(window.localStorage.getItem("taskList")) || [];
-    
-    //get the collection of draggable items and add their draggable attribute
-    for(var outputs = document.querySelectorAll('[data-draggable="dragtarget"]'), 
-      count = outputs.length, 
-      i = 0; i < count; i ++)
-      {
-        outputs[i].setAttribute('draggable', 'true');
-      }
-      
-
-  //variable for storing the dragging target reference 
-    var dragtarget = null;
-
-    	//DRAGSTART event to initiate mouse dragging
-        document.addEventListener('dragstart', function(e){
-            dragtarget = e.target;
-             e.dataTransfer.setData("taskId", dragtarget.getAttribute("taskId"));   
-        }, false);
-
-        //DRAGOVER event to allow the drag by preventing its default
-        document.addEventListener('dragover', function(e){
-          if(dragtarget){
-            e.preventDefault();
-          }
-        }, false);	
-            
-        //DRAGDROP event to allow the element to be dropped into valid targets
-        document.addEventListener('drop', function(e){
-       
-           if(e.target.getAttribute('data-draggable') == 'target'){
-                const taskId = e.dataTransfer.getData("taskId");
-                var taskList = JSON.parse(window.localStorage.getItem("taskList")) || [];
-                const task = taskList.find(task => task.id === taskId);
-                task.deleted = true;
-
-                window.localStorage.setItem("taskList", JSON.stringify(taskList));
-                
-                e.target.appendChild(dragtarget);
-                e.preventDefault();
-                renderTask();
-            }
-        }, false);
-        
-        //DRAGEND event to clean-up after drop or abort
-        document.addEventListener('dragend', function(e){
-        dragtarget = null;
-        }, false);  
- })();
-
-
-/* Trigger darkmode function 
-+ Counter to increment per button-click */
-let counterw2 = 0;
-function toggleDark(){
-    counterw2++;
-
-    let bodyObject = document.body;
-    bodyObject.classList.toggle("dark-mode");
-
-    /* Import objects to change */
-    let infoBubbleObject = document.getElementById("infoBubbleBorder");
-    let logoImageObject = document.getElementById("logoContainer");
-
-    /* Even/Uneven counter toggles object change */
-    if( (counterw2 % 2) == 1 ){
-        infoBubbleObject.style.backgroundColor = "black";
-        logoImageObject.innerHTML = "<img src = 'Images/flink_logo_hvit_smol.png' id = 'logoImage' alt = 'Website logo image'>";
-        logoImageObject.style.marginTop = "41px";
-    }else if( (counterw2 % 2) == 0 ){
-        infoBubbleObject.style.backgroundColor = "white";
-        logoImageObject.innerHTML = "<img src = 'Images/flink_logo_sort_smol.png' id = 'logoImage' alt = 'Website logo image'>";
-        logoImageObject.style.marginTop = "32px";
-    }
-}
-/* Toggle nightmode-slider  -  get/set localstorage values */
-const togglew2 = document.querySelector('.toggle-input');
-const initialStatew2 = localStorage.getItem('toggleStatew2') == 'true';
-togglew2.checked = initialStatew2;
-
-/* Eventlistener triggers slider function*/
-togglew2.addEventListener('change', slideDark2() );
-
-function slideDark2() {
-    localStorage.setItem('toggleStatew2', togglew2.checked);
-}
-//Trigger function upon page update to reset slider
-slideDark2();
 
